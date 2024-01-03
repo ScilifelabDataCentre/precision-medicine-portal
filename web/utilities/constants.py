@@ -1,3 +1,7 @@
 
 ARTICLE_TITLE = 'ARTICLE_TITLE'
 ARTICLE_URL = 'ARTICLE_URL'
+ARTICLE_MARKDOWN = 'ARTICLE_MARKDOWN'
+MAX_URL_PATH_LEN = 30
+
+BASE_URL = "http://www.precision-medicine-portal.scilifelab.se"

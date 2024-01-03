@@ -5,9 +5,12 @@ import json
 import markdown
 from markupsafe import Markup
 import time
+from web.models.articles.article import Article
+import uuid
+from web import db
 
 DEBUG = True
-article_blueprint = Blueprint('article', __name__, url_prefix='/article/')
+article_blueprint = Blueprint('article', __name__)
 
 @article_blueprint.route('/ping', methods=['GET'])
 def pong():
@@ -35,13 +38,20 @@ def get_random_article():
 def post_new_article():
     payload = json.loads(request.data)
     print(payload)
-    if not payload_is_valid(payload, [constants.ARTICLE_TITLE, constants.ARTICLE_URL]):
+    if not payload_is_valid(payload, [constants.ARTICLE_TITLE, constants.ARTICLE_URL, constants.ARTICLE_MARKDOWN]):
         if DEBUG:
             return jsonify({'error': 'invalid argument'}), 400
         raise AttributeError
     article_title = payload[constants.ARTICLE_TITLE]
     article_url = payload[constants.ARTICLE_URL]
-    write_to_db(article_title, article_url)
+
+    new_article = Article(str(uuid.uuid4()), "test_title", "test markdown article test")
+    try:
+        db.session.add(new_article)
+        db.session.commit()
+    except:
+        db.session.rollback()
+        raise MemoryError
     return jsonify({'article name': f'{article_title}', 'article_path': f'{article_url}'}), 200
 
 def write_to_db(article_title, article_url):
@@ -54,9 +64,10 @@ def write_to_db(article_title, article_url):
     db.close()
 
 
-def upload_markdown_to_storage():
+def upload_markdown_to_storage() -> bool:
     # Generate an upload link for the user to submit the file to the storage service directly. Will only be for internal use.
     upload_link = generate_upload_link()
+    return False
 
 
 #################### 
@@ -74,9 +85,3 @@ def get_markdown_file_from_server(md_file_path):
         md.close()
         return file_as_string
     
-
-
-# TODO: GET endpoint for an article. Include an external hosting
-# TODO: Integrate a post request to post to the resoruce
-# TODO: Doing presentation of the MD is fine as it is with flask. next TODO is to include React for it
-# TODO: Integrate React with the project but dont do additional front-end work.
