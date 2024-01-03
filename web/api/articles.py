@@ -38,21 +38,21 @@ def get_random_article():
 def post_new_article():
     payload = json.loads(request.data)
     print(payload)
-    if not payload_is_valid(payload, [constants.ARTICLE_TITLE, constants.ARTICLE_URL, constants.ARTICLE_MARKDOWN]):
+    if not payload_is_valid(payload, [constants.ARTICLE_TITLE, constants.ARTICLE_MARKDOWN]):
         if DEBUG:
             return jsonify({'error': 'invalid argument'}), 400
         raise AttributeError
     article_title = payload[constants.ARTICLE_TITLE]
-    article_url = payload[constants.ARTICLE_URL]
+    article_markdown = payload[constants.ARTICLE_MARKDOWN]
 
-    new_article = Article(str(uuid.uuid4()), "test_title", "test markdown article test")
+    new_article = Article(str(uuid.uuid4()), article_title, article_markdown)
     try:
         db.session.add(new_article)
         db.session.commit()
     except:
         db.session.rollback()
         raise MemoryError
-    return jsonify({'article name': f'{article_title}', 'article_path': f'{article_url}'}), 200
+    return jsonify({'article name': f'{article_title}', 'article_markdown': f'{article_markdown}'}), 200
 
 def write_to_db(article_title, article_url):
     with open('dummy_files/database.json', 'r') as db:
