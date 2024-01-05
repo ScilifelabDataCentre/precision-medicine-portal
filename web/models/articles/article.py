@@ -26,7 +26,7 @@ class Article(Base):
             self.url_prefix = self.generate_url_path_from_title(title)
         except:
             raise http_errors.InvalidArticleNameError
-        self.is_available = False
+        self.is_available = True
         self.markdown_text = markdown_text #TODO: Validate markdown before setting it
     
     def __str__(self) -> str:
@@ -39,6 +39,6 @@ class Article(Base):
         special_character_cleaned_string = re.sub('[^A-Za-z0-9_.\\-~]', '-', white_space_cleaned_string)[:constants.MAX_URL_PATH_LEN]
         trailing_dashes_cleaned = re.sub('-+\\Z', '', special_character_cleaned_string)
         leading_dashes_cleaned = re.sub('\\A-+', '', trailing_dashes_cleaned)
-        return constants.BASE_URL + '/' + leading_dashes_cleaned
+        return leading_dashes_cleaned
     
 
