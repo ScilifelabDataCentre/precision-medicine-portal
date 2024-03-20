@@ -1,6 +1,6 @@
 import web.utilities.constants as constants
 from flask import Blueprint, jsonify, request
-from web.utilities.helpers import payload_is_valid
+from web.utilities.helpers import payload_is_valid, is_valid_secret_in_request
 import web.utilities.http_errors as http_errors
 import json
 import time
@@ -11,7 +11,7 @@ from web.api import mapper
 from web.utilities import config
 from werkzeug.exceptions import Unauthorized
 
-DEBUG = True
+
 article_blueprint = Blueprint('article', __name__)
 
 @article_blueprint.route('/ping', methods=['GET'])
@@ -31,13 +31,13 @@ def get_article_with_id(article_id):
 @article_blueprint.route('/<article_id>', methods = ['PATCH'])
 def update_markdown_of_article_with_id(article_id):
     payload = json.loads(request.data)
-    secret_key = request.headers.get('X-Secret-Key')
-    if secret_key != config.POST_SCERET:
-        if DEBUG:
+    if not is_valid_secret_in_request(request):
+        if config.DEBUG:
             return jsonify({'error': 'Unauthorized access'}), 401
         raise Unauthorized('Unauthorized access')
+    
     if not payload_is_valid(payload, [constants.ARTICLE_MARKDOWN]):
-        if DEBUG:
+        if config.DEBUG:
             return jsonify({'error': 'invalid argument'}), 400
         raise AttributeError
     new_article_markdown = payload[constants.ARTICLE_MARKDOWN]
@@ -69,17 +69,15 @@ def get_all_articles():
     articles_json = mapper.articles_to_headers_json(articles)
     return articles_json, 200
 
-
 @article_blueprint.route('/', methods=['POST'])
 def post_new_article():
     payload = json.loads(request.data)
-    secret_key = request.headers.get('X-Secret-Key')
-    if secret_key != config.POST_SCERET:
-        if DEBUG:
+    if is_valid_secret_in_request(request):
+        if config.DEBUG:
             return jsonify({'error': 'Unauthorized access'}), 401
         raise Unauthorized('Unauthorized access')
     if not payload_is_valid(payload, [constants.ARTICLE_TITLE, constants.ARTICLE_MARKDOWN]):
-        if DEBUG:
+        if config.DEBUG:
             return jsonify({'error': 'invalid argument'}), 400
         raise AttributeError
     article_title = payload[constants.ARTICLE_TITLE]

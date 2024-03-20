@@ -7,6 +7,8 @@ import os
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))  
 
 SQLALCHEMY_DATABASE_URL = os.getenv('LOCALPOSTGRES')
+# os.getenv('POSTGRES_PASSWORD')
+# os.getenv('POSTGRES_URL')
 SQLALCHEMY_CONNECT_ARGS = {'connect_timeout': 5}
 DATABASE_CONNECT_OPTIONS = {'echo':True}
 
