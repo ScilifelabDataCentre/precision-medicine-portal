@@ -34,14 +34,9 @@ jobs:
         working-directory: ./next-app
         run: npm install pa11y-ci wait-on
 
-      - name: Start app and wait until ready
+      - name: Start app, wait and run pa11y-ci
         working-directory: ./next-app
         run: |
           npm run dev &
-          npx wait-on http://127.0.0.1:3000
-
-      - name: Run Pa11y CI
-        working-directory: ./next-app
-        run: |
-          npx pa11y-ci \
-            --config ${GITHUB_WORKSPACE}/.github/pa11y.config
+          npx wait-on http://127.0.0.1:3000 &
+          npx pa11y-ci --config ${GITHUB_WORKSPACE}/.github/pa11y.config
