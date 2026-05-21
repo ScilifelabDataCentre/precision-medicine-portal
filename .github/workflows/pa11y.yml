@@ -44,5 +44,4 @@ jobs:
         working-directory: ./next-app
         run: |
           pa11y-ci \
-            --config ${GITHUB_WORKSPACE}/.github/pa11y.config \
-            --level warning
+            --config ${GITHUB_WORKSPACE}/.github/pa11y.config
