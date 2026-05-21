@@ -33,6 +33,10 @@ jobs:
       - name: Install Pa11y CI and wait-on
         working-directory: ./next-app
         run: npm install -g pa11y-ci wait-on
+        
+      - name: Install Puppeteers
+        working-directory: ./next-app
+        run: npx puppeteer browsers install chrome
 
       - name: Start app and wait until ready
         working-directory: ./next-app
