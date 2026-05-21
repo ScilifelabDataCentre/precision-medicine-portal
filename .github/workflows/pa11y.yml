@@ -36,6 +36,10 @@ jobs:
         
       - name: Install Puppeteers
         working-directory: ./next-app
+        run: npm i puppeteer
+        
+      - name: Install Puppeteer Chrome browser
+        working-directory: ./next-app
         run: npx puppeteer browsers install chrome
 
       - name: Start app and wait until ready
