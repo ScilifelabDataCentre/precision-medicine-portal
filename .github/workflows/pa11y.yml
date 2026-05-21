@@ -30,6 +30,10 @@ jobs:
         working-directory: ./next-app
         run: npm install
 
+      - name: Install Pa11y CI and wait-on
+        working-directory: ./next-app
+        run: npm install pa11y-ci wait-on
+
       - name: Start app and wait until ready
         working-directory: ./next-app
         run: |
