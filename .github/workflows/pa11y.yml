@@ -27,19 +27,21 @@ jobs:
           node-version: 26
 
       - name: Install dependencies
-        run: |
-          cd next-app &
-          npm install
+        working-directory: ./next-app
+        run: npm install
 
       - name: Install Pa11y CI and wait-on
+        working-directory: ./next-app
         run: npm install -g pa11y-ci wait-on
 
       - name: Start app and wait until ready
+        working-directory: ./next-app
         run: |
           npm run dev &
           npx wait-on http://127.0.0.1:3000
 
       - name: Run Pa11y CI
+        working-directory: ./next-app
         run: |
           pa11y-ci \
             --config ${GITHUB_WORKSPACE}/.github/pa11y.config \
