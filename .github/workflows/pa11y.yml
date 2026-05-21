@@ -1,16 +1,16 @@
 # Pa11y: A tool to check accessibility issues on a webpage
-# The config file used by this workflow is in the ".github" directory
+# The config file and sitemap file used by this workflow
+# are in the ".github" directory of the repository
 #
-# This workflow is configured to run weekly at 12:12 every Friday
-# It can also be run manually from the repo's GitHub Actions page
-#----------------------------------------------------------------
-
+# This runs against a local instance of the app
+---
 name: Pa11y Accessibility Check
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: '12 12 * * FRI'
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
 
 jobs:
   pa11y:
@@ -19,19 +19,26 @@ jobs:
 
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
-      - name: Set up Node.js 22.x
-        uses: actions/setup-node@v4
+      - name: Set up Node.js 26
+        uses: actions/setup-node@v6
         with:
-          node-version: 22.x
+          node-version: 26
 
-      - name: Install Pa11y CI
-        run: npm install -g pa11y-ci
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install Pa11y CI and wait-on
+        run: npm install -g pa11y-ci wait-on
+
+      - name: Start app and wait until ready
+        run: |
+          npm run dev &
+          npx wait-on http://127.0.0.1:3000
 
       - name: Run Pa11y CI
         run: |
           pa11y-ci \
             --config ${GITHUB_WORKSPACE}/.github/pa11y.config \
-            --sitemap https://precision-medicine-portal.scilifelab.se/sitemap.xml \
-            --sitemap-exclude 'pdf$'
+            --level warning
