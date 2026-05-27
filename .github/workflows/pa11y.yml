@@ -42,4 +42,13 @@ jobs:
           PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
         run: |
           npx pa11y-ci \
-            --config ../.github/pa11y.config
+            --config ../.github/pa11y.config \
+            2>&1 | tee ../.github/pa11y-results.txt
+          exit ${PIPESTATUS[0]}
+
+      - name: Upload Pa11y results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pa11y-results
+          path: .github/pa11y-results.txt
