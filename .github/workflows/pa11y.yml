@@ -43,8 +43,7 @@ jobs:
         run: |
           npx pa11y-ci \
             --config ../.github/pa11y.config \
-            2>&1 | tee ../.github/pa11y-results.txt
-          exit ${PIPESTATUS[0]}
+            > ../.github/pa11y-results.txt 2>&1
 
       - name: Upload Pa11y results
         if: always()
