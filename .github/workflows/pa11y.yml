@@ -1,0 +1,53 @@
+# Pa11y: A tool to check accessibility issues on a webpage
+# The config file and sitemap file used by this workflow
+# are in the ".github" directory of the repository
+#
+# This runs against a local instance of the app
+---
+name: Pa11y Accessibility Check
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  pa11y:
+    name: Pa11y Test
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v6
+
+      - name: Set up Node.js 26
+        uses: actions/setup-node@v6
+        with:
+          node-version: 26
+
+      - name: Install dependencies
+        working-directory: ./next-app
+        run: npm install
+
+      - name: Start app and wait until ready
+        working-directory: ./next-app
+        run: |
+          npm run dev &
+          npx wait-on http://127.0.0.1:3000
+
+      - name: Run Pa11y CI
+        working-directory: ./next-app
+        env:
+          PUPPETEER_EXECUTABLE_PATH: /usr/bin/google-chrome-stable
+        run: |
+          npx pa11y-ci \
+            --config ../.github/pa11y.config \
+            > ../.github/pa11y-results.txt 2>&1
+
+      - name: Upload Pa11y results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: pa11y-results
+          path: .github/pa11y-results.txt

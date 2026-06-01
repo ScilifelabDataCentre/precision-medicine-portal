@@ -30,6 +30,7 @@
     "lucide-react": "^0.577.0",
     "nanoid": "^5.1.9",
     "next": "^15.5.9",
+    "pa11y-ci": "^4.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-google-recaptcha": "^3.1.0",
@@ -38,7 +39,8 @@
     "remark-gfm": "^4.0.1",
     "tailwind-merge": "^2.6.1",
     "tailwindcss-animate": "^1.0.7",
-    "validator": "^13.15.35"
+    "validator": "^13.15.35",
+    "wait-on": "^9.0.10"
   },
   "devDependencies": {
     "@types/dompurify": "^3.2.0",
