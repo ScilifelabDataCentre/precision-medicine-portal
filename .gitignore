@@ -1,3 +1,5 @@
 .DS_Store
 .vscode/*
 next-app/pnpm-lock.yaml
+next-app/.cache
+.claude/

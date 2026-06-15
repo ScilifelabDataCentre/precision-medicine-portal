@@ -103,14 +103,14 @@ export default {
   		}
   	}
   },
-  plugins: [
-    require("tailwindcss-animate"),
-    function ({ addBase, theme }: { addBase: any; theme: any }) {
-      addBase({
-        body: {
-          backgroundColor: theme("colors.base-100"),
-        },
-      });
-    },
-  ],
+//   plugins: [
+//     require("tailwindcss-animate"),
+//     function ({ addBase, theme }: { addBase: any; theme: any }) {
+//       addBase({
+//         body: {
+//           backgroundColor: theme("colors.base-100"),
+//         },
+//       });
+//     },
+//   ],
 };

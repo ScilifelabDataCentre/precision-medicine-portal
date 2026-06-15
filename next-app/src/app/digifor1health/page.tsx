@@ -175,7 +175,7 @@ export default function Digifor1healthPage(): ReactElement {
           </a>{" "}
           (HDS),{" "}
           <a
-            href="https://tef-health.se/"
+            href="https://tefhealth.se/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
@@ -282,8 +282,10 @@ export default function Digifor1healthPage(): ReactElement {
                 className="shadow-md h-full flex flex-col scroll-mt-8"
               >
                 <CardHeader className="bg-muted p-6">
-                  <CardTitle className="text-lg">{category.title}</CardTitle>
-                  <CardDescription className="text-sm leading-relaxed">
+                  <CardTitle className="text-lg text-foreground">
+                    {category.title}
+                  </CardTitle>
+                  <CardDescription className="text-sm leading-relaxed text-foreground">
                     {category.subtitle}
                   </CardDescription>
                 </CardHeader>

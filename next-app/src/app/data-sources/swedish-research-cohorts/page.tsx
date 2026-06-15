@@ -275,7 +275,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
           role="complementary"
         >
           <div
-            className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-muted-foreground text-left mx-auto"
+            className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-foreground text-left mx-auto"
             role="note"
             aria-label="Data access information"
           >
@@ -298,7 +298,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                 placeholder="Search by name or keyword"
                 value={searchBar}
                 onChange={(e) => setSearchBar(e.target.value)}
-                className="bg-muted"
+                className="bg-muted text-foreground placeholder:text-foreground/70"
                 aria-describedby="search-help"
               />
               <div id="search-help" className="sr-only">

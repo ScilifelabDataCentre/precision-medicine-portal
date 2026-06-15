@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import { cn } from "@/lib/utils";
 
 interface TitleProps {

@@ -548,7 +548,7 @@ export default function QualityRegistryPage() {
           <div className="space-y-8">
             {/* Disclaimer */}
             <div
-              className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-muted-foreground text-left mx-auto"
+              className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-foreground text-left mx-auto"
               role="note"
               aria-label="Data access information"
             >
@@ -572,13 +572,13 @@ export default function QualityRegistryPage() {
                   placeholder="Search by name or keywords"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="bg-muted"
+                  className="bg-muted text-foreground placeholder:text-foreground/70"
                   aria-describedby="search-help"
                 />
                 {searchTerm.length === 0 && (
                   <div
                     id="search-help"
-                    className="text-sm text-muted-foreground"
+                    className="text-sm text-foreground"
                     role="region"
                     aria-label="Search examples"
                   >
