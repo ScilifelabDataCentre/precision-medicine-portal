@@ -34,7 +34,8 @@ function ComplianceStatusList({
           <span aria-hidden="true">{option.selected ? "☒" : "☐"}</span>
           <span>
             {option.selected ? (
-              <strong aria-label={`Selected: ${option.label}`}>
+              <strong>
+                <span className="sr-only">Selected: </span>
                 {option.label}
               </strong>
             ) : (
@@ -281,8 +282,8 @@ export default function AccessibilityPage(): ReactElement {
 
         <Title level={2}>Statement information</Title>
         <ul className="list-none pl-0 space-y-1" role="list">
-          <li role="listitem">Statement created: 09/06/2026</li>
-          <li role="listitem">Last reviewed: 15/06/2026</li>
+          <li role="listitem">Statement created: 09-06-2026</li>
+          <li role="listitem">Last reviewed: 15-06-2026</li>
           <li role="listitem">
             Responsible organisation: SciLifeLab Data Centre
           </li>
