@@ -33,6 +33,7 @@ export const FilterSection = ({
           <div key={item} className="flex items-center space-x-3 mb-4">
             <Checkbox
               id={`filter-${item}`}
+              aria-label={item}
               checked={selectedItems.includes(item)}
               onCheckedChange={() => onFilterChange(item)}
             />
