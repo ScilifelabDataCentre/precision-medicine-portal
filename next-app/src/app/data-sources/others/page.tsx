@@ -423,7 +423,7 @@ export default function DataSourcesOthersPage(): ReactElement {
       "Cardiovascular Diseases",
       "Developmental Disorders",
       "Drug Development",
-      "General diseases",
+      "General",
       "Genetic Disorders",
       "Immunological Diseases",
       "Infectious Diseases",
