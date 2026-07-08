@@ -51,6 +51,10 @@ export default function Footer(): ReactElement {
   const linksCol4: { [id: string]: ILink } = {
     l10: { text: "Contact", link: "/contact" },
     l11: { text: "Privacy policy", link: "/privacy" },
+    l11b: {
+      text: "Accessibility statement",
+      link: "/accessibility",
+    },
     l12: {
       text: "Citation and license",
       link: "/citation-and-license",
