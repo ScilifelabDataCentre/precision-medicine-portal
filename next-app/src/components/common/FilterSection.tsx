@@ -32,12 +32,13 @@ export const FilterSection = ({
         {items.map((item) => (
           <div key={item} className="flex items-center space-x-3 mb-4">
             <Checkbox
-              id={`filter-${item}`}
+              id={`filter-${title}-${item}`}
+              aria-label={item}
               checked={selectedItems.includes(item)}
               onCheckedChange={() => onFilterChange(item)}
             />
             <label
-              htmlFor={`filter-${item}`}
+              htmlFor={`filter-${title}-${item}`}
               className="text-base leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
             >
               {item} ({getItemCount(item)})
