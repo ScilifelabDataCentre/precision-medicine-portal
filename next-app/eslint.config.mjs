@@ -1,13 +1,18 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const compat = new FlatCompat({ baseDirectory: __dirname });
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    ignores: [".next/**", "next-env.d.ts"],
+  },
+  ...nextVitals,
+  ...nextTypescript,
+  {
+    settings: {
+      react: {
+        version: "19.2.5",
+      },
+    },
     rules: {
       "prefer-spread": "off",
       "@next/next/no-img-element": "off",

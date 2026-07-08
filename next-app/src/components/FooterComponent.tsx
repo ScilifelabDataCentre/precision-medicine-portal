@@ -4,7 +4,6 @@ import type { ReactElement } from "react";
 import type { ILink } from "@/interfaces/types";
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useState, useEffect } from "react";
 
@@ -51,6 +50,10 @@ export default function Footer(): ReactElement {
   const linksCol4: { [id: string]: ILink } = {
     l10: { text: "Contact", link: "/contact" },
     l11: { text: "Privacy policy", link: "/privacy" },
+    l11b: {
+      text: "Accessibility statement",
+      link: "/accessibility",
+    },
     l12: {
       text: "Citation and license",
       link: "/citation-and-license",
@@ -177,7 +180,23 @@ export default function Footer(): ReactElement {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Linkedin size={24} aria-hidden="true" role="presentation" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  role="presentation"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
             </nav>
           </div>
