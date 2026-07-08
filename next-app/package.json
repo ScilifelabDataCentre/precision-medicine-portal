@@ -5,9 +5,9 @@
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build --webpack",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -29,7 +29,7 @@
     "js-cookie": "^3.0.5",
     "lucide-react": "^1.0.0",
     "nanoid": "^5.1.9",
-    "next": "^15.5.9",
+    "next": "^16.2.10",
     "pa11y-ci": "^4.1.1",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
