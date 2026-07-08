@@ -11,7 +11,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
       - name: Run docker/setup-qemu-action
         uses: docker/setup-qemu-action@v4
       - name: Run docker/setup-buildx-action
