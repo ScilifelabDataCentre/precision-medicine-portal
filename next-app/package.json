@@ -50,7 +50,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/react-google-recaptcha": "^2.1.9",
     "@types/validator": "^13.15.1",
-    "cypress": "^14.5.4",
+    "cypress": "^15.0.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^15.5.15",
     "postcss": "^8.5.10",
