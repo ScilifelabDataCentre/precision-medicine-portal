@@ -8,6 +8,11 @@ const eslintConfig = [
   ...nextVitals,
   ...nextTypescript,
   {
+    settings: {
+      react: {
+        version: "19.2.5",
+      },
+    },
     rules: {
       "prefer-spread": "off",
       "@next/next/no-img-element": "off",
