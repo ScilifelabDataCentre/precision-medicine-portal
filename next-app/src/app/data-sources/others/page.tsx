@@ -41,6 +41,9 @@ const SEARCH_CONFIG = {
   DEBOUNCE_DELAY: 300,
 } as const;
 
+const DATA_SOURCES_URI =
+  "https://raw.githubusercontent.com/ScilifelabDataCentre/data.scilifelab.se/develop/data/data_sources.json";
+
 // Swedish to English medical and scientific term translations
 const swedishToEnglishTerms: { [key: string]: string[] } = {
   // Medical conditions and diseases
@@ -436,9 +439,6 @@ export default function DataSourcesOthersPage(): ReactElement {
     ],
   };
 
-  const dataSourcesURI: string =
-    "https://raw.githubusercontent.com/ScilifelabDataCentre/data.scilifelab.se/develop/data/data_sources.json";
-
   // Memoized filter counts for performance
   const getCountForType = useCallback(
     (type: string, isDataType: boolean): number => {
@@ -450,29 +450,47 @@ export default function DataSourcesOthersPage(): ReactElement {
     [dataSourcesJSON],
   );
 
-  async function getData() {
-    try {
-      setIsLoading(true);
-      setError(null);
+  useEffect(() => {
+    let isActive = true;
 
-      const response = await axios.get(dataSourcesURI);
-      const tmpDataSourcesJSON = response.data
-        .filter((element: IDataSourcesDC) =>
-          element.ddls.includes("Precision Medicine and Diagnostics"),
-        )
-        .filter(
-          (element: IDataSourcesDC) => element.name !== "SCAPIS database",
-        ); // Exclude "SCAPIS"
-      setDataSourcesJSON(tmpDataSourcesJSON);
-    } catch (error) {
-      const errorMessage =
-        error instanceof Error ? error.message : "Failed to load data sources";
-      setError(errorMessage);
-      console.error("Error fetching data:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  }
+    axios
+      .get(DATA_SOURCES_URI)
+      .then((response) => {
+        if (!isActive) {
+          return;
+        }
+
+        const tmpDataSourcesJSON = response.data
+          .filter((element: IDataSourcesDC) =>
+            element.ddls.includes("Precision Medicine and Diagnostics"),
+          )
+          .filter(
+            (element: IDataSourcesDC) => element.name !== "SCAPIS database",
+          ); // Exclude "SCAPIS"
+        setDataSourcesJSON(tmpDataSourcesJSON);
+      })
+      .catch((error) => {
+        if (!isActive) {
+          return;
+        }
+
+        const errorMessage =
+          error instanceof Error
+            ? error.message
+            : "Failed to load data sources";
+        setError(errorMessage);
+        console.error("Error fetching data:", error);
+      })
+      .finally(() => {
+        if (isActive) {
+          setIsLoading(false);
+        }
+      });
+
+    return () => {
+      isActive = false;
+    };
+  }, []);
 
   // Filter management
   const updateFilter = useCallback(
@@ -537,10 +555,6 @@ export default function DataSourcesOthersPage(): ReactElement {
       .filter((result) => result.score >= SEARCH_CONFIG.SCORE_THRESHOLD)
       .sort((a, b) => b.score - a.score);
   }, [dataSourcesJSON, selectedFilters, searchTerms]);
-
-  useEffect(() => {
-    getData();
-  }, []);
 
   // Loading state
   if (isLoading) {
