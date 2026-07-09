@@ -608,7 +608,7 @@ export default function QualityRegistryPage() {
                     registryCategory: [],
                   })
                 }
-                className="text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                className="text-sm text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                 aria-label="Clear all filters"
               >
                 Clear all filters

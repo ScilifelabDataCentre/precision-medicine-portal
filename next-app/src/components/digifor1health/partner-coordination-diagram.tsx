@@ -132,7 +132,7 @@ export default function PartnerCoordinationDiagram() {
               variants={logoVariants}
               whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
               whileTap={shouldReduceMotion ? {} : { scale: 0.97 }}
-              className="flex items-center justify-center h-8 sm:h-10 md:h-10 min-w-0 rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-shadow"
+              className="flex items-center justify-center h-8 sm:h-10 md:h-10 min-w-0 rounded-md focus-visible:outline-hidden focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-shadow"
             >
               <Image
                 src={partner.logoSrc}

@@ -5,7 +5,7 @@ export default function Layout({
 }>) {
   return (
     <div
-      className="kiarva-page h-screen flex flex-col overflow-hidden w-screen relative -ml-[50vw] left-1/2"
+      className="kiarva-page h-screen flex flex-col overflow-hidden w-screen relative ml-[-50vw] left-1/2"
       role="application"
       aria-label="KIARVA application interface"
     >
@@ -16,7 +16,7 @@ export default function Layout({
         aria-label="KIARVA embedded application"
       >
         <section
-          className="outer w-[100%] h-[100%] overflow-hidden"
+          className="outer w-full h-full overflow-hidden"
           aria-label="KIARVA iframe container"
           role="region"
         >

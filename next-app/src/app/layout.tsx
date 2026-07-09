@@ -46,7 +46,7 @@ export default function RootLayout({
         <main
           id="main-content"
           role="main"
-          className="px-4 sm:px-6 lg:px-8 xl:px-12 2xl:max-w-screen-2xl 2xl:mx-auto"
+          className="px-4 sm:px-6 lg:px-8 xl:px-12 2xl:max-w-(--breakpoint-2xl) 2xl:mx-auto"
           aria-label="Main content"
         >
           {children}

@@ -108,7 +108,7 @@ export default function PrivacyPage(): ReactElement {
           controller SciLifeLab Data Centre at Uppsala University using{" "}
           <a
             href="mailto:datacentre@scilifelab.se"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Send email to SciLifeLab Data Centre for data requests"
           >
             datacentre@scilifelab.se
@@ -172,7 +172,7 @@ export default function PrivacyPage(): ReactElement {
           not hesitate to contact us at the{" "}
           <Link
             href="/contact"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Go to contact page"
           >
             Precision Medicine Portal
@@ -183,7 +183,7 @@ export default function PrivacyPage(): ReactElement {
           Our privacy policy was partially copied and adapted from the{" "}
           <a
             href="https://www.pathogens.se"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Pathogens Portal website (opens in new tab)"
@@ -193,7 +193,7 @@ export default function PrivacyPage(): ReactElement {
           . Please also refer to{" "}
           <a
             href="https://www.uu.se/en/about-uu/data-protection-policy"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Visit Uppsala University data protection policy (opens in new tab)"

@@ -321,7 +321,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                     diseaseArea: [],
                   })
                 }
-                className="text-sm text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                className="text-sm text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                 aria-label="Clear all filters"
               >
                 Clear all filters
@@ -375,14 +375,14 @@ export default function SwedishResearchCohortsPage(): ReactElement {
           >
             {filtered.map((item) => (
               <article key={item.title} role="listitem">
-                <Card className="bg-muted border border-neutral rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                <Card className="bg-muted border border-neutral rounded-lg shadow-xs hover:shadow-md transition-shadow">
                   <CardHeader className="bg-muted p-4">
                     <CardTitle className="text-lg font-medium text-primary hover:underline">
                       <a
                         href={sanitizeURL(item.link)}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                        className="focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                         aria-label={`Visit ${item.title} (opens in new tab)`}
                       >
                         {item.title}
@@ -399,7 +399,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                           href={sanitizeURL(item.SND)}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full text-black ${TAG_COLOURS.snd} hover:opacity-90 self-start transition-opacity duration-100 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2`}
+                          className={`inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full text-black ${TAG_COLOURS.snd} hover:opacity-90 self-start transition-opacity duration-100 focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2`}
                           aria-label={`View SND metadata for ${item.title} (opens in new tab)`}
                         >
                           SND Metadata
@@ -407,7 +407,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
                             height="20.092"
-                            className="flex-shrink-0"
+                            className="shrink-0"
                             aria-hidden="true"
                             role="presentation"
                           >
@@ -469,7 +469,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
             href="https://snd.se/en/catalogue/search"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Swedish National Data Service catalogue search (opens in new tab)"
           >
             Swedish National Data Service (SND) search

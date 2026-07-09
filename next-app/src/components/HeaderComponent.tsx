@@ -56,7 +56,7 @@ const ListItem = React.forwardRef<
         <a
           ref={ref}
           className={cn(
-            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-neutral hover:text-neutral-foreground focus:bg-secondary/20 focus:text-secondary-foreground",
+            "block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-hidden transition-colors hover:bg-neutral hover:text-neutral-foreground focus:bg-secondary/20 focus:text-secondary-foreground",
             className,
           )}
           role={role}
@@ -76,12 +76,12 @@ ListItem.displayName = "ListItem";
 export default function HeaderComponent() {
   return (
     <header
-      className="bg-gradient-to-b from-secondary to-primary"
+      className="bg-linear-to-b from-secondary to-primary"
       role="banner"
       aria-label="Site header"
     >
-      <div className="flex items-center justify-between gap-4 2xl:max-w-screen-2xl 2xl:mx-auto py-2 px-4 lg:px-6">
-        <Link href="/" className="flex-shrink-0" aria-label="Go to homepage">
+      <div className="flex items-center justify-between gap-4 2xl:max-w-(--breakpoint-2xl) 2xl:mx-auto py-2 px-4 lg:px-6">
+        <Link href="/" className="shrink-0" aria-label="Go to homepage">
           <Image
             width={600}
             height={59.5}
@@ -119,7 +119,7 @@ function DesktopNav() {
               <li className="row-span-3" role="none">
                 <NavigationMenuLink asChild>
                   <a
-                    className="flex h-full w-full select-none flex-col rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
+                    className="flex h-full w-full select-none flex-col rounded-md bg-linear-to-b from-muted/50 to-muted p-6 no-underline outline-hidden focus:shadow-md"
                     href="/data-sources"
                     role="menuitem"
                     aria-label="Access data - Navigate data for research"

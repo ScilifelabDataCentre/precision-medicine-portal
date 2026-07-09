@@ -47,13 +47,13 @@ This repository contains a modern web application built with the following archi
 #### Core Technologies
 
 - **Framework**: Next.js 15.3.2 (React-based full-stack framework)
-- **Language**: TypeScript 5.x (statically typed JavaScript)
-- **Runtime**: Node.js 18.x (Alpine Linux-based Docker image)
+- **Language**: TypeScript 6.x (statically typed JavaScript)
+- **Runtime**: Node.js 26.x (Alpine Linux-based Docker image)
 
 #### Frontend Architecture
 
-- **UI Library**: React 19.1.0 with React DOM
-- **Styling**: Tailwind CSS 3.4.1 with custom design system
+- **UI Library**: React 19 with React DOM
+- **Styling**: Tailwind CSS 4 with custom design system
 - **Component Library**: Radix UI primitives for accessible components
 - **Icons**: Lucide React for modern iconography
 - **State Management**: React hooks and context (no external state management library)

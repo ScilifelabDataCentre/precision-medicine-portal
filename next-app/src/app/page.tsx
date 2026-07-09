@@ -33,7 +33,7 @@ export default function HomePage(): ReactElement {
 
             <Card className="h-full relative">
               <CardContent className="p-0">
-                <div className="relative h-[32rem]">
+                <div className="relative h-128">
                   <Image
                     src={dataSourcesImg}
                     alt="Data Sources - Access to quality registries, research cohorts and biobank studies, and other data sources for precision medicine research"
@@ -42,7 +42,7 @@ export default function HomePage(): ReactElement {
                     sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover opacity-65 transition-opacity duration-300 group-hover:opacity-80"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent">
+                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent">
                     <div className="absolute inset-x-0 bottom-0 p-6 h-full flex flex-col justify-end">
                       <CardTitle className="text-white mb-2 text-2xl group-hover:text-3xl transition-all duration-300">
                         Data sources
@@ -107,7 +107,7 @@ export default function HomePage(): ReactElement {
             >
               <Card className="h-full">
                 <CardContent className="p-0">
-                  <div className="relative h-[32rem]">
+                  <div className="relative h-128">
                     <Image
                       src={kiarvaImg}
                       alt="KIARVA - Karolinska Institutet Adaptive Immune Receptor Gene Variant Atlas"
@@ -116,7 +116,7 @@ export default function HomePage(): ReactElement {
                       sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-cover opacity-65 transition-opacity duration-300 group-hover:opacity-80"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent">
+                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent">
                       <div className="absolute inset-x-0 bottom-0 p-6 h-full flex flex-col justify-end">
                         <CardTitle className="text-white mb-2 text-2xl group-hover:text-3xl transition-all duration-300">
                           KIARVA
