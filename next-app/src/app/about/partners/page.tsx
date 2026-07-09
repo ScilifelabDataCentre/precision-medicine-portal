@@ -110,7 +110,7 @@ export default function AboutPartnersPage() {
                         href={partner.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                        className="text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                         aria-label={`Visit ${partner.name} website (opens in new tab)`}
                       >
                         {partner.name}
@@ -118,7 +118,7 @@ export default function AboutPartnersPage() {
                     </CardTitle>
                   </div>
 
-                  <div className="flex-shrink-0" aria-hidden="true">
+                  <div className="shrink-0" aria-hidden="true">
                     <Image
                       src={logos[partner.logoKey]}
                       alt=""

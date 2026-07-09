@@ -117,7 +117,7 @@ export default function Footer(): ReactElement {
 
           {/* Second column - Social */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">Social</h3>
+            <h3 className="text-sm font-semibold">Social</h3>
             <nav className="flex space-x-4" aria-label="Social media links">
               <a
                 href="https://x.com/scilifelab_dc"
@@ -203,7 +203,7 @@ export default function Footer(): ReactElement {
 
           {/* Third column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">Data sources</h3>
+            <h3 className="text-sm font-semibold">Data sources</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="Data sources navigation"
@@ -222,7 +222,7 @@ export default function Footer(): ReactElement {
 
           {/* Fourth column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">Initiatives</h3>
+            <h3 className="text-sm font-semibold">Initiatives</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="Initiatives navigation"
@@ -241,7 +241,7 @@ export default function Footer(): ReactElement {
 
           {/* Fifth column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">About us</h3>
+            <h3 className="text-sm font-semibold">About us</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="About us navigation"
@@ -260,7 +260,7 @@ export default function Footer(): ReactElement {
 
           {/* Sixth column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">More</h3>
+            <h3 className="text-sm font-semibold">More</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="Additional links navigation"

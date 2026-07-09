@@ -33,10 +33,10 @@ const ProfileComponent: React.FC<ProfileComponentProps> = ({
           />
         </div>
         <div className="text-left lg:w-2/3 pl-4">
-          <h2 className="text-2xl text-ellipsis lg:text-5xl lg:text-nowrap font-normal text-neutral-content">
+          <h2 className="text-2xl text-ellipsis lg:text-5xl lg:text-nowrap font-normal">
             {name}
           </h2>
-          <p className="text-lg lg:text-xl lg:text-nowrap italic pt-2 text-neutral-content">
+          <p className="text-lg lg:text-xl lg:text-nowrap italic pt-2">
             {title}
           </p>
         </div>

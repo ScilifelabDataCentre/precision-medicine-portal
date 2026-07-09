@@ -1,8 +1,100 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap')
+layer(base);
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Limit class detection to the app sources (parity with the v3 `content` globs). */
+@import 'tailwindcss' source('..');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+
+  --color-primary: #045c64;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #777373;
+  --color-secondary-foreground: #ffffff;
+
+  --color-accent: #a7c947;
+  --color-accent-foreground: #ffffff;
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+
+  --color-neutral: #e5e5e5;
+  --color-neutral-foreground: #000000;
+
+  --color-info: #491f53;
+  --color-info-foreground: #ffffff;
+
+  --color-success: #a7c947;
+  --color-success-foreground: #ffffff;
+
+  --color-warning: #ff9900;
+  --color-warning-foreground: #ffffff;
+
+  --color-error: #ff5724;
+  --color-error-foreground: #ffffff;
+
+  --color-base-100: #f8fafc;
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+
+  --font-sans: Lato, sans-serif;
+
+  --animate-accordion-down: accordion-down 0.2s ease-out;
+  --animate-accordion-up: accordion-up 0.2s ease-out;
+
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @layer base {
   :root {
@@ -36,10 +128,6 @@
 
     --radius: 0.5rem;
   }
-}
-
-body {
-  font-family: "Lato", sans-serif;
 }
 
 @layer base {

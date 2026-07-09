@@ -109,7 +109,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://digifor1health.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="DIGIfor1healthSE (opens in new tab)"
           >
             DIGIfor1healthSE
@@ -128,7 +128,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://genomicmedicine.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Genomic Medicine Sweden (opens in new tab)"
           >
             Genomic Medicine Sweden
@@ -138,7 +138,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://www.scilifelab.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="SciLifeLab (opens in new tab)"
           >
             SciLifeLab
@@ -148,7 +148,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://gdi.onemilliongenomes.eu/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Genomic Data Infrastructure (opens in new tab)"
           >
             Genomic Data Infrastructure
@@ -158,7 +158,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://cancerimage.eu/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="European Federation for Cancer Images (opens in new tab)"
           >
             European Federation for Cancer Images
@@ -168,7 +168,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://www.healthdatasweden.eu/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Health Data Sweden (opens in new tab)"
           >
             Health Data Sweden
@@ -178,7 +178,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://tefhealth.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Testing and Experimentation Facility for Health AI and Robotics (opens in new tab)"
           >
             Testing and Experimentation Facility for Health AI and Robotics
@@ -188,7 +188,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://digital-strategy.ec.europa.eu/en/news/genome-europe-project-launched-first-step-towards-european-reference-genome"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Genome of Europe (opens in new tab)"
           >
             Genome of Europe
@@ -227,7 +227,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://digifor1health.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="DIGIfor1healthSE (opens in new tab)"
           >
             DIGIfor1healthSE
@@ -240,7 +240,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://www.scilifelab.se/news/on-the-path-to-the-european-health-data-space-ehds/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Nationwide event on EHDS (opens in new tab)"
           >
             event
@@ -250,7 +250,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://doi.org/10.17044/scilifelab.28882028"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="DIGIfor1healthSE report (opens in new tab)"
           >
             report
@@ -260,7 +260,7 @@ export default function Digifor1healthPage(): ReactElement {
             href="https://digifor1health.se/outputs/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline underline-offset-2 decoration-primary/40 hover:decoration-primary focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="DIGIfor1healthSE outputs (opens in new tab)"
           >
             DIGIfor1healthSE

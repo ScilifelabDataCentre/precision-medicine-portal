@@ -114,7 +114,7 @@ export default function AboutDSNPMDProjectsPage() {
                         href={project.url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-primary hover:underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                        className="text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                         aria-label={`Visit ${project.name} website (opens in new tab)`}
                       >
                         {project.name}
@@ -123,7 +123,7 @@ export default function AboutDSNPMDProjectsPage() {
                   </div>
 
                   {project.logoKey && logos[project.logoKey] && (
-                    <div className="flex-shrink-0" aria-hidden="true">
+                    <div className="shrink-0" aria-hidden="true">
                       <Image
                         src={logos[project.logoKey]}
                         alt=""

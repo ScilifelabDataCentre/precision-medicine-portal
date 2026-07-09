@@ -43,7 +43,7 @@ export default function ContactPage(): ReactElement {
           Moreover, if you have inquiries about data management or data sharing,{" "}
           <Link
             href="/about/team"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Learn more about our team"
           >
             our team
@@ -60,7 +60,7 @@ export default function ContactPage(): ReactElement {
             For all inquiries, please email us at{" "}
             <a
               href="mailto:precisionmedicine@scilifelab.se"
-              className="text-primary font-semibold underline hover:text-black focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary font-semibold underline hover:text-black focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Send email to precisionmedicine@scilifelab.se"
             >
               precisionmedicine@scilifelab.se
@@ -73,7 +73,7 @@ export default function ContactPage(): ReactElement {
           refer to our{" "}
           <Link
             href="/privacy"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Read our privacy policy"
           >
             privacy policy

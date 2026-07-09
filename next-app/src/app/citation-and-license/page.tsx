@@ -68,7 +68,7 @@ export default function CitationAndLicensePage(): ReactElement {
               href="https://rrid.site/data/record/nlx_144509-1/SCR_026653/resolver"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="RRID SCR_026653 (opens in new tab)"
             >
               SCR_026653
@@ -99,7 +99,7 @@ export default function CitationAndLicensePage(): ReactElement {
               href="https://precision-medicine-portal.scilifelab.se"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Precision Medicine Portal website (opens in new tab)"
             >
               https://precision-medicine-portal.scilifelab.se
@@ -123,7 +123,7 @@ export default function CitationAndLicensePage(): ReactElement {
             href="https://precision-medicine-portal.scilifelab.se"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Precision Medicine Portal website (opens in new tab)"
           >
             https://precision-medicine-portal.scilifelab.se
@@ -143,7 +143,7 @@ export default function CitationAndLicensePage(): ReactElement {
             href="https://creativecommons.org/licenses/by/4.0"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Creative Commons Attribution 4.0 International License (opens in new tab)"
           >
             Creative Commons Attribution 4.0 International License (CC BY 4.0)
@@ -153,7 +153,7 @@ export default function CitationAndLicensePage(): ReactElement {
             href="https://creativecommons.org/licenses/by/4.0/legalcode"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Full CC BY 4.0 license text (opens in new tab)"
           >
             the license.
@@ -216,7 +216,7 @@ export default function CitationAndLicensePage(): ReactElement {
             href="https://opensource.org/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Open Source Initiative website (opens in new tab)"
           >
             OSI
@@ -226,7 +226,7 @@ export default function CitationAndLicensePage(): ReactElement {
             href="https://opensource.org/licenses/mit-license.html"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="MIT License (opens in new tab)"
           >
             MIT License

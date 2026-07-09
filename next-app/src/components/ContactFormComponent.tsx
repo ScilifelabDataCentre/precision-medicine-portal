@@ -76,7 +76,7 @@ export default function ContactFormComponent(): ReactElement {
   }
 
   return (
-    <div className="bg-white bg-opacity-95 rounded-[10px] shadow border-2 border-neutral">
+    <div className="bg-white/95 rounded-[10px] shadow-sm border-2 border-neutral">
       <form
         action="https://forms.dc.scilifelab.se/api/v1/form/VLtfHqlxZxY84EM7/incoming"
         method="POST"
@@ -155,7 +155,7 @@ export default function ContactFormComponent(): ReactElement {
               recaptchaPassed ? (
                 <Button
                   type="submit"
-                  className="w-full lg:w-auto lg:min-w-48 bg-fuchsia-950 hover:bg-fuchsia-800 focus:ring focus:ring-fuchsia-300"
+                  className="w-full lg:w-auto lg:min-w-48 bg-fuchsia-950 hover:bg-fuchsia-800 focus:ring-3 focus:ring-fuchsia-300"
                 >
                   Submit
                 </Button>

@@ -59,7 +59,7 @@ export default function KiarvaIFramePage(): ReactElement {
             //     className="w-[520px] h-[170px] overflow-auto"
             //   ></iframe>
             // </div>
-            <section className="outer w-[100%] h-[100%] overflow-hidden">
+            <section className="outer w-full h-full overflow-hidden">
               <iframe
                 src={kiarva_hostname}
                 className="w-screen h-screen overflow-auto"

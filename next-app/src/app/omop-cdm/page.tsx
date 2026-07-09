@@ -37,7 +37,7 @@ export default function OMOPCDMPage(): ReactElement {
           Introduction to OMOP-CDM
         </Title>
         <section aria-labelledby="omop-what" className="mb-6">
-          <div className="space-y-8 md:space-y-0 text-left md:space-x-16 md:justify-between md:flex md:items-center">
+          <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <div className="w-full md:w-2/3 space-y-4">
               <Title id="omop-what" level={2}>
                 What is the OMOP CDM?
@@ -73,7 +73,7 @@ export default function OMOPCDMPage(): ReactElement {
         </section>
 
         <section aria-labelledby="omop-why" className="mb-6">
-          <div className="space-y-8 md:space-y-0 text-left md:space-x-16 md:justify-between md:flex md:items-center">
+          <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <Image
               className="mx-auto w-full md:w-1/3"
               src="/img/omop/why_using_omop.png"
@@ -113,7 +113,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://www.pnas.org/doi/10.1073/pnas.1510502113"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="OHDSI treatment pathways study"
                     >
                       OHDSI Treatment Pathways
@@ -123,7 +123,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10746315/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="EHDEN network paper"
                     >
                       EHDEN Network
@@ -141,7 +141,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://www.thelancet.com/journals/lanrhe/article/PIIS2665-9913(20)30276-9/fulltext"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="COVID-19 HCQ safety study"
                     >
                       COVID-19 HCQ Safety
@@ -151,7 +151,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6924620/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="LEGEND hypertension study"
                     >
                       LEGEND Hypertension
@@ -169,7 +169,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://www.ohdsi.org/data-standardization/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="OHDSI global network"
                     >
                       OHDSI Global Network
@@ -179,7 +179,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://www.nature.com/articles/s41598-024-52723-y"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="Patient-level prediction study"
                     >
                       Patient-Level Prediction
@@ -197,7 +197,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://academic.oup.com/jamia/article/31/3/583/7510741"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="OHDSI standardized vocabularies paper"
                     >
                       Standardized Vocabularies
@@ -215,7 +215,7 @@ export default function OMOPCDMPage(): ReactElement {
                       href="https://www.ohdsi.org/software-tools/"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                      className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                       aria-label="OHDSI software tools"
                     >
                       OHDSI Software Tools
@@ -229,7 +229,7 @@ export default function OMOPCDMPage(): ReactElement {
         </section>
 
         <section aria-labelledby="omop-how" className="mb-6">
-          <div className="space-y-8 md:space-y-0 text-left md:space-x-16 md:justify-between md:flex md:items-center">
+          <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <div className="w-full md:w-2/3 space-y-4">
               <Title id="omop-how" level={2}>
                 How does the OMOP CDM work?
@@ -302,7 +302,7 @@ export default function OMOPCDMPage(): ReactElement {
         </section>
 
         <section aria-labelledby="omop-history" className="mb-6">
-          <div className="space-y-8 md:space-y-0 text-left md:space-x-16 md:justify-between md:flex md:items-center">
+          <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <div className="w-full md:w-1/2 flex flex-col gap-4">
               <Image
                 className="object-contain"
@@ -356,7 +356,7 @@ export default function OMOPCDMPage(): ReactElement {
                   href="https://www.ohdsi.org/wp-content/uploads/2024/10/OurJourney2024.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                  className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                   aria-label="2024 OHDSI annual report"
                 >
                   2024 OHDSI annual report
@@ -368,7 +368,7 @@ export default function OMOPCDMPage(): ReactElement {
         </section>
 
         <section aria-labelledby="omop-scilifelab" className="mb-6">
-          <div className="space-y-8 md:space-y-0 text-left md:space-x-16 md:justify-between md:flex md:items-center">
+          <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <div className="w-full md:w-2/3 space-y-4">
               <Title id="omop-scilifelab" level={2}>
                 How is OMOP being used in SciLifeLab and Sweden?
@@ -422,7 +422,7 @@ export default function OMOPCDMPage(): ReactElement {
             Sweden, please don’t hesitate to reach out to us at{" "}
             <a
               href="mailto:precisionmedicine@scilifelab.se"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Send email to precisionmedicine@scilifelab.se"
             >
               precisionmedicine@scilifelab.se
@@ -446,7 +446,7 @@ export default function OMOPCDMPage(): ReactElement {
                   href="https://www.vinnova.se/en/p/omop-4-sweden-preparation-project-/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                  className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                   aria-label="Visit OMOP 4 Sweden preparation project page (opens in new tab)"
                 >
                   OMOP 4 Sweden
@@ -458,7 +458,7 @@ export default function OMOPCDMPage(): ReactElement {
                   href="https://ohdsi.github.io/CommonDataModel/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                  className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                   aria-label="Visit OMOP common data model webpage (opens in new tab)"
                 >
                   OMOP common data model webpage
@@ -469,7 +469,7 @@ export default function OMOPCDMPage(): ReactElement {
                   href="https://www.ohdsi.org/data-standardization"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                  className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                   aria-label="Visit OHDSI webpage (opens in new tab)"
                 >
                   OHDSI webpage
@@ -480,7 +480,7 @@ export default function OMOPCDMPage(): ReactElement {
                   href="https://academy.ehden.eu/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+                  className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
                   aria-label="Visit EHDEN Academy webpage (opens in new tab)"
                 >
                   EHDEN Academy
