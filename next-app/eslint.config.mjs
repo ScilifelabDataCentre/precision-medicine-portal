@@ -10,7 +10,11 @@ const eslintConfig = [
   {
     settings: {
       react: {
-        version: "19.2.5",
+        // Hardcoded because eslint-plugin-react's automatic version
+        // detection crashes under ESLint 10 (its detect path still calls
+        // the removed context.getFilename API). Remove once the plugin
+        // bundled by eslint-config-next supports ESLint 10 detection.
+        version: "19",
       },
     },
     rules: {

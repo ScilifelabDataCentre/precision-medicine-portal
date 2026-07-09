@@ -153,6 +153,12 @@ Builds the app for production using Next.js optimization.\
 The build is minified and optimized for the best performance.\
 This also checks the linting.
 
+Note: production builds currently pass `--webpack` to opt out of Next 16's
+Turbopack default; this was kept during the Next 16 upgrade to minimize
+change (development mode already uses Turbopack). A Turbopack production
+build compiles cleanly, so the flag can likely be dropped after a verified
+visual comparison — tracked as a follow-up.
+
 ###### `npm start`
 
 Starts the production server after building the app.
