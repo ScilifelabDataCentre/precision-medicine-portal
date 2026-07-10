@@ -9,7 +9,6 @@
       push:
         branches:
           - main
-          - dev
     jobs:
       scan:
         permissions:

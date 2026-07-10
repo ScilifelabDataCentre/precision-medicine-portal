@@ -126,7 +126,7 @@ Please note that we require all commits to be verified, so you must sign your co
 Fetch changes at any time from this remote:
 
 ```bash
-git pull upstream dev
+git pull upstream main
 ```
 
 #### Step 2: Set up your development environment
@@ -192,7 +192,7 @@ git add my_changed_file
 
 You can then commit and push to your branch:
 
-(NOTE: DO NOT FORGET TO SIGN YOUR COMMITS, by policy only signed commits can be merged into the main branches.)
+(NOTE: DO NOT FORGET TO SIGN YOUR COMMITS, by policy only signed commits can be merged into the main branch.)
 
 ```bash
 git commit -S -m "My commit"
