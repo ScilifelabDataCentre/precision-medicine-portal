@@ -1,13 +1,22 @@
-import { FlatCompat } from "@eslint/eslintrc";
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const compat = new FlatCompat({ baseDirectory: __dirname });
+import nextVitals from "eslint-config-next/core-web-vitals";
+import nextTypescript from "eslint-config-next/typescript";
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    ignores: [".next/**", "next-env.d.ts"],
+  },
+  ...nextVitals,
+  ...nextTypescript,
+  {
+    settings: {
+      react: {
+        // Hardcoded because eslint-plugin-react's automatic version
+        // detection crashes under ESLint 10 (its detect path still calls
+        // the removed context.getFilename API). Remove once the plugin
+        // bundled by eslint-config-next supports ESLint 10 detection.
+        version: "19",
+      },
+    },
     rules: {
       "prefer-spread": "off",
       "@next/next/no-img-element": "off",

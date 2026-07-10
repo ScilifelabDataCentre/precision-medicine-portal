@@ -2,7 +2,9 @@
 # The config file and sitemap file used by this workflow
 # are in the ".github" directory of the repository
 #
-# This runs against a local instance of the app
+# This runs against a local production build of the app (a dev-mode
+# server compiles pages on demand, which made the data-heavy pages
+# exceed pa11y's 30s wait and fail the run)
 ---
 name: Pa11y Accessibility Check
 
@@ -16,25 +18,32 @@ jobs:
   pa11y:
     name: Pa11y Test
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Check out the repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
 
       - name: Set up Node.js 26
-        uses: actions/setup-node@v6
+        uses: actions/setup-node@48b55a011bda9f5d6aeb4c2d9c7362e8dae4041e # v6.4.0
         with:
           node-version: 26
+          cache: npm
+          cache-dependency-path: next-app/package-lock.json
 
       - name: Install dependencies
         working-directory: ./next-app
-        run: npm install
+        run: npm ci
+
+      - name: Build app
+        working-directory: ./next-app
+        run: npm run build
 
       - name: Start app and wait until ready
         working-directory: ./next-app
         run: |
-          npm run dev &
-          npx wait-on http://127.0.0.1:3000
+          npm run start &
+          npx wait-on -t 120000 http://127.0.0.1:3000
 
       - name: Run Pa11y CI
         working-directory: ./next-app
@@ -47,7 +56,7 @@ jobs:
 
       - name: Upload Pa11y results
         if: always()
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: pa11y-results
           path: .github/pa11y-results.txt

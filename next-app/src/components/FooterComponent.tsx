@@ -4,7 +4,6 @@ import type { ReactElement } from "react";
 import type { ILink } from "@/interfaces/types";
 import Link from "next/link";
 import Image from "next/image";
-import { Linkedin } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
 import { useState, useEffect } from "react";
 
@@ -118,7 +117,7 @@ export default function Footer(): ReactElement {
 
           {/* Second column - Social */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">Social</h3>
+            <h3 className="text-sm font-semibold">Social</h3>
             <nav className="flex space-x-4" aria-label="Social media links">
               <a
                 href="https://x.com/scilifelab_dc"
@@ -181,14 +180,30 @@ export default function Footer(): ReactElement {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Linkedin size={24} aria-hidden="true" role="presentation" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  aria-hidden="true"
+                  role="presentation"
+                >
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
             </nav>
           </div>
 
           {/* Third column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">Data sources</h3>
+            <h3 className="text-sm font-semibold">Data sources</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="Data sources navigation"
@@ -207,7 +222,7 @@ export default function Footer(): ReactElement {
 
           {/* Fourth column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">Initiatives</h3>
+            <h3 className="text-sm font-semibold">Initiatives</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="Initiatives navigation"
@@ -226,7 +241,7 @@ export default function Footer(): ReactElement {
 
           {/* Fifth column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">About us</h3>
+            <h3 className="text-sm font-semibold">About us</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="About us navigation"
@@ -245,7 +260,7 @@ export default function Footer(): ReactElement {
 
           {/* Sixth column - Links */}
           <div className="space-y-6">
-            <h3 className="text-sm font-semibold mb-4">More</h3>
+            <h3 className="text-sm font-semibold">More</h3>
             <nav
               className="flex flex-col space-y-4"
               aria-label="Additional links navigation"

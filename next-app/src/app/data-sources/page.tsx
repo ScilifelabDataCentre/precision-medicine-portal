@@ -51,7 +51,7 @@ export default function DataSourcesPage(): ReactElement {
           <Link
             href="/data-sources/swedish-research-cohorts"
             aria-label="Go to Swedish research cohorts and biobank studies page"
-            className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
           >
             <svg
               className="ml-2 fill-primary w-7 h-7"
@@ -83,7 +83,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://precision-medicine-portal.scilifelab.se/data-sources/swedish-research-projects"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Precision Medicine Portal Swedish research cohorts and biobank studies (opens in new tab)"
             >
               Precision Medicine Portal
@@ -98,7 +98,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://snd.se/en/catalogue/search"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Swedish National Data Service catalogue (opens in new tab)"
             >
               Swedish National Data Service (SND)
@@ -114,7 +114,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://dataguiden.se/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Dataguiden.se website (opens in new tab)"
             >
               Dataguiden.se
@@ -129,7 +129,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://rut.registerforskning.se/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Register Utiliser Tool (RUT) website (opens in new tab)"
             >
               Register Utiliser Tool (RUT)
@@ -153,7 +153,7 @@ export default function DataSourcesPage(): ReactElement {
           <Link
             href="/data-sources/quality-registries"
             aria-label="Go to quality registries page"
-            className="focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
           >
             <svg
               className="ml-2 fill-primary w-7 h-7"
@@ -177,7 +177,7 @@ export default function DataSourcesPage(): ReactElement {
             href="https://www.1177.se/sa-fungerar-varden/lagar-och-bestammelser/nationella-kvalitetsregister/#:~:text=I%20nationella%20kvalitetsregister%20samlas%20information,l%C3%A4mnas%20till%20ett%20nationellt%20kvalitetsregister"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Read more about Swedish quality registries (opens in new tab, in Swedish)"
           >
             (further information in Swedish)
@@ -199,7 +199,7 @@ export default function DataSourcesPage(): ReactElement {
             href="https://www.riksdagen.se/sv/dokument-och-lagar/dokument/svensk-forfattningssamling/patientdatalag-2008355_sfs-2008-355/#K7"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Read patient data law information (opens in new tab, in Swedish)"
           >
             (further information in Swedish)
@@ -220,7 +220,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://qrcstockholm.se/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Stockholm Quality Registry Centre website (opens in new tab)"
             >
               Stockholm (QRC STHLM)
@@ -231,7 +231,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://rcsyd.se/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Registercentrum Syd website (opens in new tab)"
             >
               Syd (RC SYD)
@@ -242,7 +242,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://rcnorr.se/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Registercentrum Norr website (opens in new tab)"
             >
               Norr (RCN)
@@ -253,7 +253,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://www.ucr.uu.se/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Uppsala Clinical Research Center website (opens in new tab)"
             >
               Uppsala Clinical Research Center (UCR)
@@ -264,7 +264,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://registercentrum.se/rc-vast/vastra-gotaland"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Västra Götaland registry centre website (opens in new tab)"
             >
               Västra Götaland
@@ -275,7 +275,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://registercentrum.se/rc-sydost/sydost"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit SydOst registry centre website (opens in new tab)"
             >
               SydOst (RCSO)
@@ -304,7 +304,7 @@ export default function DataSourcesPage(): ReactElement {
             href="https://kliniskastudier.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Visit Kliniska Studier Sverige website (opens in new tab)"
           >
             Kliniska Studier Sverige
@@ -322,7 +322,7 @@ export default function DataSourcesPage(): ReactElement {
             href="https://data-guidelines.scilifelab.se/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Visit SciLifeLab data guidelines (opens in new tab)"
           >
             available here
@@ -333,7 +333,7 @@ export default function DataSourcesPage(): ReactElement {
             href="https://data-guidelines.scilifelab.se/topics/research-involving-human-data/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Visit SciLifeLab guidelines for research involving human data (opens in new tab)"
           >
             available here
@@ -343,7 +343,7 @@ export default function DataSourcesPage(): ReactElement {
             href="https://data-guidelines.scilifelab.se/topics/sharing-human-data/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label="Visit SciLifeLab guidelines for sharing human data (opens in new tab)"
           >
             sharing sensitive human data
@@ -365,7 +365,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://www.oru.se/english/research/research-support/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Örebro University research support (opens in new tab)"
             >
               Örebro University
@@ -376,7 +376,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://www.karolinska.se/forskning-och-utbildning/forskning/stodenheter-for-klinisk-forskning/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Karolinska University Hospital clinical research support (opens in new tab)"
             >
               Karolinska University Hospital
@@ -387,7 +387,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://www.staff.lu.se/research-and-education/research-support"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Lund University research support (opens in new tab)"
             >
               Lund University
@@ -398,7 +398,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://www.umu.se/en/research-support-and-collaboration-office/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Umeå University research support (opens in new tab)"
             >
               Umeå University
@@ -409,7 +409,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://www.uu.se/en/staff/gateway/research/research-handbook/uppsala-universitys-research-support/the-medfarm-research-support"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Uppsala University research support (opens in new tab)"
             >
               Uppsala University
@@ -420,7 +420,7 @@ export default function DataSourcesPage(): ReactElement {
               href="https://staff.ki.se/research-support"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary hover:text-black underline focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+              className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
               aria-label="Visit Karolinska Institutet research support (opens in new tab)"
             >
               Karolinska Institutet

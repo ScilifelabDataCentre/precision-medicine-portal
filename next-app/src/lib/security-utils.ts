@@ -1,4 +1,4 @@
-import createDOMPurify from "isomorphic-dompurify";
+import DOMPurify from "isomorphic-dompurify";
 import validator from "validator";
 
 /**
@@ -20,10 +20,11 @@ export const DEFAULT_SECURITY_CONFIG: SecurityConfig = {
   allowedFilenameChars: /[^a-zA-Z0-9_-]/g,
 };
 
-// Initialize DOMPurify for both client and server environments
-const DOMPurify = createDOMPurify(
-  typeof window !== "undefined" ? window : undefined
-);
+// isomorphic-dompurify's default export is already initialized for the
+// current environment: bound to a jsdom window on the server and to the
+// real window in the browser. Calling it as a factory with `undefined`
+// (as this module previously did) yields an instance without a working
+// `sanitize` on the server.
 
 /**
  * Sanitizes URLs to prevent DOMXSS and protocol-based attacks

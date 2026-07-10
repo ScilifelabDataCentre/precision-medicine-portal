@@ -30,7 +30,7 @@ export const DataSourceCard = ({
             href={sanitizeURL(dataSource.url)}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xl text-primary hover:underline flex-grow focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+            className="text-xl text-primary hover:underline grow focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label={`Visit ${sanitizeText(
               dataSource.name
             )} website (opens in new tab)`}

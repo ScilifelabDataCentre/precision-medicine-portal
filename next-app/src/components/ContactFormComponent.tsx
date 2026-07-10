@@ -1,7 +1,6 @@
 "use client";
 
 import { ChangeEvent, ReactElement, useState } from "react";
-import React from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -14,14 +13,37 @@ export default function ContactFormComponent(): ReactElement {
     email: "",
     message: "",
   });
-  const [errors, setErrors] = useState({
+  const errors = {
     name: "",
     email: "",
     message: "",
-  });
+  };
   const [recaptchaPassed, setRecaptchaPassed] = useState(false);
 
   const messageCharLimit = 1000;
+
+  if (
+    !inputFields.name.match(/^[A-Za-zŽžÀ-ÿ\s\-]+$/) &&
+    inputFields.name.length > 0
+  ) {
+    errors.name = "Invalid character in name.";
+  }
+
+  if (
+    !inputFields.email.match(
+      /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+    ) &&
+    inputFields.email.length > 0
+  ) {
+    errors.email = "Invalid E-Mail adress.";
+  }
+
+  if (
+    inputFields.message.length > messageCharLimit &&
+    inputFields.message.length > 0
+  ) {
+    errors.message = "Message exceeds limit.";
+  }
 
   function checkFormFilled(): boolean {
     let key: keyof typeof inputFields;
@@ -53,44 +75,8 @@ export default function ContactFormComponent(): ReactElement {
     setRecaptchaPassed(true);
   }
 
-  React.useEffect(() => {
-    // form validation
-    const errors_tmp = {
-      name: "",
-      email: "",
-      message: "",
-    };
-    if (
-      !inputFields.name.match(/^[A-Za-zŽžÀ-ÿ\s\-]+$/) &&
-      inputFields.name.length > 0
-    ) {
-      errors_tmp.name = "Invalid character in name.";
-    }
-
-    if (
-      !inputFields.email.match(
-        /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-      ) &&
-      inputFields.email.length > 0
-    ) {
-      errors_tmp.email = "Invalid E-Mail adress.";
-    }
-
-    if (
-      inputFields.message.length > messageCharLimit &&
-      inputFields.message.length > 0
-    ) {
-      errors_tmp.message = "Message exceeds limit.";
-    }
-    setErrors({
-      name: errors_tmp.name,
-      email: errors_tmp.email,
-      message: errors_tmp.message,
-    });
-  }, [inputFields]);
-
   return (
-    <div className="bg-white bg-opacity-95 rounded-[10px] shadow border-2 border-neutral">
+    <div className="bg-white/95 rounded-[10px] shadow-sm border-2 border-neutral">
       <form
         action="https://forms.dc.scilifelab.se/api/v1/form/VLtfHqlxZxY84EM7/incoming"
         method="POST"
@@ -121,7 +107,9 @@ export default function ContactFormComponent(): ReactElement {
               onChange={handleChange}
               required
             />
-            {errors.email ? <p className="text-error">{errors.name}</p> : null}
+            {errors.email ? (
+              <p className="text-error">{errors.email}</p>
+            ) : null}
           </div>
           <input
             type="hidden"
@@ -167,7 +155,7 @@ export default function ContactFormComponent(): ReactElement {
               recaptchaPassed ? (
                 <Button
                   type="submit"
-                  className="w-full lg:w-auto lg:min-w-48 bg-fuchsia-950 hover:bg-fuchsia-800 focus:ring focus:ring-fuchsia-300"
+                  className="w-full lg:w-auto lg:min-w-48 bg-fuchsia-950 hover:bg-fuchsia-800 focus:ring-3 focus:ring-fuchsia-300"
                 >
                   Submit
                 </Button>
