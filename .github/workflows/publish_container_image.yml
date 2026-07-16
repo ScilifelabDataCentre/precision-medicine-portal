@@ -29,7 +29,7 @@ jobs:
         id: metadata_action_id
         uses: docker/metadata-action@dc802804100637a589fabce1cb79ff13a1411302 # v6
         with:
-          images: ghcr.io/ScilifelabDataCentre/precision-medicine-portal-frontend
+          images: ghcr.io/ScilifelabDataCentre/precision-medicine-portal
           flavor: |
             latest=auto
           tags: |
@@ -39,7 +39,7 @@ jobs:
             type=semver,pattern={{major}}.{{minor}}
             type=semver,pattern={{major}}
           labels: |
-            org.opencontainers.image.title=precision-medicine-portal-frontend
+            org.opencontainers.image.title=precision-medicine-portal
             org.opencontainers.image.description=precision medicine web portal frontend
             org.opencontainers.image.url=${{ github.event.repository.html_url }}
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
