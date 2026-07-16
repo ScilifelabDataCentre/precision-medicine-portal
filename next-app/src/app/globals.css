@@ -4,8 +4,6 @@ layer(base);
 /* Limit class detection to the app sources (parity with the v3 `content` globs). */
 @import 'tailwindcss' source('..');
 
-@custom-variant dark (&:is(.dark *));
-
 @theme {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
