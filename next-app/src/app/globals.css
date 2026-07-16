@@ -96,6 +96,20 @@ layer(base);
   }
 }
 
+/*
+  Tailwind CSS v4 changed the Preflight default for buttons from
+  `cursor: pointer` to `cursor: default`, so interactive elements
+  rendered as <button> (e.g. the header dropdown triggers) stopped
+  showing a pointer on hover. Restore the v3 behavior, as recommended
+  by the official upgrade guide.
+*/
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;
