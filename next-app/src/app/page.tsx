@@ -3,7 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import {
   Card,
   CardContent,
@@ -38,7 +37,6 @@ const dataSourceCards = [
 const portalCards = [
   {
     title: "OMOP CDM",
-    badge: null,
     description:
       "An open, community-driven standard to harmonize the structure and content of observational health data.",
     cta: "Introduction to OMOP-CDM",
@@ -46,7 +44,6 @@ const portalCards = [
   },
   {
     title: "DIGIfor1healthSE",
-    badge: "Coordinated by SciLifeLab",
     description:
       "A national collaboration supporting the implementation of the European Health Data Space (EHDS) in Sweden.",
     cta: "About the initiative",
@@ -54,7 +51,6 @@ const portalCards = [
   },
   {
     title: "Contact",
-    badge: null,
     description:
       "We welcome questions and suggestions — our team is happy to assist, or at least direct you to the right place.",
     cta: "Contact us",
@@ -65,9 +61,10 @@ const portalCards = [
 export default function HomePage(): ReactElement {
   return (
     <div className="w-full">
+      {/* Full-bleed: escape the root layout's padded, width-capped <main>. */}
       <section
         aria-label="Introduction"
-        className="relative overflow-hidden bg-primary"
+        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-primary"
       >
         {/* Placeholder hero image — replace with the final artwork. */}
         <Image
@@ -126,10 +123,6 @@ export default function HomePage(): ReactElement {
               className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
               <Card className="flex h-full flex-col gap-2.5 border-transparent bg-primary p-6 transition-all group-hover:bg-primary/90 group-hover:shadow-lg md:gap-3 md:p-8">
-                <span
-                  className="block h-[5px] w-10 rounded-sm bg-accent"
-                  aria-hidden="true"
-                />
                 <CardTitle className="text-xl font-bold text-white md:text-2xl">
                   {card.title}
                 </CardTitle>
@@ -158,31 +151,31 @@ export default function HomePage(): ReactElement {
         </h2>
         <div className="grid gap-3 md:grid-cols-3 md:gap-6">
           {portalCards.map((card) => (
-            <Card key={card.href} className="flex h-full flex-col">
-              <CardHeader className="pb-2">
-                <div className="flex flex-wrap items-center gap-2">
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+            >
+              <Card className="flex h-full flex-col transition-all group-hover:border-primary/50 group-hover:shadow-lg">
+                <CardHeader className="pb-2">
                   <CardTitle className="text-lg font-bold text-info">
                     {card.title}
                   </CardTitle>
-                  {card.badge && <Badge variant="accent">{card.badge}</Badge>}
-                </div>
-              </CardHeader>
-              <CardContent className="flex flex-1 flex-col gap-2">
-                <CardDescription className="flex-1 leading-relaxed">
-                  {card.description}
-                </CardDescription>
-                <Link
-                  href={card.href}
-                  className="font-bold text-[15px] text-primary underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground rounded-sm"
-                >
-                  {card.cta}{" "}
-                  <ArrowRight
-                    className="inline size-4 align-[-2px]"
-                    aria-hidden="true"
-                  />
-                </Link>
-              </CardContent>
-            </Card>
+                </CardHeader>
+                <CardContent className="flex flex-1 flex-col gap-2">
+                  <CardDescription className="flex-1 leading-relaxed">
+                    {card.description}
+                  </CardDescription>
+                  <span className="font-bold text-[15px] text-primary underline underline-offset-4 group-hover:text-foreground">
+                    {card.cta}{" "}
+                    <ArrowRight
+                      className="inline size-4 align-[-2px]"
+                      aria-hidden="true"
+                    />
+                  </span>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </section>

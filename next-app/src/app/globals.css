@@ -110,6 +110,21 @@ layer(base);
   }
 }
 
+/*
+  Full-bleed sections (e.g. the landing hero) escape the padded <main>
+  container with the w-screen + centering technique. `clip` on the root
+  prevents the ~scrollbar-width horizontal overflow that 100vw causes on
+  platforms with classic scrollbars (the spec maps root-level `clip` to
+  `hidden` on the viewport) without creating a new scroll container, so
+  position: sticky keeps working. It must live on html — on body it does
+  not govern the viewport's scrolling.
+*/
+@layer base {
+  html {
+    overflow-x: clip;
+  }
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;
