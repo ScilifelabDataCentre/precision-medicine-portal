@@ -9,20 +9,20 @@ const dataSourceCards = [
   {
     title: "Quality registries",
     description:
-      "Explore various Swedish registries offering individualised health data.",
+      "Explore various Swedish registries offering individualised health data",
     cta: "Browse registries",
     href: "/data-sources/quality-registries",
   },
   {
     title: "Swedish research cohorts",
     description:
-      "Discover Swedish research cohorts and biobank-based studies.",
+      "Discover Swedish research cohorts and biobank-based studies",
     cta: "Browse cohorts",
     href: "/data-sources/swedish-research-cohorts",
   },
   {
     title: "Other data sources",
-    description: "Access a comprehensive overview of data sources.",
+    description: "Access a comprehensive overview of data sources",
     cta: "Browse sources",
     href: "/data-sources/others",
   },
@@ -32,14 +32,14 @@ const portalCards = [
   {
     title: "OMOP CDM",
     description:
-      "An open, community-driven standard to harmonize the structure and content of observational health data.",
+      "An open, community-driven standard to harmonize the structure and content of observational health data",
     cta: "Introduction to OMOP-CDM",
     href: "/omop-cdm",
   },
   {
     title: "DIGIfor1healthSE",
     description:
-      "A national collaboration supporting the implementation of the European Health Data Space (EHDS) in Sweden.",
+      "A national collaboration supporting the implementation of the European Health Data Space (EHDS) in Sweden",
     cta: "About the initiative",
     href: "/digifor1health",
   },
@@ -68,22 +68,22 @@ export default function HomePage(): ReactElement {
         />
         <div className="relative mx-auto max-w-6xl px-5 py-10 text-white md:px-12 md:py-16">
           <Title level={1} className="max-w-4xl text-balance text-white">
-            Your guide to Swedish data for precision medicine.
+            The entry point to research data for precision medicine in Sweden
           </Title>
-          <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/90 md:mt-4 md:text-lg">
-            Information on available datasets — national quality registries,
-            research cohorts, and other structured data relevant to clinical
-            and translational research.
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/90 md:mt-4 md:text-lg">
+            The portal offers information on available datasets, guidance on
+            accessing research data, and an introduction to recommended
+            international standards such as the OMOP Common Data Model.
           </p>
         </div>
       </section>
 
       <section
-        aria-label="Find your data"
+        aria-label="Find data"
         className="mx-auto max-w-6xl px-5 pt-8 md:px-12 md:pt-14"
       >
         <Title level={2} className="mb-4 md:mb-5">
-          Find your data
+          Find data
         </Title>
         <div className="grid gap-3.5 md:grid-cols-3 md:gap-6">
           {dataSourceCards.map((card) => (
