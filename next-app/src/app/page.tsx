@@ -2,7 +2,6 @@ import { ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
 import Title from "@/components/common/title";
 import { Card, CardTitle } from "@/components/ui/card";
 
@@ -44,13 +43,6 @@ const portalCards = [
     cta: "About the initiative",
     href: "/digifor1health",
   },
-  {
-    title: "Contact",
-    description:
-      "We welcome questions and suggestions — our team is happy to assist, or at least direct you to the right place.",
-    cta: "Contact us",
-    href: "/contact",
-  },
 ];
 
 export default function HomePage(): ReactElement {
@@ -74,7 +66,7 @@ export default function HomePage(): ReactElement {
           className="absolute inset-0 bg-linear-to-t from-[#022c31]/95 to-primary/55"
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-6xl px-5 py-8 text-white md:px-12 md:py-14">
+        <div className="relative mx-auto max-w-6xl px-5 py-10 text-white md:px-12 md:py-16">
           <Title level={1} className="max-w-4xl text-balance text-white">
             Your guide to Swedish data for precision medicine.
           </Title>
@@ -83,23 +75,6 @@ export default function HomePage(): ReactElement {
             research cohorts, and other structured data relevant to clinical
             and translational research.
           </p>
-          <div className="mt-5 flex flex-col gap-3 sm:flex-row md:mt-7 md:gap-4">
-            <Button
-              asChild
-              size="lg"
-              className="bg-accent text-black hover:bg-accent/90"
-            >
-              <Link href="/data-sources">Explore data sources</Link>
-            </Button>
-            <Button
-              asChild
-              size="lg"
-              variant="outline"
-              className="border-white/70 bg-transparent text-white hover:bg-white/10 hover:text-white"
-            >
-              <Link href="/contact">Contact us</Link>
-            </Button>
-          </div>
         </div>
       </section>
 
