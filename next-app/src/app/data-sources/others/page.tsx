@@ -1,7 +1,6 @@
 "use client";
 
 import { ReactElement, useMemo, useCallback, useState, useEffect } from "react";
-import axios from "axios";
 
 import { LastUpdated } from "@/components/common/last-updated";
 import { LoadingState } from "@/components/common/LoadingState";
@@ -453,14 +452,19 @@ export default function DataSourcesOthersPage(): ReactElement {
   useEffect(() => {
     let isActive = true;
 
-    axios
-      .get(DATA_SOURCES_URI)
+    fetch(DATA_SOURCES_URI)
       .then((response) => {
+        if (!response.ok) {
+          throw new Error(`Request failed with status ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data: IDataSourcesDC[]) => {
         if (!isActive) {
           return;
         }
 
-        const tmpDataSourcesJSON = response.data
+        const tmpDataSourcesJSON = data
           .filter((element: IDataSourcesDC) =>
             element.ddls.includes("Precision Medicine and Diagnostics"),
           )
