@@ -53,14 +53,13 @@ export default function HomePage(): ReactElement {
         aria-label="Introduction"
         className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-primary"
       >
-        {/* Placeholder hero image — replace with the final artwork. */}
         <Image
-          src="/HomePageImages/hero-placeholder.png"
+          src="/HomePageImages/hero-dna.jpg"
           alt=""
           fill
           priority
           sizes="100vw"
-          className="object-cover opacity-35"
+          className="object-cover object-[70%_45%] opacity-50"
         />
         <div
           className="absolute inset-0 bg-linear-to-t from-[#022c31]/95 to-primary/55"
