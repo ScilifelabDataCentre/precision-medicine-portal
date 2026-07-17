@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Title from "@/components/common/title";
 import {
   Card,
   CardContent,
@@ -79,11 +80,11 @@ export default function HomePage(): ReactElement {
           className="absolute inset-0 bg-linear-to-t from-[#022c31]/95 to-primary/55"
           aria-hidden="true"
         />
-        <div className="relative mx-auto max-w-6xl px-5 py-12 text-white md:px-12 md:py-22">
-          <h1 className="max-w-3xl text-3xl font-black leading-[1.15] md:text-5xl md:leading-[1.1]">
+        <div className="relative mx-auto max-w-6xl px-5 py-8 text-white md:px-12 md:py-14">
+          <Title level={1} className="max-w-3xl text-white">
             Your guide to Swedish data for precision medicine.
-          </h1>
-          <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-white/90 md:mt-4 md:text-lg">
+          </Title>
+          <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/90 md:mt-4 md:text-lg">
             Information on available datasets — national quality registries,
             research cohorts, and other structured data relevant to clinical
             and translational research.
@@ -112,9 +113,9 @@ export default function HomePage(): ReactElement {
         aria-label="Find your data"
         className="mx-auto max-w-6xl px-5 pt-8 md:px-12 md:pt-14"
       >
-        <h2 className="mb-4 text-xl font-bold md:mb-5 md:text-[22px]">
+        <Title level={2} className="mb-4 md:mb-5">
           Find your data
-        </h2>
+        </Title>
         <div className="grid gap-3.5 md:grid-cols-3 md:gap-6">
           {dataSourceCards.map((card) => (
             <Link
@@ -123,13 +124,13 @@ export default function HomePage(): ReactElement {
               className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
               <Card className="flex h-full flex-col gap-2.5 border-transparent bg-primary p-6 transition-all group-hover:bg-primary/90 group-hover:shadow-lg md:gap-3 md:p-8">
-                <CardTitle className="text-xl font-bold text-white md:text-2xl">
+                <CardTitle className="text-xl text-white md:text-2xl">
                   {card.title}
                 </CardTitle>
-                <p className="flex-1 text-sm leading-relaxed text-white/90 md:text-[15px]">
+                <p className="flex-1 text-sm leading-relaxed text-white/90 md:text-base">
                   {card.description}
                 </p>
-                <span className="font-bold text-white underline underline-offset-4">
+                <span className="text-sm font-semibold text-white underline underline-offset-4 md:text-base">
                   {card.cta}{" "}
                   <ArrowRight
                     className="inline size-4 align-[-2px]"
@@ -146,9 +147,9 @@ export default function HomePage(): ReactElement {
         aria-label="Also on the portal"
         className="mx-auto max-w-6xl px-5 pb-12 pt-8 md:px-12 md:pb-18 md:pt-12"
       >
-        <h2 className="mb-4 text-xl font-bold md:mb-5 md:text-[22px]">
+        <Title level={2} className="mb-4 md:mb-5">
           Also on the portal
-        </h2>
+        </Title>
         <div className="grid gap-3 md:grid-cols-3 md:gap-6">
           {portalCards.map((card) => (
             <Link
@@ -158,7 +159,7 @@ export default function HomePage(): ReactElement {
             >
               <Card className="flex h-full flex-col transition-all group-hover:border-primary/50 group-hover:shadow-lg">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg font-bold text-info">
+                  <CardTitle className="text-lg text-info">
                     {card.title}
                   </CardTitle>
                 </CardHeader>
@@ -166,7 +167,7 @@ export default function HomePage(): ReactElement {
                   <CardDescription className="flex-1 leading-relaxed">
                     {card.description}
                   </CardDescription>
-                  <span className="font-bold text-[15px] text-primary underline underline-offset-4 group-hover:text-foreground">
+                  <span className="text-sm font-semibold text-primary underline underline-offset-4 group-hover:text-foreground md:text-base">
                     {card.cta}{" "}
                     <ArrowRight
                       className="inline size-4 align-[-2px]"

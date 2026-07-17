@@ -41,10 +41,17 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body>
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-background focus:px-4 focus:py-2 focus:font-semibold focus:text-foreground focus:outline-2 focus:outline-primary"
+        >
+          Skip to main content
+        </a>
         <MatomoInit></MatomoInit>
         <HeaderComponent />
         <main
           id="main-content"
+          tabIndex={-1}
           role="main"
           className="px-4 sm:px-6 lg:px-8 xl:px-12 2xl:max-w-(--breakpoint-2xl) 2xl:mx-auto"
           aria-label="Main content"
