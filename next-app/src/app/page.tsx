@@ -1,101 +1,191 @@
-"use client";
-
 import { ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
+import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Badge } from "@/components/ui/badge";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-// Image paths
-const dataSourcesImg = "/HomePageImages/dataSourcesIndexImage.png";
+const dataSourceCards = [
+  {
+    title: "Quality registries",
+    description:
+      "Explore various Swedish registries offering individualised health data.",
+    cta: "Browse registries",
+    href: "/data-sources/quality-registries",
+  },
+  {
+    title: "Swedish research cohorts",
+    description:
+      "Discover Swedish research cohorts and biobank-based studies.",
+    cta: "Browse cohorts",
+    href: "/data-sources/swedish-research-cohorts",
+  },
+  {
+    title: "Other data sources",
+    description: "Access a comprehensive overview of data sources.",
+    cta: "Browse sources",
+    href: "/data-sources/others",
+  },
+];
+
+const portalCards = [
+  {
+    title: "OMOP CDM",
+    badge: null,
+    description:
+      "An open, community-driven standard to harmonize the structure and content of observational health data.",
+    cta: "Introduction to OMOP-CDM",
+    href: "/omop-cdm",
+  },
+  {
+    title: "DIGIfor1healthSE",
+    badge: "Coordinated by SciLifeLab",
+    description:
+      "A national collaboration supporting the implementation of the European Health Data Space (EHDS) in Sweden.",
+    cta: "About the initiative",
+    href: "/digifor1health",
+  },
+  {
+    title: "Contact",
+    badge: null,
+    description:
+      "We welcome questions and suggestions — our team is happy to assist, or at least direct you to the right place.",
+    cta: "Contact us",
+    href: "/contact",
+  },
+];
 
 export default function HomePage(): ReactElement {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="w-full space-y-16 pb-12">
-        <section
-          className="grid grid-cols-1 gap-6 px-4 md:px-0 max-w-2xl mx-auto"
-          aria-label="Main portal services"
-          role="region"
-        >
-          <article
-            className="overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer relative"
-            role="listitem"
-          >
-            {/* Invisible clickable overlay for card navigation */}
-            <Link
-              href="/data-sources"
-              className="absolute inset-0 z-10"
-              aria-label="Navigate to Data Sources overview"
-            />
+    <div className="w-full">
+      <section
+        aria-label="Introduction"
+        className="relative overflow-hidden bg-primary"
+      >
+        {/* Placeholder hero image — replace with the final artwork. */}
+        <Image
+          src="/HomePageImages/hero-placeholder.png"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover opacity-35"
+        />
+        <div
+          className="absolute inset-0 bg-linear-to-t from-[#022c31]/95 to-primary/55"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-6xl px-5 py-12 text-white md:px-12 md:py-22">
+          <h1 className="max-w-3xl text-3xl font-black leading-[1.15] md:text-5xl md:leading-[1.1]">
+            Your guide to Swedish data for precision medicine.
+          </h1>
+          <p className="mt-3 max-w-2xl text-[15px] leading-relaxed text-white/90 md:mt-4 md:text-lg">
+            Information on available datasets — national quality registries,
+            research cohorts, and other structured data relevant to clinical
+            and translational research.
+          </p>
+          <div className="mt-5 flex flex-col gap-3 sm:flex-row md:mt-7 md:gap-4">
+            <Button
+              asChild
+              size="lg"
+              className="bg-accent text-black hover:bg-accent/90"
+            >
+              <Link href="/data-sources">Explore data sources</Link>
+            </Button>
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-white/70 bg-transparent text-white hover:bg-white/10 hover:text-white"
+            >
+              <Link href="/contact">Contact us</Link>
+            </Button>
+          </div>
+        </div>
+      </section>
 
-            <Card className="h-full relative">
-              <CardContent className="p-0">
-                <div className="relative h-128">
-                  <Image
-                    src={dataSourcesImg}
-                    alt="Data Sources - Access to quality registries, research cohorts and biobank studies, and other data sources for precision medicine research"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover opacity-65 transition-opacity duration-300 group-hover:opacity-80"
+      <section
+        aria-label="Find your data"
+        className="mx-auto max-w-6xl px-5 pt-8 md:px-12 md:pt-14"
+      >
+        <h2 className="mb-4 text-xl font-bold md:mb-5 md:text-[22px]">
+          Find your data
+        </h2>
+        <div className="grid gap-3.5 md:grid-cols-3 md:gap-6">
+          {dataSourceCards.map((card) => (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+            >
+              <Card className="flex h-full flex-col gap-2.5 border-transparent bg-primary p-6 transition-all group-hover:bg-primary/90 group-hover:shadow-lg md:gap-3 md:p-8">
+                <span
+                  className="block h-[5px] w-10 rounded-sm bg-accent"
+                  aria-hidden="true"
+                />
+                <CardTitle className="text-xl font-bold text-white md:text-2xl">
+                  {card.title}
+                </CardTitle>
+                <p className="flex-1 text-sm leading-relaxed text-white/90 md:text-[15px]">
+                  {card.description}
+                </p>
+                <span className="font-bold text-white underline underline-offset-4">
+                  {card.cta}{" "}
+                  <ArrowRight
+                    className="inline size-4 align-[-2px]"
+                    aria-hidden="true"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent">
-                    <div className="absolute inset-x-0 bottom-0 p-6 h-full flex flex-col justify-end">
-                      <CardTitle className="text-white mb-2 text-2xl group-hover:text-3xl transition-all duration-300">
-                        Data sources
-                      </CardTitle>
-                      <nav
-                        className="flex flex-col space-y-3 h-36 relative z-20"
-                        aria-label="Data sources navigation"
-                        role="navigation"
-                      >
-                        <Button
-                          asChild
-                          variant="secondary"
-                          className="relative z-20"
-                        >
-                          <Link
-                            href="/data-sources/quality-registries"
-                            aria-label="Access Swedish quality registries for healthcare data"
-                          >
-                            Quality registries
-                          </Link>
-                        </Button>
-                        <Button
-                          asChild
-                          variant="secondary"
-                          className="relative z-20"
-                        >
-                          <Link
-                            href="/data-sources/swedish-research-cohorts"
-                            aria-label="Browse Swedish research cohorts and biobank studies"
-                          >
-                            Swedish research cohorts
-                          </Link>
-                        </Button>
-                        <Button
-                          asChild
-                          variant="secondary"
-                          className="relative z-20"
-                        >
-                          <Link
-                            href="/data-sources/others"
-                            aria-label="Explore other data sources and research databases"
-                          >
-                            Other data sources
-                          </Link>
-                        </Button>
-                      </nav>
-                    </div>
-                  </div>
+                </span>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section
+        aria-label="Also on the portal"
+        className="mx-auto max-w-6xl px-5 pb-12 pt-8 md:px-12 md:pb-18 md:pt-12"
+      >
+        <h2 className="mb-4 text-xl font-bold md:mb-5 md:text-[22px]">
+          Also on the portal
+        </h2>
+        <div className="grid gap-3 md:grid-cols-3 md:gap-6">
+          {portalCards.map((card) => (
+            <Card key={card.href} className="flex h-full flex-col">
+              <CardHeader className="pb-2">
+                <div className="flex flex-wrap items-center gap-2">
+                  <CardTitle className="text-lg font-bold text-info">
+                    {card.title}
+                  </CardTitle>
+                  {card.badge && <Badge variant="accent">{card.badge}</Badge>}
                 </div>
+              </CardHeader>
+              <CardContent className="flex flex-1 flex-col gap-2">
+                <CardDescription className="flex-1 leading-relaxed">
+                  {card.description}
+                </CardDescription>
+                <Link
+                  href={card.href}
+                  className="font-bold text-[15px] text-primary underline underline-offset-4 hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground rounded-sm"
+                >
+                  {card.cta}{" "}
+                  <ArrowRight
+                    className="inline size-4 align-[-2px]"
+                    aria-hidden="true"
+                  />
+                </Link>
               </CardContent>
             </Card>
-          </article>
-
-        </section>
-      </div>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
