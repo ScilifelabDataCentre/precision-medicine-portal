@@ -4,13 +4,7 @@ import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Title from "@/components/common/title";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardTitle } from "@/components/ui/card";
 
 const dataSourceCards = [
   {
@@ -157,24 +151,20 @@ export default function HomePage(): ReactElement {
               href={card.href}
               className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
-              <Card className="flex h-full flex-col transition-all group-hover:border-primary/50 group-hover:shadow-lg">
-                <CardHeader className="pb-2">
-                  <CardTitle className="text-lg text-primary">
-                    {card.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-1 flex-col gap-2">
-                  <CardDescription className="flex-1 leading-relaxed">
-                    {card.description}
-                  </CardDescription>
-                  <span className="text-sm font-semibold text-primary underline underline-offset-4 group-hover:text-foreground md:text-base">
-                    {card.cta}{" "}
-                    <ArrowRight
-                      className="inline size-4 align-[-2px]"
-                      aria-hidden="true"
-                    />
-                  </span>
-                </CardContent>
+              <Card className="flex h-full flex-col gap-2.5 p-6 transition-all group-hover:border-primary/50 group-hover:shadow-lg md:gap-3 md:p-8">
+                <CardTitle className="text-xl text-primary md:text-2xl">
+                  {card.title}
+                </CardTitle>
+                <p className="flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {card.description}
+                </p>
+                <span className="text-sm font-semibold text-primary underline underline-offset-4 group-hover:text-foreground md:text-base">
+                  {card.cta}{" "}
+                  <ArrowRight
+                    className="inline size-4 align-[-2px]"
+                    aria-hidden="true"
+                  />
+                </span>
               </Card>
             </Link>
           ))}
