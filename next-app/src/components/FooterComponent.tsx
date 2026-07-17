@@ -30,6 +30,7 @@ export default function Footer(): ReactElement {
   };
 
   const linksCol2: { [id: string]: ILink } = {
+    l5a: { text: "OMOP CDM", link: "/omop-cdm" },
     l5b: { text: "DIGIfor1healthSE", link: "/digifor1health" },
   };
 

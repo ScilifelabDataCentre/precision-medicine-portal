@@ -81,7 +81,7 @@ export default function HomePage(): ReactElement {
           aria-hidden="true"
         />
         <div className="relative mx-auto max-w-6xl px-5 py-8 text-white md:px-12 md:py-14">
-          <Title level={1} className="max-w-3xl text-white">
+          <Title level={1} className="max-w-4xl text-balance text-white">
             Your guide to Swedish data for precision medicine.
           </Title>
           <p className="mt-3 max-w-2xl text-base leading-relaxed text-white/90 md:mt-4 md:text-lg">
@@ -159,7 +159,7 @@ export default function HomePage(): ReactElement {
             >
               <Card className="flex h-full flex-col transition-all group-hover:border-primary/50 group-hover:shadow-lg">
                 <CardHeader className="pb-2">
-                  <CardTitle className="text-lg text-info">
+                  <CardTitle className="text-lg text-primary">
                     {card.title}
                   </CardTitle>
                 </CardHeader>
