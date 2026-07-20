@@ -94,6 +94,35 @@ layer(base);
   }
 }
 
+/*
+  Tailwind CSS v4 changed the Preflight default for buttons from
+  `cursor: pointer` to `cursor: default`, so interactive elements
+  rendered as <button> (e.g. the header dropdown triggers) stopped
+  showing a pointer on hover. Restore the v3 behavior, as recommended
+  by the official upgrade guide.
+*/
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+/*
+  Full-bleed sections (e.g. the landing hero) escape the padded <main>
+  container with the w-screen + centering technique. `clip` on the root
+  prevents the ~scrollbar-width horizontal overflow that 100vw causes on
+  platforms with classic scrollbars (the spec maps root-level `clip` to
+  `hidden` on the viewport) without creating a new scroll container, so
+  position: sticky keeps working. It must live on html — on body it does
+  not govern the viewport's scrolling.
+*/
+@layer base {
+  html {
+    overflow-x: clip;
+  }
+}
+
 @layer base {
   :root {
     --background: 210 40% 98%;

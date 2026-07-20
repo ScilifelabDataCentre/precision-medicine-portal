@@ -1,142 +1,149 @@
-"use client";
-
 import { ReactElement } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Card, CardContent, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { ArrowRight } from "lucide-react";
+import Title from "@/components/common/title";
+import { Card, CardTitle } from "@/components/ui/card";
 
-// Image paths
-const dataSourcesImg = "/HomePageImages/dataSourcesIndexImage.png";
-const kiarvaImg = "/HomePageImages/kiarvaIndexImage.png";
+const dataSourceCards = [
+  {
+    title: "Quality registries",
+    description:
+      "Explore various Swedish registries offering individualised health data",
+    cta: "Browse registries",
+    href: "/data-sources/quality-registries",
+  },
+  {
+    title: "Swedish research cohorts",
+    description:
+      "Discover Swedish research cohorts and biobank-based studies",
+    cta: "Browse cohorts",
+    href: "/data-sources/swedish-research-cohorts",
+  },
+  {
+    title: "Other data sources",
+    description: "Access a comprehensive overview of data sources",
+    cta: "Browse sources",
+    href: "/data-sources/others",
+  },
+];
+
+const portalCards = [
+  {
+    title: "OMOP CDM",
+    description:
+      "An open, community-driven standard to harmonize the structure and content of observational health data",
+    cta: "Introduction to OMOP-CDM",
+    href: "/omop-cdm",
+  },
+  {
+    title: "DIGIfor1healthSE",
+    description:
+      "A national collaboration supporting the implementation of the European Health Data Space (EHDS) in Sweden",
+    cta: "About the initiative",
+    href: "/digifor1health",
+  },
+];
 
 export default function HomePage(): ReactElement {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <div className="w-full space-y-16 pb-12">
-        <section
-          className="grid grid-cols-1 md:grid-cols-2 gap-6 px-4 md:px-0"
-          aria-label="Main portal services"
-          role="region"
-        >
-          <article
-            className="overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl cursor-pointer relative"
-            role="listitem"
-          >
-            {/* Invisible clickable overlay for card navigation */}
-            <Link
-              href="/data-sources"
-              className="absolute inset-0 z-10"
-              aria-label="Navigate to Data Sources overview"
-            />
+    <div className="w-full">
+      {/* Full-bleed: escape the root layout's padded, width-capped <main>. */}
+      <section
+        aria-label="Introduction"
+        className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-primary"
+      >
+        <Image
+          src="/HomePageImages/hero-dna.jpg"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-[70%_45%] opacity-50"
+        />
+        <div
+          className="absolute inset-0 bg-linear-to-t from-[#022c31]/95 to-primary/55"
+          aria-hidden="true"
+        />
+        <div className="relative mx-auto max-w-6xl px-5 py-10 text-white md:px-12 md:py-16">
+          <Title level={1} className="max-w-4xl text-balance text-white">
+            The entry point to research data for precision medicine in Sweden
+          </Title>
+          <p className="mt-3 max-w-3xl text-base leading-relaxed text-white/90 md:mt-4 md:text-lg">
+            The portal offers information on available datasets, guidance on
+            accessing research data, and an introduction to recommended
+            international standards such as the OMOP Common Data Model.
+          </p>
+        </div>
+      </section>
 
-            <Card className="h-full relative">
-              <CardContent className="p-0">
-                <div className="relative h-128">
-                  <Image
-                    src={dataSourcesImg}
-                    alt="Data Sources - Access to quality registries, research cohorts and biobank studies, and other data sources for precision medicine research"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover opacity-65 transition-opacity duration-300 group-hover:opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent">
-                    <div className="absolute inset-x-0 bottom-0 p-6 h-full flex flex-col justify-end">
-                      <CardTitle className="text-white mb-2 text-2xl group-hover:text-3xl transition-all duration-300">
-                        Data sources
-                      </CardTitle>
-                      <nav
-                        className="flex flex-col space-y-3 h-36 relative z-20"
-                        aria-label="Data sources navigation"
-                        role="navigation"
-                      >
-                        <Button
-                          asChild
-                          variant="secondary"
-                          className="relative z-20"
-                        >
-                          <Link
-                            href="/data-sources/quality-registries"
-                            aria-label="Access Swedish quality registries for healthcare data"
-                          >
-                            Quality registries
-                          </Link>
-                        </Button>
-                        <Button
-                          asChild
-                          variant="secondary"
-                          className="relative z-20"
-                        >
-                          <Link
-                            href="/data-sources/swedish-research-cohorts"
-                            aria-label="Browse Swedish research cohorts and biobank studies"
-                          >
-                            Swedish research cohorts
-                          </Link>
-                        </Button>
-                        <Button
-                          asChild
-                          variant="secondary"
-                          className="relative z-20"
-                        >
-                          <Link
-                            href="/data-sources/others"
-                            aria-label="Explore other data sources and research databases"
-                          >
-                            Other data sources
-                          </Link>
-                        </Button>
-                      </nav>
-                    </div>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-          </article>
-
-          <article
-            className="overflow-hidden transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-xl"
-            role="listitem"
-          >
+      <section
+        aria-label="Find data"
+        className="mx-auto max-w-6xl px-5 pt-8 md:px-12 md:pt-14"
+      >
+        <Title level={2} className="mb-4 md:mb-5">
+          Find data
+        </Title>
+        <div className="grid gap-3.5 md:grid-cols-3 md:gap-6">
+          {dataSourceCards.map((card) => (
             <Link
-              href="kiarva"
-              className="block group"
-              aria-label="Access KIARVA - Karolinska Institutet Adaptive Immune Receptor Gene Variant Atlas"
+              key={card.href}
+              href={card.href}
+              className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
-              <Card className="h-full">
-                <CardContent className="p-0">
-                  <div className="relative h-128">
-                    <Image
-                      src={kiarvaImg}
-                      alt="KIARVA - Karolinska Institutet Adaptive Immune Receptor Gene Variant Atlas"
-                      fill
-                      priority
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-cover opacity-65 transition-opacity duration-300 group-hover:opacity-80"
-                    />
-                    <div className="absolute inset-0 bg-linear-to-t from-black via-black/80 to-transparent">
-                      <div className="absolute inset-x-0 bottom-0 p-6 h-full flex flex-col justify-end">
-                        <CardTitle className="text-white mb-2 text-2xl group-hover:text-3xl transition-all duration-300">
-                          KIARVA
-                        </CardTitle>
-                        <p className="text-white h-36">
-                          The Karolinska Institutet Adaptive Immune Receptor
-                          Gene Variant Atlas (KIARVA) hosts germline-encoded IG
-                          heavy chain (IGH) alleles identified in 2485
-                          individuals, in total 479 IGHV, 10 IGHJ and 40 IGHD
-                          alleles.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </CardContent>
+              <Card className="flex h-full flex-col gap-2.5 border-transparent bg-primary p-6 transition-all group-hover:bg-primary/90 group-hover:shadow-lg md:gap-3 md:p-8">
+                <CardTitle className="text-xl text-white md:text-2xl">
+                  {card.title}
+                </CardTitle>
+                <p className="flex-1 text-sm leading-relaxed text-white/90 md:text-base">
+                  {card.description}
+                </p>
+                <span className="text-sm font-semibold text-white underline underline-offset-4 md:text-base">
+                  {card.cta}{" "}
+                  <ArrowRight
+                    className="inline size-4 align-[-2px]"
+                    aria-hidden="true"
+                  />
+                </span>
               </Card>
             </Link>
-          </article>
-        </section>
-      </div>
+          ))}
+        </div>
+      </section>
+
+      <section
+        aria-label="Also on the portal"
+        className="mx-auto max-w-6xl px-5 pb-12 pt-8 md:px-12 md:pb-18 md:pt-12"
+      >
+        <Title level={2} className="mb-4 md:mb-5">
+          Also on the portal
+        </Title>
+        <div className="grid gap-3 md:grid-cols-3 md:gap-6">
+          {portalCards.map((card) => (
+            <Link
+              key={card.href}
+              href={card.href}
+              className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
+            >
+              <Card className="flex h-full flex-col gap-2.5 p-6 transition-all group-hover:border-primary/50 group-hover:shadow-lg md:gap-3 md:p-8">
+                <CardTitle className="text-xl text-primary md:text-2xl">
+                  {card.title}
+                </CardTitle>
+                <p className="flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
+                  {card.description}
+                </p>
+                <span className="text-sm font-semibold text-primary underline underline-offset-4 group-hover:text-foreground md:text-base">
+                  {card.cta}{" "}
+                  <ArrowRight
+                    className="inline size-4 align-[-2px]"
+                    aria-hidden="true"
+                  />
+                </span>
+              </Card>
+            </Link>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

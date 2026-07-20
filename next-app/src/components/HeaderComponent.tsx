@@ -21,7 +21,6 @@ import {
 } from "@/components/ui/sheet";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -162,17 +161,6 @@ function DesktopNav() {
         <NavigationMenuItem role="none">
           <NavigationMenuLink asChild>
             <Link
-              href="/kiarva"
-              className={navigationMenuTriggerStyle()}
-              aria-label="KIARVA dashboard"
-            >
-              KIARVA dashboard
-            </Link>
-          </NavigationMenuLink>
-        </NavigationMenuItem>
-        <NavigationMenuItem role="none">
-          <NavigationMenuLink asChild>
-            <Link
               href="/omop-cdm"
               className={navigationMenuTriggerStyle()}
               aria-label="OMOP common data model"
@@ -275,16 +263,6 @@ function MobileNav() {
             aria-label="Other data sources"
           >
             Other data sources
-          </Link>
-          <Link
-            href="/kiarva"
-            className="flex items-center"
-            aria-label="KIARVA dashboard - Demo"
-          >
-            KIARVA dashboard
-            <Badge variant="accent" className="ml-1" aria-label="Demo version">
-              Demo
-            </Badge>
           </Link>
           <Link
             href="/omop-cdm"
