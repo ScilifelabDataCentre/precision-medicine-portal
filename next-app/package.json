@@ -11,6 +11,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
     "format": "prettier --write .",
     "format:check": "prettier --check ."
   },
@@ -49,6 +52,7 @@
     "prettier": "^3.9.6",
     "tailwindcss": "^4.3.2",
     "typescript": "^6.0.0",
+    "vitest": "^4.1.10",
     "wait-on": "^9.0.10"
   },
   "overrides": {

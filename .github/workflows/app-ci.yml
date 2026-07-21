@@ -1,7 +1,7 @@
-# App CI: install, lint and production-build the Next.js app, then boot
-# the standalone server output (what the Docker image ships) and smoke
-# test key routes. Nothing else in CI compiles the app, so this is the
-# gate that catches unbuildable dependency updates.
+# App CI: install, lint, typecheck and unit-test, then production-build the
+# Next.js app, boot the standalone server output (what the Docker image ships)
+# and smoke test key routes. Nothing else in CI compiles the app, so this is
+# the gate that catches unbuildable dependency updates.
 ---
 name: App CI
 
@@ -13,7 +13,7 @@ on:
 
 jobs:
   build:
-    name: Lint, build and smoke test
+    name: Lint, typecheck, test, build and smoke test
     runs-on: ubuntu-latest
     timeout-minutes: 20
 
@@ -35,6 +35,14 @@ jobs:
       - name: Lint
         working-directory: ./next-app
         run: npm run lint
+
+      - name: Typecheck
+        working-directory: ./next-app
+        run: npm run typecheck
+
+      - name: Test
+        working-directory: ./next-app
+        run: npm test
 
       - name: Build (production)
         working-directory: ./next-app
