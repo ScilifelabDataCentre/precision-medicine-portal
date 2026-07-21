@@ -16,7 +16,7 @@ const cspDirectives = [
   "default-src 'self'",
   "script-src 'self' 'unsafe-inline' https://matomo.dc.scilifelab.se",
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: https://matomo.dc.scilifelab.se",
+  "img-src 'self' blob: data: https://matomo.dc.scilifelab.se",
   "font-src 'self'",
   "connect-src 'self' https://matomo.dc.scilifelab.se https://raw.githubusercontent.com",
   "frame-ancestors 'none'",

@@ -22,9 +22,10 @@ const DEFAULT_OG_IMAGE = {
  * and Open Graph card.
  *
  * The top-level `title` is automatically suffixed with the site name via the
- * `title.template` defined in the root layout. Open Graph is not deeply merged
- * by Next.js, so the shared fields (siteName, image, locale, type) are repeated
- * here rather than inherited from the root.
+ * `title.template` defined in the root layout. Open Graph and Twitter are not
+ * deeply merged by Next.js, so their shared fields are repeated here rather than
+ * inherited from the root. `openGraph.title` is left as the bare page title
+ * (Open Graph pairs it with `og:site_name` for branding).
  *
  * @param path Root-relative path of the page, e.g. "/contact". Resolved against
  *   `metadataBase` for the canonical and og:url values.
@@ -50,6 +51,12 @@ export function pageMetadata({
       images: [DEFAULT_OG_IMAGE],
       locale: "en_US",
       type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [DEFAULT_OG_IMAGE],
     },
   };
 }

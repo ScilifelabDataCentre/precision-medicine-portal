@@ -16,19 +16,20 @@ const lato = Lato({
   variable: "--font-lato",
 });
 
+const siteDescription =
+  "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden";
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
   },
-  description:
-    "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden",
+  description: siteDescription,
   alternates: { canonical: "/" },
   openGraph: {
     title: SITE_NAME,
-    description:
-      "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden",
+    description: siteDescription,
     url: "/",
     siteName: SITE_NAME,
     images: [
@@ -41,6 +42,12 @@ export const metadata: Metadata = {
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: siteDescription,
+    images: ["/scilifelab-logo/metalogo.png"],
   },
 };
 
