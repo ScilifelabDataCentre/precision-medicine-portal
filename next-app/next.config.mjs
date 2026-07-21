@@ -75,6 +75,14 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    // Prefer AVIF (~20% smaller than WebP), then WebP, then the original.
+    // next/image serves the first format the browser advertises in its Accept
+    // header, so unsupported browsers transparently fall back. Trade-off: AVIF
+    // encodes ~50% slower on the first (uncached) request, and any proxy/CDN in
+    // front of the app must forward the Accept header for this to work.
+    formats: ["image/avif", "image/webp"],
+  },
   output: "standalone",
 };
 
