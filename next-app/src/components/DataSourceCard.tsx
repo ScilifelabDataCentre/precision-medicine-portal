@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import {
   sanitizeURL,
@@ -45,13 +46,17 @@ export const DataSourceCard = ({
               ),
             }}
           />
-          <img
-            className="w-40 h-10 object-contain object-right"
-            src={createSafeImageSrc(dataSource.thumbnail)}
-            alt=""
-            role="presentation"
-            aria-hidden="true"
-          />
+          <div className="relative w-40 h-10">
+            <Image
+              className="object-contain object-right"
+              src={createSafeImageSrc(dataSource.thumbnail)}
+              alt=""
+              role="presentation"
+              aria-hidden="true"
+              fill
+              sizes="160px"
+            />
+          </div>
         </CardTitle>
       </CardHeader>
       <CardContent className="pt-4">
