@@ -1,0 +1,16 @@
+# Build output
+.next/
+out/
+build/
+
+# Dependencies
+node_modules/
+
+# Generated / not hand-edited
+*.tsbuildinfo
+next-env.d.ts
+package-lock.json
+
+# Large data files and static assets (not hand-formatted)
+src/assets/
+public/

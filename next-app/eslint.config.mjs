@@ -1,5 +1,6 @@
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 const eslintConfig = [
   {
@@ -22,6 +23,8 @@ const eslintConfig = [
       "@next/next/no-img-element": "off",
     },
   },
+  // Must be last: turns off ESLint rules that conflict with Prettier formatting.
+  eslintConfigPrettier,
 ];
 
 export default eslintConfig;
