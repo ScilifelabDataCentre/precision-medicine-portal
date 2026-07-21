@@ -86,7 +86,7 @@ export default function DataSourcesPage(): ReactElement {
         >
           <li role="listitem">
             <a
-              href="https://precision-medicine-portal.scilifelab.se/data-sources/swedish-research-projects"
+              href="https://precision-medicine-portal.scilifelab.se/data-sources/swedish-research-cohorts"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"

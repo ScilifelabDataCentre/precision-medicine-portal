@@ -3,35 +3,6 @@ export interface ILink {
   link: string;
 }
 
-export interface ISVG {
-  href: string;
-  xmlns: string;
-  width: string;
-  height: string;
-  viewBox: string;
-  classes: string;
-  svg: string;
-}
-
-export interface ICardConfig {
-  cardClasses: string;
-  titleClasses: string;
-  subTitleClasses: string;
-  textClasses: string;
-  imgClasses: string;
-  buttonClasses: string;
-  buttonPlacement: string;
-}
-
-export interface ICardContent {
-  title: string;
-  subTitle: string;
-  text: string;
-  buttonText: string;
-  imageSrc: string;
-  imageAlt: string;
-}
-
 export interface IDataSourceFilters {
   dataTypes: string[];
   diseaseTypes: string[];
@@ -49,21 +20,6 @@ export interface IDataSourcesDC {
   type: string[];
   url: string;
   disease_type: string[];
-}
-
-export interface RegistrySources {
-  start_date: string;
-  category: string[];
-  name: string;
-  registry_centre: string[];
-  url: string;
-  search_tags: string[];
-  Information: string;
-}
-
-export interface RegistrySourcesFilters {
-  registryCentre: string[];
-  registryCategory: string[];
 }
 
 export interface IRegistryFilters {
