@@ -1,10 +1,10 @@
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Other data sources",
+  title: "Swedish research cohorts",
   description:
-    "Search a curated overview of national and international data sources for precision medicine research.",
-  path: "/data-sources/others",
+    "Search Swedish research cohorts and biobank-based studies for precision medicine research.",
+  path: "/data-sources/swedish-research-cohorts",
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {

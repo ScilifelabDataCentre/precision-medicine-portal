@@ -1,26 +1,32 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { SITE_URL, SITE_NAME } from "@/lib/metadata";
 import HeaderComponent from "@/components/HeaderComponent";
 import FooterComponent from "@/components/FooterComponent";
 import React from "react";
 import MatomoInit from "@/components/MatomoInit";
 
 export const metadata: Metadata = {
-  title: "Precision Medicine Portal",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
   description:
     "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden",
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Precision Medicine Portal",
+    title: SITE_NAME,
     description:
       "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden",
-    url: "https://precision-medicine-portal.scilifelab.se",
-    siteName: "Precision Medicine Portal",
+    url: "/",
+    siteName: SITE_NAME,
     images: [
       {
-        url: "https://precision-medicine-portal.scilifelab.se/SciLifeLab%20logo/metalogo.png",
+        url: "/scilifelab-logo/metalogo.png",
         width: 1200,
         height: 628,
-        alt: "Precision Medicine Portal Logo",
+        alt: `${SITE_NAME} logo`,
       },
     ],
     locale: "en_US",
@@ -35,11 +41,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <head>
-        <title>Precision Medicine Portal</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
       <body>
         <a
           href="#main-content"

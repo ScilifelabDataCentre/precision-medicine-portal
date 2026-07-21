@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Title from "@/components/common/title";
 import {
@@ -72,6 +71,13 @@ const partners: Partner[] = [
     logoKey: "tef",
   },
 ];
+
+export const metadata = pageMetadata({
+  title: "Partners",
+  description:
+    "The organisations behind the Precision Medicine Portal, including SciLifeLab Data Centre, Karolinska Institutet and the Data-Driven Life Science (DDLS) program.",
+  path: "/about/partners",
+});
 
 export default function AboutPartnersPage() {
   return (

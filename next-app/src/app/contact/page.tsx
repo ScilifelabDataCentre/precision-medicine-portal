@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import Link from "next/link";
 
@@ -14,6 +13,12 @@ import {
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { MailX } from "lucide-react";
 import { LastUpdated } from "@/components/common/last-updated";
+
+export const metadata = pageMetadata({
+  title: "Contact",
+  description: "Get in touch with the SciLifeLab Precision Medicine Portal team.",
+  path: "/contact",
+});
 
 export default function ContactPage(): ReactElement {
   return (

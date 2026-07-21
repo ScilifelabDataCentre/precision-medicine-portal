@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import ProfileComponent from "@/components/ProfileComponent";
 
@@ -12,6 +11,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { LastUpdated } from "@/components/common/last-updated";
+
+export const metadata = pageMetadata({
+  title: "Team",
+  description: "Meet the team behind the SciLifeLab Precision Medicine Portal.",
+  path: "/about/team",
+});
 
 export default function AboutTeamPage(): ReactElement {
   return (

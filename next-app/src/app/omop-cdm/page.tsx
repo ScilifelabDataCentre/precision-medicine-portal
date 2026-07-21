@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 
 import {
@@ -12,6 +11,13 @@ import {
 import { LastUpdated } from "@/components/common/last-updated";
 import Title from "@/components/common/title";
 import Image from "next/image";
+
+export const metadata = pageMetadata({
+  title: "Introduction to OMOP-CDM",
+  description:
+    "An introduction to the OMOP Common Data Model (CDM), an open standard for harmonising observational health data for research.",
+  path: "/omop-cdm",
+});
 
 export default function OMOPCDMPage(): ReactElement {
   return (

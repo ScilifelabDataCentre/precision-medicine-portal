@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import Title from "@/components/common/title";
 import PartnerCoordinationDiagram from "@/components/digifor1health/partner-coordination-diagram";
@@ -79,6 +78,13 @@ const categories: KeyMessageCategory[] = [
     ],
   },
 ];
+
+export const metadata = pageMetadata({
+  title: "DIGIfor1healthSE",
+  description:
+    "A national collaboration supporting implementation of the European Health Data Space (EHDS) in Sweden.",
+  path: "/digifor1health",
+});
 
 export default function Digifor1healthPage(): ReactElement {
   return (

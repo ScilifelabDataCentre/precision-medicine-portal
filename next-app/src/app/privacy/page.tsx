@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import Link from "next/link";
 import React from "react";
@@ -15,6 +14,13 @@ import {
 import { LastUpdated } from "@/components/common/last-updated";
 // import { Alert, AlertDescription } from "@/components/ui/alert";
 // import { Cookie } from "lucide-react";
+
+export const metadata = pageMetadata({
+  title: "Privacy policy",
+  description:
+    "How the SciLifeLab Precision Medicine Portal collects and processes personal data, in compliance with the GDPR.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage(): ReactElement {
   // const optInOrOutTextActive = (isTrackingEnabled: boolean): string[] => {
