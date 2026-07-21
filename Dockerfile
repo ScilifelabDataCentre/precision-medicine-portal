@@ -1,4 +1,7 @@
-FROM node:26-alpine AS base
+# Pinned by digest for reproducible builds; the tag is kept for readability.
+# Renovate maintains both the tag and the digest (see renovate.json). The
+# digest is the multi-arch image index, so amd64 + arm64 builds are preserved.
+FROM node:26-alpine@sha256:e88a35be04478413b7c71c455cd9865de9b9360e1f43456be5951032d7ac1a66 AS base
 
 # 1. Install dependencies only when needed
 FROM base AS deps

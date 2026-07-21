@@ -9,6 +9,7 @@ jobs:
     permissions:
       contents: read
       packages: write
+      security-events: write # upload the Trivy image-scan SARIF to the Security tab
     steps:
       - name: Checkout
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
@@ -54,6 +55,7 @@ jobs:
             org.opencontainers.image.url=${{ github.event.repository.html_url }}
             org.opencontainers.image.source=${{ github.event.repository.html_url }}
       - name: Build and push
+        id: build
         uses: docker/build-push-action@53b7df96c91f9c12dcc8a07bcb9ccacbed38856a # v7
         with:
           push: true
@@ -62,3 +64,32 @@ jobs:
           platforms: linux/amd64,linux/arm64
           tags: ${{ steps.metadata_action_id.outputs.tags }}
           labels: ${{ steps.metadata_action_id.outputs.labels }}
+          # Supply-chain attestations, pushed alongside the image to GHCR:
+          #   provenance (SLSA, mode=max) records how/where/from-which-commit
+          #   the image was built; sbom records what is inside it.
+          provenance: mode=max
+          sbom: true
+
+      # Scan the artifact we actually ship. The pre-build Trivy "fs" scan
+      # (trivy-scan.yml) only sees the source tree, not the base-OS packages
+      # or the production node_modules baked into the final image. This is
+      # report-only (Trivy's default exit-code is 0), so a newly disclosed
+      # upstream CVE never blocks a release; findings surface in the Security
+      # tab. The image is referenced by the digest just pushed, and by a
+      # lowercased name because OCI/GHCR require lowercase repository names.
+      - name: Scan the published image with Trivy
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25 # v0.36.0
+        with:
+          scan-type: image
+          image-ref: ghcr.io/scilifelabdatacentre/precision-medicine-portal@${{ steps.build.outputs.digest }}
+          format: sarif
+          output: trivy-image-results.sarif
+          ignore-unfixed: true
+          severity: CRITICAL,HIGH
+          limit-severities-for-sarif: true
+
+      - name: Upload image-scan results to GitHub Security tab
+        uses: github/codeql-action/upload-sarif@7188fc363630916deb702c7fdcf4e481b751f97a # v4.37.1
+        with:
+          sarif_file: trivy-image-results.sarif
+          category: trivy-image
