@@ -54,7 +54,7 @@ export default function HomePage(): ReactElement {
         className="relative left-1/2 w-screen -translate-x-1/2 overflow-hidden bg-primary"
       >
         <Image
-          src="/HomePageImages/hero-dna.jpg"
+          src="/home-page-images/hero-dna.jpg"
           alt=""
           fill
           priority

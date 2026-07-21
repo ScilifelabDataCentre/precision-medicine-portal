@@ -12,10 +12,10 @@ import {
 import { LastUpdated } from "@/components/common/last-updated";
 
 const logos: { [key: string]: string } = {
-  pmPortal: "/partner-logo/SciLifeLab_Logotype_Green_POS.png",
-  tefHealth: "/partner-logo/tefhealth_logo.png",
-  brainchild: "/partner-logo/Barncancerfonden.png",
-  tehdas2: "/partner-logo/tehdas2_logo.png",
+  pmPortal: "/partner-logo/scilifelab-logotype-green-pos.png",
+  tefHealth: "/partner-logo/tefhealth-logo.png",
+  brainchild: "/partner-logo/barncancerfonden.png",
+  tehdas2: "/partner-logo/tehdas2-logo.png",
 };
 
 interface Project {

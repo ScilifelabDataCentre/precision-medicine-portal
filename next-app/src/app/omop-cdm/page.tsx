@@ -69,7 +69,7 @@ export default function OMOPCDMPage(): ReactElement {
             </div>
             <Image
               className="mx-auto w-full md:w-1/2"
-              src="/img/omop/what_is_omop.png"
+              src="/img/omop/what-is-omop.png"
               alt="What is OMOP?"
               width={500}
               height={500}
@@ -82,7 +82,7 @@ export default function OMOPCDMPage(): ReactElement {
           <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <Image
               className="mx-auto w-full md:w-1/3"
-              src="/img/omop/why_using_omop.png"
+              src="/img/omop/why-using-omop.png"
               alt="Why use the OMOP CDM?"
               width={600}
               height={600}
@@ -289,7 +289,7 @@ export default function OMOPCDMPage(): ReactElement {
             <div className="w-full md:w-1/3 flex flex-col gap-4">
               <Image
                 className="mx-auto w-full h-auto"
-                src="/img/omop/how_does_omop_work.png"
+                src="/img/omop/how-does-omop-work.png"
                 alt="How does the OMOP CDM work?"
                 width={500}
                 height={500}
@@ -297,7 +297,7 @@ export default function OMOPCDMPage(): ReactElement {
               />
               <Image
                 className="mx-auto w-full h-auto"
-                src="/img/omop/OHDSI_galaxy.png"
+                src="/img/omop/ohdsi-galaxy.png"
                 alt="OHDSI Galaxy of Tools"
                 width={500}
                 height={500}
@@ -312,7 +312,7 @@ export default function OMOPCDMPage(): ReactElement {
             <div className="w-full md:w-1/2 flex flex-col gap-4">
               <Image
                 className="object-contain"
-                src="/img/omop/omop_timeline.png"
+                src="/img/omop/omop-timeline.png"
                 alt="What's the history of OMOP?"
                 width={500}
                 height={500}
@@ -320,7 +320,7 @@ export default function OMOPCDMPage(): ReactElement {
               />
               <Image
                 className="object-contain"
-                src="/img/omop/OHDSI_Collaborators_July2025.png"
+                src="/img/omop/ohdsi-collaborators-july2025.png"
                 alt="OHDSI Collaborators July 2025"
                 width={500}
                 height={500}
@@ -409,7 +409,7 @@ export default function OMOPCDMPage(): ReactElement {
             </div>
             <Image
               className="mx-auto w-full md:w-1/2"
-              src="/img/omop/omop_at_scilifelab.png"
+              src="/img/omop/omop-at-scilifelab.png"
               alt="OMOP at SciLifeLab"
               width={500}
               height={500}
