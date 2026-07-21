@@ -20,7 +20,8 @@ const eslintConfig = [
     },
     rules: {
       "prefer-spread": "off",
-      "@next/next/no-img-element": "off",
+      // Enforce next/image over raw <img> so images are always optimized.
+      "@next/next/no-img-element": "error",
     },
   },
   // Must be last: turns off ESLint rules that conflict with Prettier formatting.

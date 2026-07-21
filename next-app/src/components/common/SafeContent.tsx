@@ -2,7 +2,6 @@ import React, { JSX, ReactNode } from "react";
 import {
   sanitizeText,
   sanitizeURL,
-  createSafeImageSrc,
   sanitizeHTML,
   SecurityConfig,
   DEFAULT_SECURITY_CONFIG,
@@ -24,15 +23,6 @@ interface SafeUrlProps extends SafeContentProps {
   children: ReactNode;
   target?: string;
   rel?: string;
-}
-
-interface SafeImageProps extends SafeContentProps {
-  src: string;
-  alt: string;
-  basePath?: string;
-  fallbackImage?: string;
-  width?: number;
-  height?: number;
 }
 
 interface SafeHTMLProps extends SafeContentProps {
@@ -88,35 +78,6 @@ export function SafeUrl({
 }
 
 /**
- * SafeImage component for rendering sanitized images
- */
-export function SafeImage({
-  src,
-  alt,
-  basePath = "/img/datasources/",
-  fallbackImage = "/img/datasources/na-sign-icon.png",
-  config = DEFAULT_SECURITY_CONFIG,
-  className,
-  width,
-  height,
-  ...props
-}: SafeImageProps) {
-  const safeSrc = createSafeImageSrc(src, basePath, fallbackImage, config);
-  const sanitizedAlt = sanitizeText(alt, config);
-
-  return (
-    <img
-      src={safeSrc}
-      alt={sanitizedAlt}
-      width={width}
-      height={height}
-      className={className}
-      {...props}
-    />
-  );
-}
-
-/**
  * SafeHTML component for rendering sanitized HTML content
  */
 export function SafeHTML({
@@ -156,7 +117,6 @@ export function SafeContent({
 export const Safe = {
   Text: SafeText,
   Url: SafeUrl,
-  Image: SafeImage,
   HTML: SafeHTML,
   Content: SafeContent,
 };
