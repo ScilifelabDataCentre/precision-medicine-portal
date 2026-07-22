@@ -12,9 +12,16 @@
 // add https://www.google.com and https://www.gstatic.com to script-src,
 // https://www.google.com to a frame-src directive, and
 // https://forms.dc.scilifelab.se to form-action.
+// React's development build uses eval() for debugging (e.g. reconstructing
+// call stacks). `next dev` serves this same CSP, so without 'unsafe-eval' in
+// development the browser blocks it and logs a CSP error. Production never
+// needs it — React's prod build has no eval() — so it is kept out of the
+// shipped policy. This dev/prod split follows the Next.js CSP guide.
+const isDev = process.env.NODE_ENV === "development";
+
 const cspDirectives = [
   "default-src 'self'",
-  "script-src 'self' 'unsafe-inline' https://matomo.dc.scilifelab.se",
+  `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""} https://matomo.dc.scilifelab.se`,
   "style-src 'self' 'unsafe-inline'",
   "img-src 'self' blob: data: https://matomo.dc.scilifelab.se",
   "font-src 'self'",
