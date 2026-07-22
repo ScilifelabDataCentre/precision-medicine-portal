@@ -1,5 +1,5 @@
 /* Limit class detection to the app sources (parity with the v3 `content` globs). */
-@import 'tailwindcss' source('..');
+@import "tailwindcss" source("..");
 
 @theme {
   --color-background: hsl(var(--background));
@@ -52,6 +52,13 @@
 
   --font-sans: var(--font-lato), sans-serif;
 
+  /* Custom breakpoint for the header: the horizontal desktop nav needs ~1130px
+     to fit alongside the logo (logo ~484px at h-12 + 5 items ~581px +
+     gaps/padding). Below this we show the hamburger. Tuned above the fit width
+     for margin; revisit if nav items or the logo height change. Enables the
+     `navbar:` variant. */
+  --breakpoint-navbar: 72rem;
+
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
 
@@ -69,6 +76,23 @@
     }
     to {
       height: 0;
+    }
+  }
+
+  /* Fast, subtle reveal for the header navigation dropdowns (see
+     NavigationMenuViewport). Added because the tailwindcss-animate classes the
+     shadcn primitive ships with became inert after the Tailwind v4 migration,
+     so the menus previously had no open animation at all. */
+  --animate-nav-open: nav-open 120ms ease-out;
+
+  @keyframes nav-open {
+    from {
+      opacity: 0;
+      transform: scale(0.97) translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1) translateY(0);
     }
   }
 }

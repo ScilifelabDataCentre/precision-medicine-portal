@@ -87,13 +87,13 @@ export default function HeaderComponent() {
             src={"/scilifelab-logo/precisionmedicineportal-logo-white.png"}
             alt="Precision Medicine Portal - SciLifeLab"
             priority
-            className="w-auto h-7 lg:h-14"
+            className="w-auto h-7 navbar:h-12"
           />
         </Link>
-        <div className="hidden lg:block">
+        <div className="hidden navbar:block">
           <DesktopNav />
         </div>
-        <div className="lg:hidden">
+        <div className="navbar:hidden">
           <MobileNav />
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function HeaderComponent() {
 
 function DesktopNav() {
   return (
-    <NavigationMenu>
+    <NavigationMenu delayDuration={0}>
       <NavigationMenuList role="menubar" aria-label="Main navigation">
         <NavigationMenuItem role="none">
           <NavigationMenuTrigger aria-label="Data sources menu">
