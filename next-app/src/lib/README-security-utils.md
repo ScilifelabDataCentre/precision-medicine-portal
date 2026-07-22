@@ -122,20 +122,6 @@ Renders sanitized links.
 <Safe.Url url={userUrl} target="_self">Internal Link</Safe.Url>
 ```
 
-### `Safe.Image`
-
-Renders sanitized images.
-
-```tsx
-<Safe.Image src={userImage} alt="User avatar" />
-<Safe.Image
-  src={userImage}
-  alt="User avatar"
-  basePath="/custom/path/"
-  fallbackImage="/default.png"
-/>
-```
-
 ### `Safe.HTML`
 
 Renders sanitized HTML content.

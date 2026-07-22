@@ -46,7 +46,7 @@ This repository contains a modern web application built with the following archi
 
 #### Core Technologies
 
-- **Framework**: Next.js 15.3.2 (React-based full-stack framework)
+- **Framework**: Next.js 16 (React-based full-stack framework, App Router)
 - **Language**: TypeScript 6.x (statically typed JavaScript)
 - **Runtime**: Node.js 26.x (Alpine Linux-based Docker image)
 
@@ -56,22 +56,22 @@ This repository contains a modern web application built with the following archi
 - **Styling**: Tailwind CSS 4 with custom design system
 - **Component Library**: Radix UI primitives for accessible components
 - **Icons**: Lucide React for modern iconography
+- **Animation**: Framer Motion for UI animations
 - **State Management**: React hooks and context (no external state management library)
 
 #### Key Features & Libraries
 
-- **Analytics**: Matomo integration for web analytics
-- **Content**: React Markdown with GitHub Flavored Markdown support
-- **Security**: DOMPurify for XSS protection, Google reCAPTCHA integration
-- **HTTP Client**: Axios for API requests
-- **Utilities**: Class Variance Authority, clsx, tailwind-merge for styling utilities
-- **Cookies**: js-cookie and cookies-next for cookie management
+- **Analytics**: Matomo integration for web analytics (`@socialgouv/matomo-next`)
+- **Security & Sanitization**: `isomorphic-dompurify` for XSS protection and `validator` for URL/input validation (see `src/lib/security-utils.ts`)
+- **Utilities**: Class Variance Authority, clsx, and tailwind-merge for composing class names
 
 #### Development Tools
 
-- **Linting**: ESLint with Next.js configuration
-- **Testing**: Cypress 14.3.3 for end-to-end testing
-- **Build Tool**: Next.js built-in bundler with Webpack
+- **Linting & Formatting**: ESLint (Next.js configuration) and Prettier
+- **Type Checking**: TypeScript in strict mode (`npm run typecheck`; also enforced by `next build`)
+- **Unit Testing**: Vitest, covering the pure logic in `src/lib` (search ranking and security/sanitization helpers)
+- **Accessibility Testing**: pa11y-ci, run in CI against a production build
+- **Build Tool**: Next.js built-in bundler
 - **Package Manager**: npm with package-lock.json for dependency management
 
 #### Deployment & Infrastructure
@@ -85,14 +85,13 @@ This repository contains a modern web application built with the following archi
 ```
 next-app/
 ├── src/
-│   ├── app/           # Next.js App Router pages and layouts
-│   ├── components/    # Reusable React components
-│   ├── lib/          # Utility functions and configurations
+│   ├── app/          # Next.js App Router pages, layouts and route handlers
+│   ├── components/   # Reusable React components (incl. Radix UI wrappers)
+│   ├── hooks/        # Custom React hooks (e.g. useDebounce)
+│   ├── lib/          # Utilities: search engine, security helpers, metadata
 │   ├── interfaces/   # TypeScript type definitions
-│   └── assets/       # Static assets and data files
-├── public/           # Static files served directly
-├── cypress/         # End-to-end test configuration
-└── fonts/           # Custom font files
+│   └── assets/       # JSON data files (registries, research cohorts)
+└── public/           # Static files served directly (images, icons)
 ```
 
 #### Design System
@@ -145,13 +144,14 @@ Runs the app in development mode with hot reload.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Type errors are surfaced in the console and the browser error overlay.
 
 ###### `npm run build`
 
 Builds the app for production using Next.js optimization.\
 The build is minified and optimized for the best performance.\
-This also checks the linting.
+It also type-checks the project and fails on any TypeScript error. Linting is a
+separate step (`npm run lint`); it is not run as part of the build.
 
 ###### `npm start`
 
@@ -161,9 +161,24 @@ Starts the production server after building the app.
 
 Runs ESLint to check code quality and consistency.
 
+###### `npm run typecheck`
+
+Runs the TypeScript compiler in no-emit mode (`tsc --noEmit`) to type-check the
+project without producing output.
+
 ###### `npm test`
 
-Runs Cypress end-to-end tests for the application.
+Runs the Vitest unit tests once. These cover the pure logic in `src/lib` — the
+search ranking engine and the security/sanitization helpers.
+
+###### `npm run test:watch`
+
+Runs Vitest in interactive watch mode, re-running affected tests on file changes.
+
+###### `npm run format` / `npm run format:check`
+
+Formats the codebase with Prettier (`format`), or checks formatting without
+writing changes (`format:check`).
 
 ##### Docker
 

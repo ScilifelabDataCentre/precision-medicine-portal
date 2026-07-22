@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Title from "@/components/common/title";
 import {
@@ -14,11 +13,11 @@ import Image from "next/image";
 
 const logos: { [key: string]: string } = {
   dc: "/partner-logo/dc.png",
-  nbis: "/partner-logo/nbislogo_orange_txt_3cb0778d90.svg",
-  kaw: "/partner-logo/kaw_sv_300x300.png",
-  ki: "/partner-logo/KI_digital_logotyp_positiv_RGB.png",
-  scilifelab: "/partner-logo/SciLifeLab_Logotype_Green_POS.png",
-  tef: "/partner-logo/tefhealth_logo.png",
+  nbis: "/partner-logo/nbislogo-orange-txt-3cb0778d90.svg",
+  kaw: "/partner-logo/kaw-sv-300x300.png",
+  ki: "/partner-logo/ki-digital-logotyp-positiv-rgb.png",
+  scilifelab: "/partner-logo/scilifelab-logotype-green-pos.png",
+  tef: "/partner-logo/tefhealth-logo.png",
 };
 
 interface Partner {
@@ -72,6 +71,13 @@ const partners: Partner[] = [
     logoKey: "tef",
   },
 ];
+
+export const metadata = pageMetadata({
+  title: "Partners",
+  description:
+    "The organisations behind the Precision Medicine Portal, including SciLifeLab Data Centre, Karolinska Institutet and the Data-Driven Life Science (DDLS) program.",
+  path: "/about/partners",
+});
 
 export default function AboutPartnersPage() {
   return (

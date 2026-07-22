@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import Title from "@/components/common/title";
 import {
@@ -65,6 +64,13 @@ const assessmentOptions: ComplianceOption[] = [
 
 const linkClassName =
   "text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded";
+
+export const metadata = pageMetadata({
+  title: "Accessibility statement",
+  description:
+    "Accessibility statement for the Precision Medicine Portal, including how accessible the service is and how to report accessibility problems.",
+  path: "/accessibility",
+});
 
 export default function AccessibilityPage(): ReactElement {
   return (

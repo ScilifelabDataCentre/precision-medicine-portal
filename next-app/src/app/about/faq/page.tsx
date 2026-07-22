@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 
 import Title from "@/components/common/title";
@@ -17,6 +16,13 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { LastUpdated } from "@/components/common/last-updated";
+
+export const metadata = pageMetadata({
+  title: "FAQ",
+  description:
+    "Answers to common questions about the Precision Medicine Portal and accessing data for precision medicine research in Sweden.",
+  path: "/about/faq",
+});
 
 export default function AboutFAQPage(): ReactElement {
   return (

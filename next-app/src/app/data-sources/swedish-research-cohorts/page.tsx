@@ -241,7 +241,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
             </BreadcrumbItem>
             <BreadcrumbSeparator />
             <BreadcrumbItem>
-              <BreadcrumbLink href="/data-sources/swedish-research-projects">
+              <BreadcrumbLink href="/data-sources/swedish-research-cohorts">
                 Swedish research cohorts and biobank studies
               </BreadcrumbLink>
             </BreadcrumbItem>

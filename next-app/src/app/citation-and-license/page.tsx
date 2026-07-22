@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 
 import { LastUpdated } from "@/components/common/last-updated";
@@ -13,6 +12,13 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+
+export const metadata = pageMetadata({
+  title: "Citation and license",
+  description:
+    "How to cite the Precision Medicine Portal and the licence terms for reusing its content.",
+  path: "/citation-and-license",
+});
 
 export default function CitationAndLicensePage(): ReactElement {
   return (

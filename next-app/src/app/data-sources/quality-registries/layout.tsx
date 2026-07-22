@@ -1,10 +1,10 @@
 import { pageMetadata } from "@/lib/metadata";
 
 export const metadata = pageMetadata({
-  title: "Other data sources",
+  title: "Quality registries",
   description:
-    "Search a curated overview of national and international data sources for precision medicine research.",
-  path: "/data-sources/others",
+    "Search Swedish national quality registries that offer individual-level health data for precision medicine research.",
+  path: "/data-sources/quality-registries",
 });
 
 export default function Layout({ children }: { children: React.ReactNode }) {

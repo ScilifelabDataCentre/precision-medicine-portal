@@ -1,30 +1,53 @@
 import type { Metadata } from "next";
+import { Lato } from "next/font/google";
 import "./globals.css";
+import { SITE_URL, SITE_NAME } from "@/lib/metadata";
 import HeaderComponent from "@/components/HeaderComponent";
 import FooterComponent from "@/components/FooterComponent";
 import React from "react";
 import MatomoInit from "@/components/MatomoInit";
 
+// Self-hosted at build time (no runtime requests to Google Fonts). Exposed as a
+// CSS variable so `--font-sans` in globals.css and SVG diagrams can reference it.
+const lato = Lato({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-lato",
+});
+
+const siteDescription =
+  "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden";
+
 export const metadata: Metadata = {
-  title: "Precision Medicine Portal",
-  description:
-    "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: SITE_NAME,
+    template: `%s | ${SITE_NAME}`,
+  },
+  description: siteDescription,
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Precision Medicine Portal",
-    description:
-      "Service for researchers in the precision medicine field, designed to support and accelerate data-driven life science research in Sweden",
-    url: "https://precision-medicine-portal.scilifelab.se",
-    siteName: "Precision Medicine Portal",
+    title: SITE_NAME,
+    description: siteDescription,
+    url: "/",
+    siteName: SITE_NAME,
     images: [
       {
-        url: "https://precision-medicine-portal.scilifelab.se/SciLifeLab%20logo/metalogo.png",
+        url: "/scilifelab-logo/metalogo.png",
         width: 1200,
         height: 628,
-        alt: "Precision Medicine Portal Logo",
+        alt: `${SITE_NAME} logo`,
       },
     ],
     locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_NAME,
+    description: siteDescription,
+    images: ["/scilifelab-logo/metalogo.png"],
   },
 };
 
@@ -34,12 +57,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <title>Precision Medicine Portal</title>
-        <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
+    <html lang="en" className={lato.variable}>
       <body>
         <a
           href="#main-content"

@@ -159,10 +159,12 @@ export default function PuzzleCategoriesDiagram() {
                 fill="white"
                 fontSize={piece.fontSize}
                 fontWeight="bold"
-                fontFamily="'Lato', sans-serif"
                 textAnchor="middle"
                 dominantBaseline="central"
-                style={{ pointerEvents: "none" }}
+                style={{
+                  pointerEvents: "none",
+                  fontFamily: "var(--font-lato), sans-serif",
+                }}
               >
                 <tspan x={piece.textX} dy="-0.65em">
                   {piece.textLines[0]}

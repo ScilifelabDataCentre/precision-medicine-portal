@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import Link from "next/link";
 
@@ -13,6 +12,13 @@ import {
   BreadcrumbList,
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
+
+export const metadata = pageMetadata({
+  title: "Data sources",
+  description:
+    "How researchers access human data for precision medicine research in Sweden — from research cohorts and biobanks to quality registries — and how to apply.",
+  path: "/data-sources",
+});
 
 export default function DataSourcesPage(): ReactElement {
   return (
@@ -80,7 +86,7 @@ export default function DataSourcesPage(): ReactElement {
         >
           <li role="listitem">
             <a
-              href="https://precision-medicine-portal.scilifelab.se/data-sources/swedish-research-projects"
+              href="https://precision-medicine-portal.scilifelab.se/data-sources/swedish-research-cohorts"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"

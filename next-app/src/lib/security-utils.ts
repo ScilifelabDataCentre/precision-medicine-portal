@@ -117,7 +117,11 @@ export function createSafeImageSrc(
     return fallbackImage;
   }
 
-  return `${basePath}${sanitizedFilename}.png`;
+  // Lowercase the filename so the resolved path is robust to the casing used
+  // in the (externally-sourced) thumbnail names. Locally stored thumbnails are
+  // kept lowercase to match; case-sensitive servers otherwise 404 on a mismatch
+  // (e.g. upstream "Researchdata.png" vs local "researchdata.png").
+  return `${basePath}${sanitizedFilename.toLowerCase()}.png`;
 }
 
 /**

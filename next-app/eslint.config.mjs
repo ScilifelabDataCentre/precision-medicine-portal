@@ -1,5 +1,6 @@
 import nextVitals from "eslint-config-next/core-web-vitals";
 import nextTypescript from "eslint-config-next/typescript";
+import eslintConfigPrettier from "eslint-config-prettier/flat";
 
 const eslintConfig = [
   {
@@ -19,9 +20,12 @@ const eslintConfig = [
     },
     rules: {
       "prefer-spread": "off",
-      "@next/next/no-img-element": "off",
+      // Enforce next/image over raw <img> so images are always optimized.
+      "@next/next/no-img-element": "error",
     },
   },
+  // Must be last: turns off ESLint rules that conflict with Prettier formatting.
+  eslintConfigPrettier,
 ];
 
 export default eslintConfig;

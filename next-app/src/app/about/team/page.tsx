@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import ProfileComponent from "@/components/ProfileComponent";
 
@@ -12,6 +11,12 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { LastUpdated } from "@/components/common/last-updated";
+
+export const metadata = pageMetadata({
+  title: "Team",
+  description: "Meet the team behind the SciLifeLab Precision Medicine Portal.",
+  path: "/about/team",
+});
 
 export default function AboutTeamPage(): ReactElement {
   return (
@@ -42,7 +47,7 @@ export default function AboutTeamPage(): ReactElement {
         <div role="list">
           <div role="listitem">
             <ProfileComponent
-              imageUrl="/TeamPics/JanTeamPic.jpg"
+              imageUrl="/team-pics/jan-team-pic.jpg"
               name="Jan Lorenz"
               title="Product Owner"
               bgColor="bg-muted"
@@ -50,7 +55,7 @@ export default function AboutTeamPage(): ReactElement {
           </div>
           <div role="listitem">
             <ProfileComponent
-              imageUrl="/TeamPics/NatTeamPic.jpg"
+              imageUrl="/team-pics/nat-team-pic.jpg"
               name="Natashia Benzian Olsson"
               title="Data Steward"
               bgColor="bg-neutral"
@@ -58,7 +63,7 @@ export default function AboutTeamPage(): ReactElement {
           </div>
           <div role="listitem">
             <ProfileComponent
-              imageUrl="/TeamPics/SebTeamPic.png"
+              imageUrl="/team-pics/seb-team-pic.png"
               name="Sebastian Lindbom Gunnari"
               title="Software Engineer"
               bgColor="bg-muted"
@@ -66,7 +71,7 @@ export default function AboutTeamPage(): ReactElement {
           </div>
           <div role="listitem">
             <ProfileComponent
-              imageUrl="/TeamPics/SamTeamPic.jpg"
+              imageUrl="/team-pics/sam-team-pic.jpg"
               name="Saman Rassam"
               title="Data Engineer"
               bgColor="bg-neutral"
@@ -74,7 +79,7 @@ export default function AboutTeamPage(): ReactElement {
           </div>
           <div role="listitem">
             <ProfileComponent
-              imageUrl="/TeamPics/SteTeamPic.jpg"
+              imageUrl="/team-pics/ste-team-pic.jpg"
               name="Stefano Rapisarda"
               title="Database Coordinator"
               bgColor="bg-muted"

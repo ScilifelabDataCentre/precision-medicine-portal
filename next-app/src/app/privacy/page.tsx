@@ -1,9 +1,7 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { ReactElement } from "react";
 import Link from "next/link";
 import React from "react";
-// import { deleteCookie, setCookie } from "cookies-next";
 import Title from "@/components/common/title";
 import {
   Breadcrumb,
@@ -13,29 +11,15 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { LastUpdated } from "@/components/common/last-updated";
-// import { Alert, AlertDescription } from "@/components/ui/alert";
-// import { Cookie } from "lucide-react";
+
+export const metadata = pageMetadata({
+  title: "Privacy policy",
+  description:
+    "How the SciLifeLab Precision Medicine Portal collects and processes personal data, in compliance with the GDPR.",
+  path: "/privacy",
+});
 
 export default function PrivacyPage(): ReactElement {
-  // const optInOrOutTextActive = (isTrackingEnabled: boolean): string[] => {
-  //   if (isTrackingEnabled) {
-  //     return ["Click on the button to opt out", "Opt Out"];
-  //   } else {
-  //     return ["Click on the button to opt in", "Opt In"];
-  //   }
-  // };
-
-  // const [optInText, setOptInText] = useState(
-  //   optInOrOutTextActive(!trackingDisabled())
-  // );
-
-  // const handleOptOut = () => {
-  //   trackingDisabled()
-  //     ? deleteCookie("trackingDisabled")
-  //     : setCookie("trackingDisabled", "true", { maxAge: 365 });
-  //   setOptInText(optInOrOutTextActive(!trackingDisabled()));
-  // };
-
   return (
     <div className="container max-w-4xl mx-auto py-8">
       <nav aria-label="Breadcrumb navigation" role="navigation">
@@ -130,20 +114,6 @@ export default function PrivacyPage(): ReactElement {
           2016/679 of the European Parliament and of the Council of 27 April
           2016, the General Data Protection Regulation (GDPR).
         </p>
-        {/* <Alert className="bg-muted text-muted-foreground">
-          <div className="flex items-start space-x-2">
-            <Cookie className="h-4 w-4 mt-2" />
-            <AlertDescription className="flex flex-col sm:flex-row sm:items-center w-full">
-              <span>{optInText[0]}</span>
-              <button
-                onClick={handleOptOut}
-                className={`mt-2 sm:mt-0 sm:ml-4`}
-              >
-                {optInText[1]}
-              </button>
-            </AlertDescription>
-          </div>
-        </Alert> */}
         <Title level={2} aria-label="Information about links to external sites">
           Links to other sites
         </Title>

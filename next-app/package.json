@@ -3,11 +3,19 @@
   "version": "1.2.2",
   "private": true,
   "license": "MIT",
+  "engines": {
+    "node": ">=26"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -21,14 +29,12 @@
     "@socialgouv/matomo-next": "^1.13.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "cookies-next": "^6.0.0",
     "framer-motion": "^12.38.0",
     "isomorphic-dompurify": "^3.0.0",
     "lucide-react": "^1.0.0",
     "next": "^16.2.10",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
-    "react-google-recaptcha": "^3.1.0",
     "tailwind-merge": "^3.0.0",
     "validator": "^13.15.35"
   },
@@ -37,14 +43,16 @@
     "@types/node": "26.1",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "@types/react-google-recaptcha": "^2.1.9",
     "@types/validator": "^13.15.1",
     "eslint": "^10.0.0",
     "eslint-config-next": "^16.0.0",
+    "eslint-config-prettier": "^10.1.8",
     "pa11y-ci": "^4.1.1",
     "postcss": "^8.5.10",
+    "prettier": "^3.9.6",
     "tailwindcss": "^4.3.2",
     "typescript": "^6.0.0",
+    "vitest": "^4.1.10",
     "wait-on": "^9.0.10"
   },
   "overrides": {

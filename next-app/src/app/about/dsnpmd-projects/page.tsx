@@ -1,5 +1,4 @@
-"use client";
-
+import { pageMetadata } from "@/lib/metadata";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Image from "next/image";
 import Title from "@/components/common/title";
@@ -13,10 +12,10 @@ import {
 import { LastUpdated } from "@/components/common/last-updated";
 
 const logos: { [key: string]: string } = {
-  pmPortal: "/partner-logo/SciLifeLab_Logotype_Green_POS.png",
-  tefHealth: "/partner-logo/tefhealth_logo.png",
-  brainchild: "/partner-logo/Barncancerfonden.png",
-  tehdas2: "/partner-logo/tehdas2_logo.png",
+  pmPortal: "/partner-logo/scilifelab-logotype-green-pos.png",
+  tefHealth: "/partner-logo/tefhealth-logo.png",
+  brainchild: "/partner-logo/barncancerfonden.png",
+  tehdas2: "/partner-logo/tehdas2-logo.png",
 };
 
 interface Project {
@@ -74,6 +73,13 @@ const projects: Project[] = [
     url: "https://www.barncancerfonden.se/press/2024/regeringen-finansierar-brainchild-med-10-miljoner-kronor/",
   },
 ];
+
+export const metadata = pageMetadata({
+  title: "Projects",
+  description:
+    "Projects run by the Data Science Node in Precision Medicine and Diagnostics (DSN-PMD), including the PM Portal, KIARVA, TEF-Health and TEHDAS2.",
+  path: "/about/dsnpmd-projects",
+});
 
 export default function AboutDSNPMDProjectsPage() {
   return (
