@@ -290,7 +290,7 @@ export default function Footer(): ReactElement {
             Built by the Data Science Node in Precision Medicine and
             Diagnostics. The source code is available on{" "}
             <a
-              href="https://github.com/ScilifelabDataCentre/precision-medicine-portal-frontend"
+              href="https://github.com/ScilifelabDataCentre/precision-medicine-portal"
               target="_blank"
               rel="noopener noreferrer"
               className="font-medium text-white/80 hover:text-white underline underline-offset-4 transition-colors"

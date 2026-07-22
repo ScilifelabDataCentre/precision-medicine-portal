@@ -107,17 +107,17 @@ next-app/
 
 **Important**: You must work through a fork of the repository. Do not commit directly to the main repository.
 
-1. Fork the repository: Click the "Fork" button at the top right of the [main repository page](https://github.com/ScilifelabDataCentre/precision-medicine-portal-frontend) to create your own copy.
+1. Fork the repository: Click the "Fork" button at the top right of the [main repository page](https://github.com/ScilifelabDataCentre/precision-medicine-portal) to create your own copy.
 
 2. Clone your fork: Clone your forked repository to your local machine:
 
    ```bash
-   git clone https://github.com/YOUR_USERNAME/precision-medicine-portal-frontend.git
+   git clone https://github.com/YOUR_USERNAME/precision-medicine-portal.git
    ```
 
 3. Add the upstream remote: Add the original repository as an upstream remote to keep your fork updated:
    ```bash
-   git remote add upstream https://github.com/ScilifelabDataCentre/precision-medicine-portal-frontend.git
+   git remote add upstream https://github.com/ScilifelabDataCentre/precision-medicine-portal.git
    ```
 
 Please note that we require all commits to be verified, so you must sign your commits. For information on how to set this up, see the GitHub documentation [here](https://docs.github.com/en/authentication/managing-commit-signature-verification/signing-commits).
@@ -222,7 +222,7 @@ Once you're finished with your edits and they are committed and pushed to your b
 
 You can find full documentation on the [GitHub help website](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/about-pull-requests). In short:
 
-- Visit your fork: `https://github.com/YOUR_USERNAME/precision-medicine-portal-frontend`
+- Visit your fork: `https://github.com/YOUR_USERNAME/precision-medicine-portal`
 - Find the branch `my_branch` that you created and pushed to
 - Click the button that reads _"New Pull Request"_
 - GitHub will automatically detect that you want to create a pull request to the upstream repository
