@@ -23,11 +23,7 @@ function ComplianceStatusList({
   label: string;
 }): ReactElement {
   return (
-    <ul
-      className="list-none pl-0 space-y-1"
-      role="list"
-      aria-label={label}
-    >
+    <ul className="list-none pl-0 space-y-1" role="list" aria-label={label}>
       {options.map((option) => (
         <li key={option.label} className="flex items-start gap-2">
           <span aria-hidden="true">{option.selected ? "☒" : "☐"}</span>
@@ -95,7 +91,8 @@ export default function AccessibilityPage(): ReactElement {
         <Title level={1}>Accessibility statement</Title>
 
         <p role="doc-abstract">
-          This accessibility statement applies to the Precision Medicine Portal (
+          This accessibility statement applies to the Precision Medicine Portal
+          (
           <a
             href="https://precision-medicine-portal.scilifelab.se"
             className={linkClassName}
@@ -174,8 +171,8 @@ export default function AccessibilityPage(): ReactElement {
         <Title level={2}>Report deficiencies in accessibility</Title>
         <p>
           The Agency for Digital Government (DIGG) is responsible for
-          supervising compliance with the Act on Accessibility to Digital
-          Public Services.
+          supervising compliance with the Act on Accessibility to Digital Public
+          Services.
         </p>
         <p>
           If you are not satisfied with how we handle your feedback regarding
@@ -206,14 +203,12 @@ export default function AccessibilityPage(): ReactElement {
         </p>
 
         <Title level={3}>Non-accessible content</Title>
+        <p>The content described below is not fully accessible.</p>
         <p>
-          The content described below is not fully accessible.
-        </p>
-        <p>
-          Accessibility improvements have been made based on an initial automated
-          accessibility review. However, a comprehensive accessibility assessment
-          has not yet been completed, and there may be accessibility issues that
-          have not yet been identified or documented.
+          Accessibility improvements have been made based on an initial
+          automated accessibility review. However, a comprehensive accessibility
+          assessment has not yet been completed, and there may be accessibility
+          issues that have not yet been identified or documented.
         </p>
         <p>Areas that have not yet been systematically assessed include:</p>
         <ul className="list-disc pl-4" role="list">

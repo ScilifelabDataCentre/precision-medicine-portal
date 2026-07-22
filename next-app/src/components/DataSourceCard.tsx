@@ -33,16 +33,16 @@ export const DataSourceCard = ({
             rel="noopener noreferrer"
             className="text-xl text-primary hover:underline grow focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
             aria-label={`Visit ${sanitizeText(
-              dataSource.name
+              dataSource.name,
             )} website (opens in new tab)`}
             dangerouslySetInnerHTML={{
               __html: sanitizeHTML(
                 highlightSearchTerms(
                   sanitizeText(dataSource.name),
-                  searchTerms
+                  searchTerms,
                 ),
                 ["mark"],
-                ["class"]
+                ["class"],
               ),
             }}
           />
@@ -65,7 +65,7 @@ export const DataSourceCard = ({
             __html: sanitizeHTML(
               highlightSearchTerms(dataSource.description, searchTerms),
               ["mark"],
-              ["class"]
+              ["class"],
             ),
           }}
         />

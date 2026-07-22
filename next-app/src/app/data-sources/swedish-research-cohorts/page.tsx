@@ -25,11 +25,7 @@ type StudyType =
   | "cohort_infrastructure";
 
 type DataType =
-  | "genomics"
-  | "clinical_data"
-  | "imaging"
-  | "registry_linkage"
-  | "multi_omics";
+  "genomics" | "clinical_data" | "imaging" | "registry_linkage" | "multi_omics";
 
 type DiseaseArea = "cancer" | "cardiovascular" | "metabolic" | "neurology";
 

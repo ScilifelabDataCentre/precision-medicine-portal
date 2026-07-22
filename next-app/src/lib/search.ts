@@ -28,13 +28,17 @@ export function expandSearchTerms(terms: string[]): string[] {
     }
 
     // Also check for reverse mapping (English to Swedish)
-    Object.entries(SWEDISH_TO_ENGLISH_TERMS).forEach(([swedish, englishTerms]) => {
-      if (
-        englishTerms.some((english) => english.toLowerCase() === normalizedTerm)
-      ) {
-        expandedTerms.push(swedish, ...englishTerms);
-      }
-    });
+    Object.entries(SWEDISH_TO_ENGLISH_TERMS).forEach(
+      ([swedish, englishTerms]) => {
+        if (
+          englishTerms.some(
+            (english) => english.toLowerCase() === normalizedTerm,
+          )
+        ) {
+          expandedTerms.push(swedish, ...englishTerms);
+        }
+      },
+    );
   });
 
   // Remove duplicates and return

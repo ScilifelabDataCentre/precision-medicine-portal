@@ -31,7 +31,7 @@ export default function Title({
       className={cn(
         baseStyles,
         sizeStyles[level as keyof typeof sizeStyles],
-        className
+        className,
       )}
     >
       {children}

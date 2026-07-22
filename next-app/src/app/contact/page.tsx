@@ -16,7 +16,8 @@ import { LastUpdated } from "@/components/common/last-updated";
 
 export const metadata = pageMetadata({
   title: "Contact",
-  description: "Get in touch with the SciLifeLab Precision Medicine Portal team.",
+  description:
+    "Get in touch with the SciLifeLab Precision Medicine Portal team.",
   path: "/contact",
 });
 

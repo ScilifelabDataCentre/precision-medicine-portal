@@ -12,14 +12,14 @@ const LastUpdated = React.forwardRef<HTMLDivElement, LastUpdatedProps>(
         ref={ref}
         className={cn(
           "mt-auto py-4 text-center text-sm text-muted-foreground",
-          className
+          className,
         )}
         {...props}
       >
         Last updated on {date}
       </div>
     );
-  }
+  },
 );
 LastUpdated.displayName = "LastUpdated";
 
