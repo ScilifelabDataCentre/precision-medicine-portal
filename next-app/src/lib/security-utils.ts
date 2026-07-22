@@ -38,7 +38,7 @@ export const DEFAULT_SECURITY_CONFIG: SecurityConfig = {
  */
 export function sanitizeURL(
   url: string,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): string {
   // Basic validation
   if (!url || typeof url !== "string" || url.trim().length === 0) {
@@ -82,7 +82,7 @@ export function createSafeImageSrc(
   thumbnail: string,
   basePath: string = "/img/datasources/",
   fallbackImage: string = "/img/datasources/na-sign-icon.png",
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): string {
   if (
     !thumbnail ||
@@ -99,7 +99,7 @@ export function createSafeImageSrc(
   const sanitizedFilename = filename.replace(
     config.allowedFilenameChars ||
       DEFAULT_SECURITY_CONFIG.allowedFilenameChars!,
-    ""
+    "",
   );
 
   if (
@@ -136,7 +136,7 @@ export function createSafeImageSrc(
  */
 export function sanitizeText(
   text: string,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): string {
   if (!text || typeof text !== "string" || text.trim().length === 0) {
     return "";
@@ -166,7 +166,7 @@ export function sanitizeText(
 export function sanitizeHTML(
   html: string,
   allowedTags: string[] = [],
-  allowedAttr: string[] = []
+  allowedAttr: string[] = [],
 ): string {
   if (!html || typeof html !== "string") {
     return "";
@@ -188,7 +188,7 @@ export function sanitizeHTML(
 export function createSafeUrl(
   baseUrl: string,
   path?: string | null,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): string {
   if (!baseUrl || typeof baseUrl !== "string") {
     return "#";
@@ -210,7 +210,7 @@ export function createSafeUrl(
  */
 export function isValidUrl(
   url: string,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): boolean {
   if (!url || typeof url !== "string") {
     return false;
@@ -239,7 +239,7 @@ export function isValidUrl(
  */
 export function sanitizeObject(
   obj: unknown,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): unknown {
   if (obj === null || obj === undefined) {
     return obj;
@@ -272,7 +272,7 @@ export function sanitizeObject(
  */
 export function useSanitizedValue(
   value: string,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): string {
   return sanitizeText(value, config);
 }
@@ -285,7 +285,7 @@ export function useSanitizedValue(
  */
 export function useSanitizedUrl(
   url: string,
-  config: SecurityConfig = DEFAULT_SECURITY_CONFIG
+  config: SecurityConfig = DEFAULT_SECURITY_CONFIG,
 ): string {
   return sanitizeURL(url, config);
 }

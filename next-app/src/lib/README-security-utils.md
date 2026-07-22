@@ -65,7 +65,7 @@ const safeImage = createSafeImageSrc(userImagePath);
 const customImage = createSafeImageSrc(
   userImagePath,
   "/custom/path/",
-  "/fallback.png"
+  "/fallback.png",
 );
 ```
 

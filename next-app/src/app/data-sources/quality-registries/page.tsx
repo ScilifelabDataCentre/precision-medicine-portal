@@ -50,7 +50,7 @@ export default function QualityRegistryPage() {
   // Debounce search term for better performance
   const debouncedSearchTerm = useDebounce(
     searchTerm,
-    SEARCH_CONFIG.DEBOUNCE_DELAY
+    SEARCH_CONFIG.DEBOUNCE_DELAY,
   );
 
   // Data fetching
@@ -60,16 +60,15 @@ export default function QualityRegistryPage() {
         setIsLoading(true);
         setError(null);
 
-        const registryData = await import(
-          "@/assets/Kvalitetsregister_geo_dates_02.09.2024.json"
-        );
+        const registryData =
+          await import("@/assets/Kvalitetsregister_geo_dates_02.09.2024.json");
 
         const processedData = registryData.default.map(
           (entry: IRegistrySource) => ({
             ...entry,
             start_date: entry.start_date ? entry.start_date.split("-")[0] : "",
             category: entry.category || [],
-          })
+          }),
         );
 
         setRegistries(processedData);
@@ -96,7 +95,7 @@ export default function QualityRegistryPage() {
         return tags.some((tag) => tag.toLowerCase() === type.toLowerCase());
       }).length;
     },
-    [registries]
+    [registries],
   );
 
   // Filter management
@@ -106,7 +105,7 @@ export default function QualityRegistryPage() {
         const newFilters = { ...prev };
         if (newFilters[filterType].includes(filterName)) {
           newFilters[filterType] = newFilters[filterType].filter(
-            (item) => item !== filterName
+            (item) => item !== filterName,
           );
         } else {
           newFilters[filterType] = [...newFilters[filterType], filterName];
@@ -114,7 +113,7 @@ export default function QualityRegistryPage() {
         return newFilters;
       });
     },
-    []
+    [],
   );
 
   // Search and filter logic
@@ -132,16 +131,16 @@ export default function QualityRegistryPage() {
         selectedFilters.registryCentre.length === 0 ||
         selectedFilters.registryCentre.some((filter) =>
           registry.registry_centre.some(
-            (centre) => centre.toLowerCase() === filter.toLowerCase()
-          )
+            (centre) => centre.toLowerCase() === filter.toLowerCase(),
+          ),
         );
 
       const categoryFilter =
         selectedFilters.registryCategory.length === 0 ||
         selectedFilters.registryCategory.some((filter) =>
           registry.category.some(
-            (cat) => cat.toLowerCase() === filter.toLowerCase()
-          )
+            (cat) => cat.toLowerCase() === filter.toLowerCase(),
+          ),
         );
 
       return centreFilter && categoryFilter;

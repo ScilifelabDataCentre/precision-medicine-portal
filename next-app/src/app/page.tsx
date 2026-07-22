@@ -15,8 +15,7 @@ const dataSourceCards = [
   },
   {
     title: "Swedish research cohorts",
-    description:
-      "Discover Swedish research cohorts and biobank-based studies",
+    description: "Discover Swedish research cohorts and biobank-based studies",
     cta: "Browse cohorts",
     href: "/data-sources/swedish-research-cohorts",
   },

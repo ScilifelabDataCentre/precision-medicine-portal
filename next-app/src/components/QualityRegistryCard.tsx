@@ -39,7 +39,7 @@ export const QualityRegistryCard = ({
 }: QualityRegistryCardProps) => {
   const expandedTerms = useMemo(
     () => expandSearchTerms(searchTerms),
-    [searchTerms, expandSearchTerms]
+    [searchTerms, expandSearchTerms],
   );
   const hasSearch = searchTerms.length > 0;
 
@@ -76,7 +76,7 @@ export const QualityRegistryCard = ({
               hasSearch
                 ? highlightSearchTerms(
                     registry.Information || "Information not available.",
-                    expandedTerms
+                    expandedTerms,
                   )
                 : registry.Information || "Information not available."
             }
@@ -99,7 +99,7 @@ export const QualityRegistryCard = ({
                   url={organisationLinks[registry.registry_centre[0]]}
                   className="hover:underline"
                   aria-label={`Visit ${registry.registry_centre.join(
-                    ", "
+                    ", ",
                   )} website (opens in new tab)`}
                 >
                   <Safe.HTML
@@ -107,7 +107,7 @@ export const QualityRegistryCard = ({
                       hasSearch
                         ? highlightSearchTerms(
                             registry.registry_centre.join(", "),
-                            expandedTerms
+                            expandedTerms,
                           )
                         : registry.registry_centre.join(", ")
                     }
@@ -126,7 +126,7 @@ export const QualityRegistryCard = ({
                     hasSearch
                       ? highlightSearchTerms(
                           registry.category.join(", "),
-                          expandedTerms
+                          expandedTerms,
                         )
                       : registry.category.join(", ")
                   }
