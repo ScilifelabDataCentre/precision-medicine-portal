@@ -27,7 +27,11 @@ export const DEFAULT_SECURITY_CONFIG: SecurityConfig = {
 // `sanitize` on the server.
 
 /**
- * Sanitizes URLs to prevent DOMXSS and protocol-based attacks
+ * Sanitizes URLs to prevent DOMXSS and protocol-based attacks by enforcing an
+ * http/https scheme allowlist, collapsing javascript:, data:, and other unsafe
+ * schemes to "#". This is the intended guard for dynamic `href` sinks; some
+ * static scanners (e.g. Snyk Code) do not recognise it as a sanitizer and may
+ * flag call sites as false positives.
  * @param url - The URL to sanitize
  * @param config - Security configuration options
  * @returns Sanitized URL or "#" if invalid

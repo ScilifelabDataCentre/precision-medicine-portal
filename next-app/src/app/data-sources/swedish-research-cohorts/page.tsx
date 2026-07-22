@@ -378,6 +378,15 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                 <Card className="bg-muted border border-neutral rounded-lg shadow-xs hover:shadow-md transition-shadow">
                   <CardHeader className="bg-muted p-4">
                     <CardTitle className="text-lg font-medium text-primary hover:underline">
+                      {/*
+                        Snyk Code javascript/DOMXSS on this href is a false
+                        positive. `item.link` (and `item.SND` below) come from a
+                        static, repo-committed JSON asset imported at build time —
+                        not a user-, URL-, or network-controlled source — and
+                        sanitizeURL() enforces an http/https allowlist, collapsing
+                        javascript:/data:/etc. to "#" (unit-tested in
+                        security-utils.test.ts). Dismissed in the Snyk platform.
+                      */}
                       <a
                         href={sanitizeURL(item.link)}
                         target="_blank"
