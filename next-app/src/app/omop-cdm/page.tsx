@@ -311,7 +311,7 @@ export default function OMOPCDMPage(): ReactElement {
           <div className="flex flex-col gap-8 text-left md:flex-row md:gap-16 md:justify-between md:items-center">
             <div className="w-full md:w-1/2 flex flex-col gap-4">
               <Image
-                className="object-contain"
+                className="mx-auto w-full h-auto"
                 src="/img/omop/omop-timeline.png"
                 alt="What's the history of OMOP?"
                 width={500}
@@ -319,7 +319,7 @@ export default function OMOPCDMPage(): ReactElement {
                 priority
               />
               <Image
-                className="object-contain"
+                className="mx-auto w-full h-auto"
                 src="/img/omop/ohdsi-collaborators-july2025.png"
                 alt="OHDSI Collaborators July 2025"
                 width={500}

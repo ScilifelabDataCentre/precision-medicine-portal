@@ -129,13 +129,16 @@ export default function AboutDSNPMDProjectsPage() {
                   </div>
 
                   {project.logoKey && logos[project.logoKey] && (
-                    <div className="shrink-0" aria-hidden="true">
+                    <div
+                      className="relative h-16 w-32 shrink-0"
+                      aria-hidden="true"
+                    >
                       <Image
                         src={logos[project.logoKey]}
                         alt=""
-                        width={128}
-                        height={64}
-                        className="object-contain max-h-[64px]"
+                        fill
+                        sizes="128px"
+                        className="object-contain"
                         role="presentation"
                       />
                     </div>

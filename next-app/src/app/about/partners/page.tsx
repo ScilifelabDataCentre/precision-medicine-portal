@@ -124,12 +124,15 @@ export default function AboutPartnersPage() {
                     </CardTitle>
                   </div>
 
-                  <div className="shrink-0" aria-hidden="true">
+                  <div
+                    className="relative h-16 w-32 shrink-0"
+                    aria-hidden="true"
+                  >
                     <Image
                       src={logos[partner.logoKey]}
                       alt=""
-                      width={128}
-                      height={64}
+                      fill
+                      sizes="128px"
                       className="object-contain"
                       role="presentation"
                     />
