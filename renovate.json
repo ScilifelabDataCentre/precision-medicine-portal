@@ -2,7 +2,10 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
   "minimumReleaseAge": "7 days",
-  "docker": {
-    "pinDigests": true
-  }
+  "packageRules": [
+    {
+      "matchCategories": ["docker"],
+      "pinDigests": true
+    }
+  ]
 }
