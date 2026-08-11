@@ -30,6 +30,18 @@ interface QualityRegistryCardProps {
   organisationLinks: Record<string, string>;
 }
 
+/** Compare URLs ignoring trailing slash, whitespace, and host casing. */
+function normalizeUrl(url?: string): string {
+  if (!url) return "";
+  const trimmed = url.trim();
+  try {
+    const parsed = new URL(trimmed);
+    return `${parsed.host}${parsed.pathname}`.replace(/\/+$/, "").toLowerCase();
+  } catch {
+    return trimmed.replace(/\/+$/, "").toLowerCase();
+  }
+}
+
 export const QualityRegistryCard = ({
   registry,
   searchTerms,
@@ -43,6 +55,12 @@ export const QualityRegistryCard = ({
   );
   const hasSearch = searchTerms.length > 0;
 
+  const showMetadata =
+    !!registry.metadata_url &&
+    (registry.metadata_source === "SKR" ||
+      registry.metadata_source === "RCC") &&
+    normalizeUrl(registry.metadata_url) !== normalizeUrl(registry.url);
+
   return (
     <article
       key={registry.name}
@@ -53,6 +71,7 @@ export const QualityRegistryCard = ({
       <Card>
         <CardHeader className="bg-muted">
           <CardTitle className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            {/* Website / official registry link (primary) */}
             <Safe.Url
               url={registry.url}
               className="text-xl text-primary hover:underline"
@@ -84,6 +103,28 @@ export const QualityRegistryCard = ({
             allowedAttr={["class"]}
             className="mb-3"
           />
+          {showMetadata && (
+            <div className="mb-3">
+              <Safe.Url
+                url={registry.metadata_url!}
+                className="inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full text-black bg-[#649ED2] hover:opacity-90 self-start transition-opacity duration-100 focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2"
+                aria-label={`View Metadata: ${registry.metadata_source} for ${registry.name} (opens in new tab)`}
+              >
+                Metadata: {registry.metadata_source}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="20"
+                  height="20.092"
+                  className="shrink-0"
+                  aria-hidden="true"
+                  role="presentation"
+                >
+                  <path d="m12 0 2.561 2.537-6.975 6.976 2.828 2.828 6.988-6.988L20 7.927 19.998 0H12z" />
+                  <path d="M9 4.092v-2H0v18h18v-9h-2v7H2v-14h7z" />
+                </svg>
+              </Safe.Url>
+            </div>
+          )}
           <dl
             className="mt-3 flex flex-wrap gap-2"
             aria-label="Registry details"

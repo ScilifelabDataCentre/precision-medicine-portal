@@ -35,6 +35,13 @@ export interface IRegistrySource {
   registry_centre: string[];
   category: string[];
   search_tags: string[];
+  /**
+   * Primary external metadata/catalogue source, typically "SKR" or "RCC".
+   * Omit when there is no separate catalogue page (e.g. metadata URL equals official URL).
+   */
+  metadata_source?: string;
+  /** URL for the primary metadata/catalogue page. Must differ from `url`. */
+  metadata_url?: string;
 }
 
 export const filters: IRegistryFilters = {

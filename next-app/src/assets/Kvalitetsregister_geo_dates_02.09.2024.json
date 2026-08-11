@@ -11,11 +11,14 @@
             "Sverige",
             "obesity"
         ],
-        "Information": "One of the world's largest and oldest registries for the treatment of childhood obesity. BORIS was established in 2005 and has over 40,000 registered individuals. In more than 40 scientific publications, BORIS has contributed to increased knowledge about childhood obesity.",
+        "Information": "BORIS is one of the world's largest and oldest registries for the treatment of childhood obesity. It supports quality improvement and research by collecting data on treatment and outcomes in paediatric obesity care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2005"
+        "start_date": "2005",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/barnobesitasregistretisverigeboris.77541.html"
     },
     {
         "name": "Endovaskulär behandling av Stroke – EVAS-registret",
@@ -33,7 +36,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2012"
+        "start_date": "2012",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/endovaskularbehandlingavstrokeevasregistret.77562.html"
     },
     {
         "name": "Graviditetsregistret",
@@ -49,11 +55,14 @@
             "fetal",
             "neonatal"
         ],
-        "Information": "The purpose of the registry is to provide a solid foundation of data and results for healthcare services across the country. Data is collected from maternal healthcare, fetal diagnostics and delivery records. As of 2024, the registry includes data on roughly 58,500 pregnant individuals and about 63,600 deliveries.",
+        "Information": "The Pregnancy Register provides a national foundation of data for maternal and perinatal healthcare. It collects information from maternal healthcare, fetal diagnostics and delivery records to support quality improvement, follow-up and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2013"
+        "start_date": "2013",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/graviditetsregistret.77568.html"
     },
     {
         "name": "InfCareHIV",
@@ -67,29 +76,35 @@
             "immune",
             "virus"
         ],
-        "Information": "Includes all HIV clinics in Sweden, covering over 99% of those diagnosed with HIV. Key data collected at enrollment and follow-up include sex at birth, gender identity, transmission route, HIV RNA levels, CD4+ cell counts, drug resistance, and co-infections with hepatitis C and B. Medication start/stop dates, AIDS diagnoses, and causes of death are also recorded.",
+        "Information": "InfCareHIV is a national quality registry that collects longitudinal clinical, laboratory and treatment data for people living with HIV in Sweden. It supports clinical follow-up, quality improvement and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1983"
+        "start_date": "1983",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/infcarehiv.77574.html"
     },
     {
         "name": "InfCareHepatit",
         "registry_centre": [
             "Kvalitetsregistercentrum Stockholm"
         ],
-        "url": "http://www.infcarehepatit.se/",
+        "url": "https://www.infcarehepatit.se/",
         "search_tags": [
             "liver",
             "hepatitis",
             "virus",
             "InfCareHepatit"
         ],
-        "Information": "InfCareHepatit is a Swedish registry that includes individuals with Hepatitis B and C. It involves all infectious disease clinics in Sweden and one gastroenterology clinic, covering over 90% of Hepatitis C patients and a majority of those with Hepatitis B. The registry collects data on age, gender at birth, country of birth, virus type, viral load, transmission route, date of first positive Hepatitis B or C test, liver function tests, and fibrosis assessment results. For those receiving treatment, it also records medication type, treatment outcomes, and any complications such as liver cirrhosis or cancer.",
+        "Information": "InfCareHepatit is a national quality registry for hepatitis B and C in Sweden. It collects longitudinal clinical, laboratory and treatment data to support quality improvement, follow-up and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/infcarehepatit.77573.html"
     },
     {
         "name": "Kvalitetsregister för cystisk fibros – CF-registret",
@@ -106,7 +121,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2012"
+        "start_date": "2012",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/kvalitetsregisterforcystiskfibroscfregistret.77556.html"
     },
     {
         "name": "Nationellt kvalitetsregister för assisterad befruktning – Q-IVF",
@@ -123,7 +141,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2007"
+        "start_date": "2007",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforassisteradbefruktningqivf.77538.html"
     },
     {
         "name": "Svenska hemofiliregistret",
@@ -141,7 +162,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2015"
+        "start_date": "2015",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationellaregistretforblodningssjukdomar.77548.html"
     },
     {
         "name": "Svenska Intensivvårdsregistret – SIR",
@@ -159,7 +183,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaintensivvardsregistretsir.77587.html"
     },
     {
         "name": "Svenska korsbandsregistret",
@@ -175,7 +202,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2005-05-01"
+        "start_date": "2005-05-01",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskkorsbandsregister.77591.html"
     },
     {
         "name": "Svenska neuroregister",
@@ -193,7 +223,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2001"
+        "start_date": "2001",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaneuroregister.77606.html"
     },
     {
         "name": "Svensk Reumatologis Kvalitetsregister – SRQ",
@@ -210,7 +243,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1995"
+        "start_date": "1995",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskreumatologiskvalitetsregistersrq.77620.html"
     },
     {
         "name": "Svenskt neonatalt kvalitetsregister – SNQ",
@@ -228,7 +264,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2001"
+        "start_date": "2001",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktneonataltkvalitetsregistersnq.77605.html"
     },
     {
         "name": "InfCare Sprututbyte",
@@ -246,7 +285,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2016"
+        "start_date": "2016",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt register för levertransplantation",
@@ -262,7 +302,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "1998"
+        "start_date": "1998",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Lungfibrosregistret",
@@ -280,7 +321,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2014"
+        "start_date": "2014",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Svenskt kvalitetsregister för atopiskt dermatit – SwedAD",
@@ -294,11 +336,12 @@
             "eczema",
             "atopic dermatitis"
         ],
-        "Information": "SwedAD collects detailed data on patients with atopic dermatitis, including demographic information, disease severity, treatment regimens, and patient-reported outcomes such as quality of life and symptom control. It also includes information on healthcare resource utilisation, like hospital visits and medications. It includes data from both specialised care centres and general practitioners.",
+        "Information": "SwedAD is a national quality registry for atopic dermatitis. It supports follow-up of disease severity, treatment and patient-reported outcomes and is used for quality improvement and research.",
         "category": [
-            "Other quality registry"
+            "National quality registry"
         ],
-        "start_date": "2019"
+        "start_date": "2019",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Amputations- och Protesregistret Swedeamp",
@@ -316,7 +359,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2011"
+        "start_date": "2011",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/amputationsochprotesregisterswedeamp.77535.html"
     },
     {
         "name": "Barnkataraktregistret PECARE",
@@ -334,7 +380,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2006"
+        "start_date": "2006",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "BPSD – Svenskt register för Beteendemässiga och Psykiska Symptom vid Demens",
@@ -352,7 +399,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktkvalitetsregisterforbeteendemassigaochpsykiskasymtomviddemenssjukdombpsd.77557.html"
     },
     {
         "name": "CPUP – Uppföljningsprogram för Cerebral Pares",
@@ -370,7 +420,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/cerebralparesuppfoljningsprogramcpup.77555.html"
     },
     {
         "name": "HAKIR – Handkirurgiskt kvalitetsregister",
@@ -388,7 +441,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/handkirurgisktkvalitetsregisterhakir.77572.html"
     },
     {
         "name": "Könsdysforiregistret",
@@ -406,7 +462,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2017"
+        "start_date": "2017",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "LKG-registret – Nationellt kvalitetsregister för läpp- käk- och/eller gomspalt",
@@ -423,24 +480,30 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforlappkakochgomspaltlkgregistret.77600.html"
     },
     {
         "name": "MMCUP – Kvalitetsregister för MMC (myelomeningocele) och annan neuralrörsdefekt",
         "registry_centre": [
             "Registercentrum Syd"
         ],
-        "url": "http://mmcup.se/",
+        "url": "https://mmcup.se/",
         "search_tags": [
             "MMCUP",
             "myelomeningocele",
             "neural tube defect"
         ],
-        "Information": "This registry collects data on patients with myelomeningocele (spina bifida) and other neural tube defects. It includes information on surgical interventions, neurological function, urological and orthopaedic outcomes, associated conditions, and patient-reported outcomes related to quality of life. It captures data on approximately 95% of all cases in Sweden.",
+        "Information": "MMCUP is a follow-up programme and quality registry for people with myelomeningocele and related conditions. It supports systematic follow-up of function, interventions, complications and outcomes across Sweden.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2013"
+        "start_date": "2013",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/kvalitetsregisterformmcannanneuralrorsdefektochhydrocefalusmmcup.77622.html"
     },
     {
         "name": "Nationella Kataraktregistret",
@@ -453,11 +516,14 @@
             "vision",
             "cataract"
         ],
-        "Information": "The register gathers comprehensive data on cataract surgeries performed in Sweden, including patient demographics, types of cataract, surgical techniques, intraocular lenses used, complications, and visual outcomes. This registry covers over 99% of all cataract surgeries in Sweden, including data from all ophthalmology clinics and hospitals performing these procedures.",
+        "Information": "The National Cataract Register gathers data on cataract surgery in Sweden, including patient characteristics, surgical techniques, intraocular lenses, complications and visual outcomes. It supports quality monitoring, comparison between units and research in ophthalmic surgery.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1992"
+        "start_date": "1992",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationellakataraktregistret.77569.html"
     },
     {
         "name": "Nationella Kvalitetsregistret för Infektionssjukdomar",
@@ -475,25 +541,29 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2007"
+        "start_date": "2007",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "RIKSHÖFT",
         "registry_centre": [
             "Registercentrum Syd"
         ],
-        "url": "http://rikshoft.se/",
+        "url": "https://rcsyd.se/rikshoft/",
         "search_tags": [
             "RIKSHÖFT",
             "fracture",
             "hip",
             "bone"
         ],
-        "Information": "Gathers data on patients with hip fractures, including demographic details, fracture types, treatments (surgical and non-surgical), complications, rehabilitation, and functional outcomes such as mobility and pain. It covers nearly all hospitals in Sweden that treat hip fractures, with around 90% of cases included in the registry.",
+        "Information": "RIKSHOFT follows hip-fracture care and outcomes in Sweden to support comparison, quality improvement and research across the care pathway.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1988"
+        "start_date": "1988",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforhoftfrakturrikshoft.77583.html"
     },
     {
         "name": "SKaPa – Svenskt kvalitetsregister för Karies och Parodontit",
@@ -511,7 +581,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktkvalitetsregisterforkariesochparodontitskapa.77589.html"
     },
     {
         "name": "SKRS – Svenskt Kvalitetsregister för Rehabilitering vid Synnedsättning",
@@ -528,7 +601,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2015"
+        "start_date": "2015",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktkvalitetsregisterforrehabiliteringvidsynnedsattningskrs.77619.html"
     },
     {
         "name": "SQRTPA – Scandinavian Quality Register for Thyroid, Parathyroid and Adrenal surgery",
@@ -546,7 +622,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2004"
+        "start_date": "2004",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/scandinavianqualityregisterforthyroidparathyroidandadrenalsurgerysqrtpa.77561.html"
     },
     {
         "name": "Svenska Cornearegistret",
@@ -564,7 +643,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1996"
+        "start_date": "1996",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskacornearegistret.77579.html"
     },
     {
         "name": "Svenska Nationella Fotledsregistret",
@@ -582,7 +664,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1997"
+        "start_date": "1997",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskanationellafotledsregistret.77563.html"
     },
     {
         "name": "Svenska Makularegistret",
@@ -600,7 +685,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskamakularegistret.77601.html"
     },
     {
         "name": "Svenska Skulder- och Armbågsregistret",
@@ -617,7 +705,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1999"
+        "start_date": "1999",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaskulderocharmbagsregistret.77624.html"
     },
     {
         "name": "SweTrau – Svenska Traumaregistret",
@@ -635,7 +726,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2011"
+        "start_date": "2011",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskatraumaregistret.77632.html"
     },
     {
         "name": "AmbuReg – Ambulansregistret",
@@ -649,11 +743,12 @@
             "ambulance",
             "emergency"
         ],
-        "Information": "AmbuReg collects data on pre-hospital care provided by ambulance services in Sweden. This includes information on patient demographics, medical conditions, types of interventions performed, response times, and outcomes of pre-hospital treatment.",
+        "Information": "AmbuReg is the national quality registry for ambulance care in Sweden. It supports quality improvement, follow-up and comparison of prehospital emergency care.",
         "category": [
-            "Other quality registry"
+            "National quality registry"
         ],
-        "start_date": "2016"
+        "start_date": "2016",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Analfistelregistret",
@@ -671,7 +766,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "GamReg Sweden – Kvalitetsregister för spel- och dataspelsberoende",
@@ -689,7 +785,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2019"
+        "start_date": "2019",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Glaukomregistret",
@@ -707,25 +804,27 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "LHON-registret – Registret för Lebers Hereditära Opticusneuropati",
         "registry_centre": [
             "Registercentrum Syd"
         ],
-        "url": "https://lhon-registret.se/om-lhon/",
+        "url": "https://lhon-registret.se/",
         "search_tags": [
             "optic",
             "Lebers",
             "Leber's hereditary optic neuropathy",
             "LHON-registret"
         ],
-        "Information": "Data from the registry may be used to try to identify the risk of developing vision impairment. Since the registry not only includes individuals with vision impairment but also carriers of the genetic variants who have normal vision, the registry may eventually be used to identify environmental or lifestyle factors that preceded vision impairment.",
+        "Information": "The Swedish LHON Registry is currently a research registry for Leber hereditary optic neuropathy (LHON). Its primary purpose is to facilitate research projects and improve knowledge about the condition.",
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2018"
+        "start_date": "2018",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "LSR – Lund Stroke Register",
@@ -743,7 +842,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2001"
+        "start_date": "2001",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Njurtransplantationsregistret",
@@ -761,7 +861,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Barnkirurgi operationsregister",
@@ -777,7 +878,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Register för brachyterapi vid uvealt melanom",
@@ -795,7 +897,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Sklerodermiregistret",
@@ -813,7 +916,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Svenska Lambåregistret",
@@ -829,7 +933,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "SweAAA – Svenskt Register för Abdominellt Aortaaneurysm",
@@ -846,23 +951,30 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11"
     },
     {
-        "name": "Sällsynta diagnoser",
+        "name": "RaraSwed – Nationellt kvalitetsregister för sällsynta hälsotillstånd",
         "registry_centre": [
             "Registercentrum Syd"
         ],
-        "url": "https://rcsyd.se/anslutna-register",
+        "url": "https://sodrasjukvardsregionen.se/csd-syd/raraswed-kvalitetsregister/",
         "search_tags": [
+            "RaraSwed",
             "rare disease",
-            "genetic"
+            "genetic",
+            "Sällsynta diagnoser",
+            "sällsynta hälsotillstånd"
         ],
-        "Information": "Collects data on rare diseases, focusing on diagnosis and treatment outcomes.",
+        "Information": "RaraSwed is the Swedish national quality registry for rare health conditions. It collects structured information across rare diagnoses to support quality improvement, follow-up and research and to improve knowledge about healthcare and outcomes for people living with rare conditions.",
         "category": [
-            "Other quality registry"
+            "National quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "verification_source": "Official registry source",
+        "verification_url": "https://rcsyd.se/anslutna-register/raraswed-nationellt-kvalitetsregister-for-sallsynta-diagnoser",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "PsoReg – Nationellt register för systembehandling av psoriasis",
@@ -880,7 +992,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2006"
+        "start_date": "2006",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/registerforsystembehandlingavpsoriasispsoreg.77616.html"
     },
     {
         "name": "Riksstroke – Nationellt kvalitetsregister för strokesjukvård",
@@ -898,7 +1013,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1994"
+        "start_date": "1994",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationellakvalitetsregistretforstrokeriksstroke.77627.html"
     },
     {
         "name": "Svenskt Bråckregister  – Nationellt kvalitetsregister inom bråckkirurgi",
@@ -913,7 +1031,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1992"
+        "start_date": "1992",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktbrackregister.77598.html"
     },
     {
         "name": "GynOp – Nationella kvalitetsregister inom gynekologisk kirurgi",
@@ -930,7 +1051,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterinomgynekologiskkirurgigynop.77570.html"
     },
     {
         "name": "SveATTR – Svenska transtyretinamyloidosregistret",
@@ -946,14 +1070,15 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2019"
+        "start_date": "2019",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "DBS – Kvalitetsregister inom deep brain stimulation",
         "registry_centre": [
             "Registercentrum Norr"
         ],
-        "url": "https://deepbrainstimulation.se/",
+        "url": "https://rcnorr.se/anslutna-register/",
         "search_tags": [
             "DBS",
             "stimulation",
@@ -963,7 +1088,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "CKG – Kardiovaskulär genetik",
@@ -981,7 +1107,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "Unknown"
+        "start_date": "Unknown",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Terapeutisk aferes – Internationellt register för terapeutisk aferes behandling",
@@ -996,7 +1123,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "1992"
+        "start_date": "1992",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "AURICULA – Nationellt register för förmaksflimmer och antikoagulation",
@@ -1012,7 +1140,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2007"
+        "start_date": "2007",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "GallRiks – Svenskt kvalitetsregister för gallstenskirurgi",
@@ -1025,11 +1154,14 @@
             "cholecystectomy",
             "gallstone surgery"
         ],
-        "Information": "GallRiks monitors gallstone surgeries in Sweden, collecting data on over 12,000 gallbladder surgeries and 6,000 endoscopic procedures annually. It tracks complications, surgery types, and patient outcomes, aiming to reduce post-operative complications, which occur in 5-10% of cases. GallRiks covers all hospitals performing gallstone surgery, ensuring comprehensive national data​.",
+        "Information": "GallRiks is Sweden's national quality registry for gallstone surgery and ERCP. It records gallbladder surgery, ERCP procedures and postoperative complications and supports quality monitoring, comparison between units and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2005"
+        "start_date": "2005",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforgallstenskirurgiochercpgallriks.77567.html"
     },
     {
         "name": "Kateterablationsregistret – Nationellt kvalitetsregister för kateterablation vid hjärtrusningar",
@@ -1045,7 +1177,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2004"
+        "start_date": "2004",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforkateterablation.77544.html"
     },
     {
         "name": "NRS – Nationellt register över smärtrehabilitering",
@@ -1061,7 +1196,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisteroversmartrehabiliteringnrs.77626.html"
     },
     {
         "name": "RiksSvikt – Nationellt kvalitetsregister för hjärtsvikt",
@@ -1073,11 +1211,14 @@
             "RiksSvikt",
             "hear disease"
         ],
-        "Information": "RiksSvikt collects data on patients with heart failure, focusing on diagnostics, treatments, and long-term outcomes. It aims to ensure that 90% of patients are treated according to national guidelines, covering most hospitals across Sweden.",
+        "Information": "RiksSvikt is a national quality registry for heart failure. It collects data on diagnostics, treatment and long-term outcomes to support guideline-based care, quality improvement and research across Swedish hospitals.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2003"
+        "start_date": "2003",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationellthjartsviktsregisterrikssvikt.77578.html"
     },
     {
         "name": "RiksSår – Nationellt kvalitetsregister för svårläkta sår",
@@ -1094,7 +1235,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforpatientermedsvarlaktasarrikssar.77628.html"
     },
     {
         "name": "Senior alert – Nationellt kvalitetsregister för vård och omsorg",
@@ -1107,32 +1251,38 @@
             "senior alert",
             "treatment"
         ],
-        "Information": "Senior alert monitors the care of over 500,000 elderly patients annually. It tracks risks like falls, malnutrition, and pressure ulcers, with national coverage in elderly care facilities, hospitals, and home care​.",
+        "Information": "Senior alert is a national quality registry and a tool for preventive care. It supports systematic prevention and follow-up of risks including falls, pressure ulcers, malnutrition, poor oral health and bladder dysfunction.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforvardochomsorgsenioralert.77634.html"
     },
     {
         "name": "SOReg – Scandinavian Obesity Surgery Registry",
         "registry_centre": [
             "Uppsala Clinical Research Center"
         ],
-        "url": "https://www.ucr.uu.se/soreg/",
+        "url": "https://www.soreg.se/",
         "search_tags": [
             "Obesity",
             "Scandinavian",
             "Surgery",
             "SOReg"
         ],
-        "Information": "SOReg collects data from approximately 7,000 patients annually undergoing bariatric surgery in Sweden. It monitors surgical types, complications, and long-term outcomes, covering all bariatric surgery centres in Sweden.",
+        "Information": "SOReg is a quality registry for bariatric surgery. It follows procedures, complications, weight outcomes and long-term follow-up and supports quality improvement and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2007"
+        "start_date": "2007",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/scandinavianobesitysurgeryregistersoreg.77611.html"
     },
     {
-        "name": "SPAHR – Svenska PAH & CTEPH registret",
+        "name": "SPAHR – Svenska PAH och CTEPH-registret",
         "registry_centre": [
             "Uppsala Clinical Research Center"
         ],
@@ -1142,29 +1292,35 @@
             "CTEPH",
             "SPAHR"
         ],
-        "Information": "Includes about 500 patients diagnosed with pulmonary arterial hypertension (PAH) and chronic thromboembolic pulmonary hypertension (CTEPH) in Sweden. It focuses on tracking diagnosis, treatments, and outcomes​.",
+        "Information": "SPAHR is a national quality registry for pulmonary arterial hypertension (PAH) and chronic thromboembolic pulmonary hypertension (CTEPH). It follows diagnosis, treatment, function, quality of life and prognosis and supports national comparison, quality improvement and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskapahochctephregistretspahr.77584.html"
     },
     {
         "name": "SPOR – Svenskt perioperativt register",
         "registry_centre": [
             "Uppsala Clinical Research Center"
         ],
-        "url": "https://www.ucr.uu.se/spor/",
+        "url": "https://spor.se/",
         "search_tags": [
             "register",
             "SPOR",
             "UCR",
             "perioperativt"
         ],
-        "Information": "SPOR collects perioperative data from over 1.2 million surgeries annually in Sweden, focusing on anaesthesia and post-surgical recovery. The registry helps improve patient safety in surgical care across Swedish hospitals​.",
+        "Information": "SPOR is a national quality registry that collects perioperative data for patients undergoing surgery. It supports patient safety, quality improvement, national comparison and research across perioperative care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2011"
+        "start_date": "2011",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktperioperativtregisterspor.77610.html"
     },
     {
         "name": "SveDem – Svenska registret för kognitiva sjukdomar/demenssjukdomar",
@@ -1178,11 +1334,14 @@
             "UCR",
             "SveDem"
         ],
-        "Information": "SveDem tracks more than 90,000 patients with dementia, collecting data on cognitive evaluations, treatments, and long-term care plans. It includes primary care and memory clinics across Sweden​.",
+        "Information": "SveDem, the Swedish Registry for Cognitive/Dementia Disorders, supports systematic follow-up of diagnosis, treatment, care and support for people with cognitive disorders. It is used for quality improvement, national follow-up and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2007"
+        "start_date": "2007",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaregistretforkognitivasjukdomardemenssjukdomarsvedem.77558.html"
     },
     {
         "name": "SWEDCON – Barnhjärtregistret (inkluderar GUCH, det vill säga vuxna med medfött hjärtfel)",
@@ -1200,7 +1359,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1998"
+        "start_date": "1998",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltregisterformedfoddahjartsjukdomarswedcon.77603.html"
     },
     {
         "name": "SWEDEHEART – Sammanslagning av RIKS-HIA, SEPHIA, SCAAR, TAVI, Svenska Hjärtkirurgiregistret och Kardiogenetikregistret.",
@@ -1218,7 +1380,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltregisterforhjartintensivvardkranskarlsrontgenpcihjartkirurgiochsekundarpreventionswedeheart.77576.html"
     },
     {
         "name": "SWEDEVOX – Andningssviktregistret över oxygenbehandling och respiratorbehandling i hemmet",
@@ -1235,7 +1400,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/andningssviktsregistretswedevox.77536.html"
     },
     {
         "name": "SWEDVASC – Nationellt register för kärlkirurgi",
@@ -1247,11 +1415,14 @@
             "vain",
             "SWEDVASC"
         ],
-        "Information": "SWEDVASC includes more than 100,000 vascular surgery cases. It tracks procedures like aneurysm repairs and peripheral artery disease treatment from hospitals across Sweden​.",
+        "Information": "SWEDVASC is the national quality registry for vascular surgery. It follows procedures such as aneurysm repair and treatment of peripheral artery disease and supports quality improvement, comparison and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1994"
+        "start_date": "1994",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforkarlkirurgiswedvasc.77592.html"
     },
     {
         "name": "SVAR – Svenskt akutvårdsregister",
@@ -1264,11 +1435,12 @@
             "SVAR",
             "acute care"
         ],
-        "Information": "SVAR is a national registry designed to cover the entire emergency care process, including prehospital care, emergency departments, and acute wards. It currently tracks over 600,000 patient visits annually and aims to improve the quality of emergency care across Sweden. Data is automatically collected from patient records to ensure high coverage and reliability​.",
+        "Information": "SVAR is a national registry covering the emergency care pathway, including prehospital care, emergency departments and acute wards. It supports quality improvement and follow-up of emergency care across Sweden.",
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "TBI – Traumatic Brain Injury",
@@ -1286,7 +1458,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "ThoR – Allmän Thoraxkirurgi",
@@ -1303,7 +1476,8 @@
         "category": [
             "Other quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "BRIMP – Bröstimplantatregistret",
@@ -1316,11 +1490,14 @@
             "Bröstimplantatregistret",
             "BRIMP"
         ],
-        "Information": "BRIMP collects data on all breast implant procedures, including both cosmetic and reconstructive surgeries. It tracks implant types, surgical methods, and complications, aiming to improve patient safety. The registry covers all healthcare providers that perform breast implant surgeries in Sweden, with about 9,936 breast implants tracked in the Västra Götaland region between 2014 and 2021.",
+        "Information": "BRIMP is the national breast implant registry. It collects data on cosmetic and reconstructive breast implant procedures, implant types, surgical methods and complications to support patient safety and quality improvement.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2014"
+        "start_date": "2014",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/brostimplantatregistret.77550.html"
     },
     {
         "name": "Kranio – Kranioregistret",
@@ -1337,7 +1514,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2023"
+        "start_date": "2023",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "LVR – Luftvägsregistret",
@@ -1354,10 +1532,13 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2013"
+        "start_date": "2013",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/luftvagsregistret.77590.html"
     },
     {
-        "name": "Nationellt kvalitetsregister för öron-, näs- och halssjukvård:",
+        "name": "Nationellt kvalitetsregister för öron-, näs- och halssjukvård",
         "registry_centre": [
             "Registercentrum Västra Götaland"
         ],
@@ -1372,7 +1553,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1997"
+        "start_date": "1997",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterfororonnasochhalssjukvard.81907.html"
     },
     {
         "name": "NDR – Nationella Diabetesregistret",
@@ -1385,11 +1569,14 @@
             "Nationella",
             "Diabetes"
         ],
-        "Information": "The data collected focuses on glycaemic control, risk factors, complications, and treatment outcomes for patients with both type 1 and type 2 diabetes. It promotes evidence-based healthcare by making data available to healthcare providers for regular comparison and quality improvement efforts. The NDR is one of the largest diabetes registries in the world, covering nearly 90% of patients with diabetes in Sweden.",
+        "Information": "The National Diabetes Register collects data on diabetes care, risk factors, treatment and outcomes. It is used for quality improvement, benchmarking, follow-up and research in Swedish diabetes care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1996"
+        "start_date": "1996",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelladiabetesregistretndr.77559.html"
     },
     {
         "name": "NROK – Nationella registret för ortognatkirurgi",
@@ -1405,7 +1592,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2018"
+        "start_date": "2018",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "QregPV – Primärvårdens kvalitetsregister Västra Götaland",
@@ -1416,11 +1604,12 @@
         "search_tags": [
             "QregPV"
         ],
-        "Information": "This registry focuses on primary care for conditions like hypertension and coronary artery disease. It includes data from over 200,000 patients, helping healthcare providers track and improve treatment outcomes​.",
+        "Information": "QregPV is a regional quality registry for primary care in Vastra Gotaland. It supports systematic follow-up and quality improvement in primary care by compiling relevant clinical indicators and outcomes.",
         "category": [
-            "National quality registry"
+            "Other quality registry"
         ],
-        "start_date": "2006"
+        "start_date": "2006",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Riksfot – Svenska fotkirurgiska registret",
@@ -1434,11 +1623,14 @@
             "Riksfot",
             "surgery"
         ],
-        "Information": "The Swedish Fracture Register (SFR) tracks over 900,000 fractures and registers over 100,000 new fractures each year. It collects data on all types of fractures, both surgical and non-surgical, to improve treatment outcomes and reduce complications. The registry is used in research and clinical improvement efforts across Sweden​.",
+        "Information": "Riksfot is the Swedish foot surgery registry. It follows foot and ankle surgical procedures, patient characteristics and outcomes to support quality improvement, comparison between units and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2011"
+        "start_date": "2011",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskafotkirurgiskaregistretriksfot.77564.html"
     },
     {
         "name": "SESAR – Svenska Sömnapnéregistret",
@@ -1451,11 +1643,14 @@
             "SESAR",
             "sleep apnea"
         ],
-        "Information": "SESAR focuses on tracking the diagnosis, treatment, and follow-up of patients with suspected or confirmed sleep apnea (mostly obstructive sleep apnea, OSA). The registry now includes around 120,000 patients. The number of healthcare units reporting to SESAR has grown steadily, and as of 2023, over 50 units are actively contributing data. In the last year, approximately 40,000 patient care events were registered, showing significant growth in both reporting and registry coverage​",
+        "Information": "SESAR is a national quality registry for sleep apnoea. It follows diagnosis, treatment and follow-up of patients with suspected or confirmed sleep apnoea, mainly obstructive sleep apnoea, and supports quality improvement and service development.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskasomnapneregistretsesar.77629.html"
     },
     {
         "name": "SFR – Svenska Frakturregistret",
@@ -1467,11 +1662,14 @@
             "SFR",
             "fracture"
         ],
-        "Information": "It aims to track all types of fractures treated in Sweden, with data covering fracture characteristics, patient demographics, injury types, and treatment outcomes. Both surgical and non-surgical treatments are recorded, including any subsequent reoperations or complications. The registry serves a dual purpose: improving clinical care through feedback on treatment outcomes and facilitating research. By 2023, more than 900,000 fractures had been registered, and over 100,000 new fractures are added each year​. The SFR is notable for being implemented across all 54 orthopaedic departments in Sweden, with most achieving a completeness of 75-95% in matching fractures to official health databases​.",
+        "Information": "The Swedish Fracture Register follows fractures treated in Sweden, including fracture characteristics, injury mechanisms, treatment and outcomes for both surgical and non-surgical care. It supports clinical feedback, quality improvement and research in fracture care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2011"
+        "start_date": "2011",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskafrakturregistret.77565.html"
     },
     {
         "name": "SLR – Svenska Ledprotesregistret",
@@ -1488,7 +1686,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2020"
+        "start_date": "2020",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaledprotesregistret.77595.html"
     },
     {
         "name": "SPOQ – Svenskt Pediatriskt Ortopediskt Qvalitetsregister",
@@ -1502,27 +1703,33 @@
             "child",
             "Pediatric care"
         ],
-        "Information": "Was established in 2015 and focuses on five major pediatric orthopedic conditions: hip instability (DDH), Perthes disease, slipped capital femoral epiphysis (SCFE), clubfoot (PEVA), and patellar dislocation. These conditions are significant for child orthopedics in Sweden, as untreated or delayed interventions can lead to lifelong physical impairments. The primary goal of SPOQ is to monitor and improve the quality of care by ensuring timely diagnosis and treatment. It tracks patient outcomes to prevent long-term issues like residual deformities, early-onset osteoarthritis, and the need for reoperations later in life. Data from the registry is used to evaluate treatment methods and inform clinical practice, with approximately 1 in 800 children born in Sweden being diagnosed with clubfoot​.",
+        "Information": "SPOQ is a national quality registry for paediatric orthopaedics. It focuses on conditions such as developmental dysplasia of the hip, Perthes disease, slipped capital femoral epiphysis, clubfoot and patellar dislocation, and supports timely diagnosis, treatment follow-up and quality improvement.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2015"
+        "start_date": "2015",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktpediatrisktortopedisktqvalitetsregisterspoq.77612.html"
     },
     {
         "name": "Svenska Artrosregistret",
         "registry_centre": [
             "Registercentrum Västra Götaland"
         ],
-        "url": "https://artrosregistret.registercentrum.se/",
+        "url": "https://boa.registercentrum.se/",
         "search_tags": [
             "svenska artros",
             "arthritis"
         ],
-        "Information": "It tracks data on osteoarthritis (OA) care across Sweden, focusing on non-surgical, first-line treatments like education, physical activity, and weight control. The register aims to monitor the effects of these interventions on patients' pain levels, physical activity, and overall health. As of 2023, over 225,000 patients have been registered, with data collected via questionnaires before treatment, three months after, and one year post-treatment.",
+        "Information": "Svenska Artrosregistret is a national quality registry that follows first-line osteoarthritis care and patient-reported outcomes. It is used for quality improvement, service follow-up and research in osteoarthritis care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaartrosregistret.77537.html"
     },
     {
         "name": "Svenska Hjärt- lungräddningsregistret",
@@ -1533,11 +1740,14 @@
         "search_tags": [
             "cardiopulmonary resuscitation"
         ],
-        "Information": "Plays a key role in tracking and improving cardiopulmonary resuscitation (CPR) efforts in Sweden. This registry is a vital tool in improving the chain of survival for heart attack victims, tracking critical factors such as time to intervention, quality of care, and long-term patient outcomes. Approximately 2,500 in-hospital cardiac arrests are reported annually, and out-of-hospital cases are similarly recorded, aiming for full coverage.",
+        "Information": "The Swedish Registry of Cardiopulmonary Resuscitation collects data on cardiac-arrest events and the critical links in the chain of survival, both in and outside hospital. It supports quality improvement, comparison and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1990"
+        "start_date": "1990",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskahjartlungraddningsregistret.77577.html"
     },
     {
         "name": "Svenska Thoraxtransplantationsregistret",
@@ -1549,11 +1759,12 @@
             "Thoraxtransplantationsregistret",
             "transplant"
         ],
-        "Information": "The registry focuses on monitoring heart and lung transplantations performed at the only two hospitals in Sweden where these surgeries are conducted: Skånes University Hospital in Lund and Sahlgrenska University Hospital in Gothenburg. STRAX aims to systematically collect information about patients before, during, and after their transplantation. This includes data from the waiting list, details of the surgeries, and lifelong follow-ups to track the success of the transplants and manage complications. Approximately 60-70 heart and lung transplants are performed annually in Sweden.",
+        "Information": "The Swedish Thoracic Transplant Registry follows heart and lung transplantation, including waiting-list information, perioperative care and long-term follow-up. It supports quality monitoring and research in thoracic transplantation.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2018"
+        "start_date": "2018",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Svenskt Register för Rehabiliteringsmedicin",
@@ -1571,7 +1782,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2021"
+        "start_date": "2021",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktregisterforrehabiliteringsmedicin.77618.html"
     },
     {
         "name": "SWEAPS – Svenska registret för avancerad barn- och ungdomskirurgi",
@@ -1587,7 +1801,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2016"
+        "start_date": "2016",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Bipolär- och psykosregistret – Nationellt kvalitetsregister för bipolär sjukdom och schizofrenispektrumtillstånd",
@@ -1600,18 +1815,21 @@
             "bipolar",
             "psychosis"
         ],
-        "Information": "Collects and analyses data on patients with bipolar disorder and schizophrenia spectrum conditions. Currently, the registry covers around 13,000 individuals with bipolar disorder from 166 healthcare units across Sweden. It tracks variables such as the number of mood episodes, medication types, treatment outcomes, and age of onset. The data is used to improve the quality of care, evaluate new treatments, and support research in psychiatric care.",
+        "Information": "The bipolar and psychosis registry is a national quality registry for bipolar disorder and schizophrenia spectrum conditions. It collects data on disease course, medication, treatment outcomes and care processes to support quality improvement and research in psychiatric care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2004"
+        "start_date": "2004",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/bipolarochpsykosregistretbipsy.77546.html"
     },
     {
         "name": "Bättre Beroendevård",
         "registry_centre": [
             "Registercentrum Västra Götaland"
         ],
-        "url": "https://battreberoendevard.registercentrum.se/",
+        "url": "https://www.battreberoendevard.regionstockholm.se/",
         "search_tags": [
             "Beroendevård",
             "addiction"
@@ -1620,23 +1838,29 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/battreberoendevard.77545.html"
     },
     {
         "name": "Kvalitetsregister ECT",
         "registry_centre": [
             "Registercentrum Västra Götaland"
         ],
-        "url": "https://ect.registercentrum.se/",
+        "url": "https://ect.rcnorr.se/",
         "search_tags": [
             "ECT",
             "electroconvulsive therapy"
         ],
-        "Information": "The registry includes data on electroconvulsive therapy (ECT) treatments, which are used primarily for severe psychiatric conditions like depression. It has a coverage rate of approximately 96% as of 2022, with all hospitals in Sweden that provide ECT contributing data. Since 2018, it has also tracked repetitive transcranial magnetic stimulation (rTMS) treatments, covering 11 regions and with a 90% data coverage rate.",
+        "Information": "The ECT quality registry collects data on electroconvulsive therapy used mainly for severe psychiatric conditions such as depression. It also follows repetitive transcranial magnetic stimulation (rTMS) and supports quality monitoring and national comparison of these treatments.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2012"
+        "start_date": "2012",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/kvalitetsregisterect.77560.html"
     },
     {
         "name": "Q-bup – Nationellt kvalitetsregister för barn- och ungdomspsykiatri",
@@ -1649,11 +1873,12 @@
             "child psychiatry",
             "psychiatry"
         ],
-        "Information": "Focused on psychiatric care for children and adolescents across Sweden. Its primary aim is to improve the quality and equality of mental health services by collecting comprehensive data from various regions. This data includes patient demographics, diagnoses, treatments, and outcomes, providing a national benchmark for psychiatric services. As of recent reports, it had a national coverage rate of around 22%, with higher regional coverage in areas like Kalmar, Stockholm, Gävleborg, and Jämtland/Härjedalen, reaching 76%.",
+        "Information": "Q-bup is the national quality registry for child and adolescent psychiatry. It collects data on demographics, diagnoses, treatments and outcomes to support quality improvement and more equal mental health services across Sweden.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2017"
+        "start_date": "2017",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Riksät – Nationellt kvalitetsregister för ätstörningsbehandling",
@@ -1666,11 +1891,12 @@
             "psychiatry",
             "eating disorder"
         ],
-        "Information": "It initially focused on specialised eating disorder units but has since expanded to include all eating disorder care in Sweden. The registry collects detailed data on patients, such as treatment duration, outcomes, and patient satisfaction, aiming to improve care quality and follow-up of treatment effects. Currently, approximately 50 units participate across 21 regions.",
+        "Information": "Riksat is a national quality registry for eating-disorder treatment. It collects information on care, treatment, outcomes and patient experience and supports quality improvement and longitudinal follow-up.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1999"
+        "start_date": "1999",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "RättspsyK – Nationellt rättspsykiatriskt kvalitetsregister",
@@ -1683,11 +1909,14 @@
             "RättspsyK",
             "psychiatry"
         ],
-        "Information": "Tracks patients receiving forensic psychiatric care in Sweden, which involves compulsory treatment following legal decisions. The registry collects comprehensive data on 25 different indicators, including treatment plans, risk assessments, recidivism in criminal activity, use of coercive measures, and patient health status. In 2023, the registry followed up on 2,070 patients, marking its highest recorded coverage since inception.",
+        "Information": "RättspsyK is the national quality registry for forensic psychiatric care. It follows treatment plans, risk assessments, coercive measures, health status and related outcomes to support quality improvement and follow-up of compulsory forensic psychiatric care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltrattspsykiatrisktkvalitetsregisterrattspsyk.77623.html"
     },
     {
         "name": "SibeR – Svenska internetbehandlingsregistret",
@@ -1699,11 +1928,14 @@
             "internetbehandlingsregistret",
             "SibeR"
         ],
-        "Information": "Collects data on internet-based psychological treatments, including cognitive behavioural therapy (iCBT), targeting mental health conditions across psychiatry, primary care, and somatic care. By 2021, SibeR had seen increasing use, with a significant portion of the data—70%—being directly transferred from patient records, facilitating streamlined data collection. The registry covers a wide range of treatments, including recent expansions into areas such as ADHD in adults and gastrointestinal issues.",
+        "Information": "SibeR is a national quality registry for internet-delivered psychological treatment. It collects information on access to treatment, treatment processes, mental-health outcomes and completion and supports quality-driven development of digital care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2015"
+        "start_date": "2015",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskainternetbehandlingsregistretsiber.77588.html"
     },
     {
         "name": "Barnnjurregistret (BNR)",
@@ -1719,7 +1951,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "1998"
+        "start_date": "1998",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskabarnnjurregistret.77608.html"
     },
     {
         "name": "Barnreumaregistret",
@@ -1736,7 +1971,10 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskabarnreumaregistret.77594.html"
     },
     {
         "name": "Registret för medfödda metabola sjukdomar (RMMS)",
@@ -1748,11 +1986,14 @@
             "born",
             "RMMS"
         ],
-        "Information": "Tracks and monitors 46 rare metabolic disorders. The registry aims to improve the care of individuals with inherited metabolic diseases by gathering comprehensive data on patient demographics, diagnoses, treatments, and outcomes. The registry currently has a national coverage rate of 71% (as of 2024). RMMS is critical for standardising care across different regions in Sweden and supports ongoing research and quality improvement in healthcare for these rare conditions. Approximately 50 new cases are diagnosed annually​.",
+        "Information": "RMMS follows people with inherited metabolic disorders. It collects data on demographics, diagnoses, treatments and outcomes to support standardised care, quality improvement and research in rare metabolic disease.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2013"
+        "start_date": "2013",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/registretformedfoddametabolasjukdomarrmms.77604.html"
     },
     {
         "name": "Svenska Barnhälsovårdsregistret (BHVQ)",
@@ -1769,7 +2010,8 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2013"
+        "start_date": "2013",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "PIDcare",
@@ -1784,73 +2026,91 @@
         "category": [
             "National quality registry"
         ],
-        "start_date": "2012"
+        "start_date": "2012",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforprimaraimmunbristerpidcare.77614.html"
     },
     {
         "name": "Svenskt Njurregister (SNR)",
         "registry_centre": [
             "Registercentrum Sydost"
         ],
-        "url": "https://www.medscinet.net/snr/",
+        "url": "https://www.snronline.se/",
         "search_tags": [
             "SNR",
             "Njurregister",
             "kidney"
         ],
-        "Information": "Was established to monitor and improve the quality of kidney care in Sweden, tracking various aspects of treatment for patients with chronic kidney disease, dialysis, and kidney transplants. The registry covers virtually all dialysis and transplant centres in Sweden, ensuring comprehensive national coverage. Data variables include patient demographics, treatment outcomes, transplantation statistics, and long-term survival rates. By 2023, SNR had registered over 18,300 kidney transplants, with around 6,400 patients living with a functioning transplant. Each year, the registry reports on approximately 523 transplantations and a large number of dialysis treatments.",
+        "Information": "Svenskt Njurregister follows chronic kidney disease, dialysis and kidney transplantation in Sweden. It supports clinical follow-up, quality improvement, benchmarking and research in kidney care.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1991"
+        "start_date": "1991",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktnjurregistersnr.77609.html"
     },
     {
-        "name": "Swespine",
+        "name": "Swespine – Svenska Ryggregistret",
         "registry_centre": [
             "Registercentrum Sydost"
         ],
-        "url": "http://www.swespine.se/",
+        "url": "https://www.swespine.se/",
         "search_tags": [
             "Swespine",
             "spine",
-            "spine disorders"
+            "spine disorders",
+            "Ryggregistret"
         ],
-        "Information": "It monitors spine surgeries performed across Sweden's orthopedic and neurosurgery clinics. By 2023, the registry included around 192,800 registered operations, with approximately 10,000 new spine surgeries added each year. The registry covers about 95% of the relevant clinics in Sweden, with a completeness rate of 85%, meaning a high proportion of patients who undergo spine surgery are captured.",
+        "Information": "Swespine, the Swedish Spine Registry, follows spine surgery, patient characteristics, procedures and patient-reported outcomes. It supports quality assurance, comparison of treatment results and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "1998"
+        "start_date": "1998",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaryggregistretswespine.77621.html"
     },
     {
-        "name": "Swibreg",
+        "name": "SWIBREG",
         "registry_centre": [
             "Registercentrum Sydost"
         ],
         "url": "https://www.swibreg.se/",
         "search_tags": [
-            "Swibreg"
+            "Swibreg",
+            "SWIBREG",
+            "IBD"
         ],
-        "Information": "Swibreg, the Swedish Inflammatory Bowel Disease Registry, was established to monitor and improve the care of individuals with inflammatory bowel diseases (IBD) like Crohn’s disease and ulcerative colitis. It tracks treatment outcomes, disease activity, and patient-reported quality of life across local, regional, and national levels. Swibreg currently includes data from over 64,000 registered patients.",
+        "Information": "SWIBREG is a national quality registry for inflammatory bowel disease. It follows treatment, disease activity, healthcare use and patient-reported outcomes and supports quality improvement and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2013"
+        "start_date": "2013",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltregisterforinflammatorisktarmsjukdomswibreg.77586.html"
     },
     {
         "name": "Svenska Palliativregistret",
         "registry_centre": [
             "Registercentrum Sydost"
         ],
-        "url": "https://palliativregistret.se/",
+        "url": "https://www.palliativregistret.se/",
         "search_tags": [
             "Svenska",
             "Palliativregistret",
             "pallitative"
         ],
-        "Information": "Designed to improve palliative care for patients at the end of life. The registry aims to cover all deaths in Sweden, regardless of diagnosis, age, or place of death. The registry includes data from approximately 90,000 deaths per year, contributing to continuous improvements in palliative care across various healthcare units. Variables collected include symptom management, patient and family support, and care preferences.",
+        "Information": "Svenska Palliativregistret is a national quality registry that supports systematic improvement of end-of-life care. It collects information on care processes and outcomes and provides feedback for quality improvement and research.",
         "category": [
             "National quality registry"
         ],
-        "start_date": "2005"
+        "start_date": "2005",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskapalliativregistret.77633.html"
     },
     {
         "name": "Nationellt kvalitetsregister akut lymfatisk leukemi",
@@ -1865,7 +2125,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "1997"
+        "start_date": "1997",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterakutlymfatiskleukemiall.83492.html"
     },
     {
         "name": "Nationellt kvalitetsregister akut myeloisk leukemi (AML), inklusive akut oklassificerad leukemi (AUL)",
@@ -1880,7 +2143,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "1997"
+        "start_date": "1997",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterakutmyeloiskleukemiamlinklusiveakutoklassificeradleukemiaul.83493.html"
     },
     {
         "name": "Nationellt Kvalitetsregister för Bröstcancer NKBC",
@@ -1895,7 +2161,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforbrostcancernkbc.77549.html"
     },
     {
         "name": "Svenska kvalitetsregistret för gynekologisk cancer",
@@ -1910,7 +2179,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskakvalitetsregistretforgynekologiskcancer.77571.html"
     },
     {
         "name": "Nationellt kvalitetsregister hudmelanom (SweMR)",
@@ -1925,7 +2197,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2003"
+        "start_date": "2003",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterhudmelanomswemr.77580.html"
     },
     {
         "name": "Svenskt kvalitetsregister för huvud- och halscancer",
@@ -1942,7 +2217,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktkvalitetsregisterforhuvudochhalscancer.77581.html"
     },
     {
         "name": "Svenska Hypofysregistret",
@@ -1959,22 +2237,32 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2011"
+        "start_date": "2011",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskahypofysregistret.77582.html"
     },
     {
-        "name": "Nationellt kvalitetsregister kronisk lymfatisk leukemi (ALL)",
+        "name": "Nationellt kvalitetsregister kronisk lymfatisk leukemi (KLL)",
         "registry_centre": [
             "Regionala Cancercentrum i Samverkan"
         ],
         "url": "https://cancercentrum.se/samverkan/cancerdiagnoser/blod-lymfom-myelom/kronisk-lymfatisk-leukemi-kll/kvalitetsregister/",
         "search_tags": [
-            "Nationellt kvalitetsregister kronisk lymfatisk leukemi (ALL)"
+            "Nationellt kvalitetsregister kronisk lymfatisk leukemi (KLL)",
+            "KLL",
+            "CLL"
         ],
         "Information": "The registry aims to collect comprehensive data on patients diagnosed with CLL, including demographic information, genetic markers, treatment approaches, and patient outcomes. Key variables tracked include treatment response, disease progression, and long-term survival rates. The registry provides insights into how different therapeutic strategies affect patient outcomes and supports ongoing clinical research.",
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2007"
+        "start_date": "2007",
+        "verification_source": "RCC",
+        "verification_url": "https://cancercentrum.se/samverkan/cancerdiagnoser/blod-lymfom-myelom/kronisk-lymfatisk-leukemi-kll/kvalitetsregister/",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterkronisklymfatiskleukemikll.84653.html"
     },
     {
         "name": "Svenska registret för cancer i lever, gallblåsa och gallvägar (SweLiv)",
@@ -1992,7 +2280,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskaregistretforcancerilevergallblasaochgallvagarsweliv.77596.html"
     },
     {
         "name": "Nationellt kvalitetsregister lymfom",
@@ -2007,7 +2298,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2000"
+        "start_date": "2000",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterlymfom.84684.html"
     },
     {
         "name": "Nationellt kvalitetsregister myelodysplastiskt syndrom",
@@ -2024,7 +2318,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregistermyelodysplastisktsyndrommds.84686.html"
     },
     {
         "name": "Nationellt kvalitetsregister myeloproliferativa sjukdomar",
@@ -2041,7 +2338,30 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregistermyeloproliferativasjukdomarmpn.84687.html"
+    },
+    {
+        "name": "Nationellt kvalitetsregister för mastocytos",
+        "registry_centre": [
+            "Regionala Cancercentrum i Samverkan"
+        ],
+        "url": "https://cancercentrum.se/diagnosbehandling/cancerdiagnoser/hematologiskacancersjukdomar/mastocytos/kvalitetsregister.11775.html",
+        "search_tags": [
+            "mastocytos",
+            "mastocytosis",
+            "Nationellt kvalitetsregister för mastocytos"
+        ],
+        "Information": "The Swedish National Quality Registry for Mastocytosis collects structured data on patients with mastocytosis to support quality improvement, follow-up and research. The registry is part of the Swedish national cancer quality registry system and is supported by Regionala cancercentrum i samverkan.",
+        "category": [
+            "National cancer quality registry"
+        ],
+        "start_date": "2016",
+        "verification_source": "RCC",
+        "verification_url": "https://cancercentrum.se/utvecklingsarbeteutbildning/statistikrapporter/kvalitetsregister/ansvarsupport.8336.html",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt kvalitetsregister myelom",
@@ -2057,14 +2377,17 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2008"
+        "start_date": "2008",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregistermyelom.84688.html"
     },
     {
         "name": "Nationellt kvalitetsregister neuroendokrina buktumörer (GEP-NET)",
         "registry_centre": [
             "Regionala Cancercentrum i Samverkan"
         ],
-        "url": "https://cancercentrum.se/samverkan/cancerdiagnoser/neuroendokrina-buktumorer/kvalitetsregister/",
+        "url": "https://cancercentrum.se/diagnosbehandling/cancerdiagnoser/neuroendokrinabuktumorer/kvalitetsregister.3525.html",
         "search_tags": [
             "Nationellt kvalitetsregister neuroendokrina buktumörer (GEP-NET)",
             "GEP-NET"
@@ -2073,7 +2396,8 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2010"
+        "start_date": "2010",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Regionalt kvalitetsregister för skelettmetastaser",
@@ -2090,7 +2414,8 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2009"
+        "start_date": "2009",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt kvalitetsregister sköldkörtelcancer",
@@ -2107,7 +2432,10 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2003"
+        "start_date": "2003",
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforskoldkortelcancer.77625.html"
     },
     {
         "name": "Svenskt kvalitetsregister för koloskopier och kolorektalcancerscreening (SveReKKS)",
@@ -2122,14 +2450,15 @@
         "category": [
             "National cancer quality registry"
         ],
-        "start_date": "2017"
+        "start_date": "2017",
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt kvalitetsregister för analcancer",
         "registry_centre": [
             "Regionala Cancercentrum i Samverkan"
         ],
-        "url": "https://cancercentrum.se/samverkan/cancerdiagnoser/tjocktarm-andtarm-och-anal/anal/kvalitetsregister/",
+        "url": "https://cancercentrum.se/diagnosbehandling/cancerdiagnoser/anal/kvalitetsregister.3263.html",
         "search_tags": [
             "Nationellt kvalitetsregister för analcancer"
         ],
@@ -2137,7 +2466,8 @@
         "start_date": "2015",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt kvalitetsregister för barncancer",
@@ -2154,7 +2484,10 @@
         "start_date": "2011",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskabarncancerregistretsbcr.77539.html"
     },
     {
         "name": "Nationellt kvalitetsregister för bukspottkörtelcancer (Pankreasregistret)",
@@ -2170,7 +2503,10 @@
         "start_date": "2011",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforbukspottkortelcancerpankreasregistret.77552.html"
     },
     {
         "name": "Nationella Kvalitetsregistret för Cervixcancerprevention (NKCx)",
@@ -2185,7 +2521,10 @@
         "start_date": "1999",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregistretforcervixcancerpreventionnkcx.77597.html"
     },
     {
         "name": "Nationellt kvalitetsregister för hjärntumörer och centrala nervsystemet",
@@ -2202,7 +2541,10 @@
         "start_date": "2009",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforhjarntumorerochcentralanervsystemet.77575.html"
     },
     {
         "name": "Nationellt kvalitetsregister för KML (kronisk myeloisk leukemi)",
@@ -2218,7 +2560,10 @@
         "start_date": "2002",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforkroniskmyeloiskleukemikml.84685.html"
     },
     {
         "name": "Nationellt kvalitetsregister för lungcancer",
@@ -2234,7 +2579,10 @@
         "start_date": "2002",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforlungcancer.77599.html"
     },
     {
         "name": "Nationellt kvalitetsregister för matstrups- och magsäckscancer (NREV)",
@@ -2251,7 +2599,10 @@
         "start_date": "2007",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterformatstrupsochmagsackscancernrev.77553.html"
     },
     {
         "name": "Nationellt kvalitetsregister för njurcancer",
@@ -2267,14 +2618,17 @@
         "start_date": "2005",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterfornjurcancer.77607.html"
     },
     {
         "name": "Nationella kvalitetsregistret för organiserad prostatacancertestning (SweOPT)",
         "registry_centre": [
             "Regionala Cancercentrum i Samverkan"
         ],
-        "url": "https://cancercentrum.se/samverkan/vara-uppdrag/prevention-och-tidig-upptackt/prostatacancertestning/kvalitetsregister/",
+        "url": "https://cancercentrum.se/preventiontidigupptackt/screeningochtestning/prostatacancertestning/kvalitetsregister.7547.html",
         "search_tags": [
             "Nationella kvalitetsregistret för organiserad prostatacancertestning (SweOPT)",
             "prostate cancer",
@@ -2284,14 +2638,15 @@
         "start_date": "2023",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt kvalitetsregister för sarkom",
         "registry_centre": [
             "Regionala Cancercentrum i Samverkan"
         ],
-        "url": "https://cancercentrum.se/samverkan/cancerdiagnoser/sarkom/kvalitetsregister/",
+        "url": "https://cancercentrum.se/diagnosbehandling/cancerdiagnoser/sarkom/skelettochmjukdelssarkom/kvalitetsregister.3495.html",
         "search_tags": [
             "Nationellt kvalitetsregister för sarkom",
             "ewings sarcoma",
@@ -2301,7 +2656,8 @@
         "start_date": "2009",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Nationellt kvalitetsregister för testikelcancer seminom",
@@ -2317,7 +2673,10 @@
         "start_date": "2000",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterfortestikelcancerseminom.77630.html"
     },
     {
         "name": "Nationellt kvalitetsregister för tjock- och ändtarmscancer",
@@ -2329,11 +2688,14 @@
             "Nationellt kvalitetsregister för tjock- och ändtarmscancer",
             "colorectal cancer"
         ],
-        "Information": "It collects comprehensive data on patients diagnosed with colorectal cancer, focusing on diagnosis, surgical treatments, radiotherapy, chemotherapy, and outcomes. The aim is to improve treatment protocols and outcomes by comparing data across hospitals and regions. The registry covers all major hospitals in Sweden and ensures complete national coverage. As of recent years, it tracks thousands of new cases annually, with around 6,000 new patients added each year.",
+        "Information": "The national colorectal cancer registry collects data on diagnosis, surgical treatment, radiotherapy, chemotherapy and outcomes. It supports comparison across hospitals and regions, quality improvement and research in colorectal cancer care.",
         "start_date": "2007",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskakolorektalcancerregistretscrcr.77631.html"
     },
     {
         "name": "Nationellt kvalitetsregister för urinblåsecancer",
@@ -2345,11 +2707,14 @@
             "Nationellt kvalitetsregister för urinblåsecancer",
             "bladder cancer"
         ],
-        "Information": "It collects detailed information on patients diagnosed with bladder cancer, including tumour stage, grade, treatment methods (such as surgery, radiotherapy, chemotherapy, or immunotherapy), and long-term outcomes. The primary aim is to improve clinical practice by tracking treatments and outcomes across all hospitals in Sweden, ensuring uniform quality standards. The registry also supports research by providing data for evaluating treatment effectiveness. Annually, around 2,000 new bladder cancer cases are registered.",
+        "Information": "The national bladder cancer registry collects information on tumour stage and grade, treatment such as surgery, radiotherapy, chemotherapy or immunotherapy, and long-term outcomes. It supports uniform quality standards, clinical follow-up and research.",
         "start_date": "1997",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforurinblasecancer.77554.html"
     },
     {
         "name": "Nationella prostatacancerregistret (NPCR)",
@@ -2365,23 +2730,29 @@
         "start_date": "1987",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationellaprostatacancerregistretnpcr.77615.html"
     },
     {
         "name": "Nationellt kvalitetsregister peniscancer (NPECR)",
         "registry_centre": [
             "Regionala Cancercentrum i Samverkan"
         ],
-        "url": "https://cancercentrum.se/diagnosbehandling/cancerdiagnoser/penis.8266.html",
+        "url": "https://cancercentrum.se/diagnosbehandling/cancerdiagnoser/penis/kvalitetsregister.3518.html",
         "search_tags": [
             "Nationellt kvalitetsregister för peniscancer",
             "penis cancer"
         ],
-        "Information": "NPECR monitors penile cancer care in Sweden, and more than 3,900 patients are included. Over the past six years, the coverage rate has been 88% compared to the Swedish Cancer Register, ensuring that the data is nationwide and population based. The register collects information on disease incidence, diagnostics, tumor stage distribution, morphological classification, treatment, surgical complications, and follow-up. Since 2015, it also includes patient-reported outcome and experience measures and referrals to the national center.",
+        "Information": "The national penile cancer registry includes newly diagnosed invasive and non-invasive penile cancer and records information on diagnosis, staging, treatment, waiting times and follow-up. It also supports patient-reported outcome and experience measures.",
         "start_date": "2000",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltregisterforpeniscancer.77613.html"
     },
     {
         "name": "Nationellt kvalitetsregister för mammografiscreening (NKM)",
@@ -2397,7 +2768,10 @@
         "start_date": "about 2020",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforbrostcancerscreeningnkb.77602.html"
     },
     {
         "name": "Svenskt bråckregister",
@@ -2413,7 +2787,10 @@
         "start_date": "1992",
         "category": [
             "National quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11",
+        "metadata_source": "SKR",
+        "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svensktbrackregister.77598.html"
     },
     {
         "name": "Nationellt onkogenetiskt kvalitetsregister (NOGA)",
@@ -2428,7 +2805,8 @@
         "start_date": "2021",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11"
     },
     {
         "name": "Register för cancerläkemedel",
@@ -2446,6 +2824,7 @@
         "start_date": "2018",
         "category": [
             "National cancer quality registry"
-        ]
+        ],
+        "last_verified": "2026-08-11"
     }
 ]

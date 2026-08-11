@@ -398,7 +398,7 @@ export default function QualityRegistryPage() {
         </section>
       </div>
 
-      <LastUpdated date="16-09-2025" />
+      <LastUpdated date="11-08-2026" />
     </div>
   );
 }
