@@ -35,6 +35,23 @@ export interface IRegistrySource {
   registry_centre: string[];
   category: string[];
   search_tags: string[];
+  /**
+   * Primary external metadata/catalogue source, typically "SKR" or "RCC".
+   * Omit when there is no separate catalogue page (e.g. metadata URL equals official URL).
+   */
+  metadata_source?: string;
+  /** URL for the primary metadata/catalogue page. Must differ from `url`. */
+  metadata_url?: string;
+  /**
+   * ISO date (YYYY-MM-DD) on which *this* registry's link was confirmed
+   * reachable and its description checked against the registry's own site.
+   * Omit when that could not be confirmed — an absent value means "unverified",
+   * so do not backfill it for rows whose link is broken.
+   *
+   * Provenance only; not rendered. The page shows a single site-wide date via
+   * `<LastUpdated />`.
+   */
+  last_verified?: string;
 }
 
 export const filters: IRegistryFilters = {

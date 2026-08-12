@@ -16,6 +16,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Users, Dna, Activity } from "lucide-react";
 import { sanitizeURL } from "@/lib/security-utils";
+import { MetadataLink } from "@/components/common/MetadataLink";
 import { useDebounce } from "@/hooks/useDebounce";
 
 type StudyType =
@@ -70,7 +71,6 @@ const FILTER_OPTIONS = {
 } as const;
 
 const TAG_COLOURS: { [key: string]: string } = {
-  snd: "bg-[#649ED2] text-black",
   tag: "bg-muted text-muted-foreground",
 };
 
@@ -376,8 +376,8 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                     <CardTitle className="text-lg font-medium text-primary hover:underline">
                       {/*
                         Snyk Code javascript/DOMXSS on this href is a false
-                        positive. `item.link` (and `item.SND` below) come from a
-                        static, repo-committed JSON asset imported at build time —
+                        positive. `item.link` comes from a static,
+                        repo-committed JSON asset imported at build time —
                         not a user-, URL-, or network-controlled source — and
                         sanitizeURL() enforces an http/https allowlist, collapsing
                         javascript:/data:/etc. to "#" (unit-tested in
@@ -400,26 +400,11 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                     </p>
                     <div className="flex flex-col gap-3">
                       {item.SND && (
-                        <a
-                          href={sanitizeURL(item.SND)}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={`inline-flex items-center gap-2 px-3 py-1 text-sm font-medium rounded-full text-black ${TAG_COLOURS.snd} hover:opacity-90 self-start transition-opacity duration-100 focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2`}
-                          aria-label={`View SND metadata for ${item.title} (opens in new tab)`}
-                        >
-                          SND Metadata
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="20"
-                            height="20.092"
-                            className="shrink-0"
-                            aria-hidden="true"
-                            role="presentation"
-                          >
-                            <path d="m12 0 2.561 2.537-6.975 6.976 2.828 2.828 6.988-6.988L20 7.927 19.998 0H12z" />
-                            <path d="M9 4.092v-2H0v18h18v-9h-2v7H2v-14h7z" />
-                          </svg>
-                        </a>
+                        <MetadataLink
+                          href={item.SND}
+                          source="SND"
+                          resourceName={item.title}
+                        />
                       )}
                       <div
                         className="flex flex-wrap gap-2"

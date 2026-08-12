@@ -43,8 +43,9 @@ export function SafeText({
 }: SafeTextProps) {
   const sanitizedText = sanitizeText(text, config);
 
+  // Spread first, for consistency with SafeUrl and SafeHTML.
   return (
-    <Component className={className} {...props}>
+    <Component {...props} className={className}>
       {sanitizedText}
     </Component>
   );
@@ -64,13 +65,19 @@ export function SafeUrl({
 }: SafeUrlProps) {
   const sanitizedUrl = sanitizeURL(url, config);
 
+  // `{...props}` is spread FIRST so the security-relevant attributes below
+  // always win. Passing `href` is a type error today (SafeUrlProps has no
+  // `href`), but ordering makes that structural rather than a side effect of
+  // the props interface happening to stay narrow — and hyphenated JSX
+  // attributes (aria-*, data-*) bypass excess-property checking, so `props` is
+  // not as closed as it looks.
   return (
     <a
+      {...props}
       href={sanitizedUrl}
       target={target}
       rel={rel}
       className={className}
-      {...props}
     >
       {children}
     </a>
@@ -89,11 +96,14 @@ export function SafeHTML({
 }: SafeHTMLProps) {
   const sanitizedHTML = sanitizeHTML(html, allowedTags, allowedAttr);
 
+  // Spread first: `dangerouslySetInnerHTML` must not be overridable by a
+  // caller-supplied prop, or unsanitised markup could replace the sanitised
+  // payload. See the note in SafeUrl.
   return (
     <div
+      {...props}
       className={className}
       dangerouslySetInnerHTML={{ __html: sanitizedHTML }}
-      {...props}
     />
   );
 }

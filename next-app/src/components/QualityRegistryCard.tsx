@@ -1,7 +1,9 @@
 import { useMemo } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Safe } from "@/components/common/SafeContent";
+import { MetadataLink } from "@/components/common/MetadataLink";
 import { IRegistrySource } from "@/interfaces/types";
+import { isSameDestination } from "@/lib/url-utils";
 
 /**
  * QualityRegistryCard Component
@@ -43,6 +45,18 @@ export const QualityRegistryCard = ({
   );
   const hasSearch = searchTerms.length > 0;
 
+  // Show the catalogue link only when it adds something: a source label, and a
+  // destination that is not just the registry's own site again. Deliberately
+  // not restricted to a known set of sources — the data decides, so adding a
+  // catalogue is a data change rather than a change here. Narrowed into one
+  // object so both fields stay type-checked at the call site.
+  const metadata =
+    registry.metadata_source &&
+    registry.metadata_url &&
+    !isSameDestination(registry.metadata_url, registry.url)
+      ? { source: registry.metadata_source, url: registry.metadata_url }
+      : undefined;
+
   return (
     <article
       key={registry.name}
@@ -53,6 +67,7 @@ export const QualityRegistryCard = ({
       <Card>
         <CardHeader className="bg-muted">
           <CardTitle className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+            {/* Website / official registry link (primary) */}
             <Safe.Url
               url={registry.url}
               className="text-xl text-primary hover:underline"
@@ -84,6 +99,15 @@ export const QualityRegistryCard = ({
             allowedAttr={["class"]}
             className="mb-3"
           />
+          {metadata && (
+            <div className="mb-3">
+              <MetadataLink
+                href={metadata.url}
+                source={metadata.source}
+                resourceName={registry.name}
+              />
+            </div>
+          )}
           <dl
             className="mt-3 flex flex-wrap gap-2"
             aria-label="Registry details"
