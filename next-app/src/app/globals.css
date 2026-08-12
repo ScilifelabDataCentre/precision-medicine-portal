@@ -42,6 +42,11 @@
   --color-error-foreground: #ffffff;
 
   --color-base-100: #f8fafc;
+
+  /* External metadata/catalogue link badge (SND, SKR, RCC). Contrast against
+     the black foreground is 7.3:1, clearing WCAG AA for normal text. */
+  --color-metadata: #649ed2;
+  --color-metadata-foreground: #000000;
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
