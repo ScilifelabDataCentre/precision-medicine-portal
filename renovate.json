@@ -2,7 +2,18 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
   "minimumReleaseAge": "7 days",
-  "docker": {
-    "pinDigests": true
-  }
+  "lockFileMaintenance": {
+    "enabled": true
+  },
+  "packageRules": [
+    {
+      "matchCategories": ["docker"],
+      "pinDigests": true
+    },
+    {
+      "description": "minimumReleaseAge cannot be enforced for lock file maintenance: the package manager resolves the versions itself, so Renovate has no per-release age to check. Left as null rather than an unenforceable 7 days.",
+      "matchUpdateTypes": ["lockFileMaintenance"],
+      "minimumReleaseAge": null
+    }
+  ]
 }

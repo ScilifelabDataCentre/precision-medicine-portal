@@ -31,7 +31,7 @@ jobs:
       - name: List available platforms
         run: echo ${{ steps.buildx.outputs.platforms }}
       - name: Run docker/login-action
-        uses: docker/login-action@af1e73f918a031802d376d3c8bbc3fe56130a9b0 # v4
+        uses: docker/login-action@dbcb813823bdd20940b903addbd779551569679f # v4
         with:
           registry: ghcr.io
           username: ${{ github.actor }}
@@ -89,7 +89,7 @@ jobs:
           limit-severities-for-sarif: true
 
       - name: Upload image-scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@7188fc363630916deb702c7fdcf4e481b751f97a # v4.37.1
+        uses: github/codeql-action/upload-sarif@f205ea1c3313d32999d8d6a48b4f6530d4437b38 # v4.37.4
         with:
           sarif_file: trivy-image-results.sarif
           category: trivy-image

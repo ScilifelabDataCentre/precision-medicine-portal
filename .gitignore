@@ -4,3 +4,4 @@ next-app/pnpm-lock.yaml
 next-app/.cache
 .claude/
 .playwright-mcp/
+.worktrees/
