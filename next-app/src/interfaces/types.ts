@@ -42,6 +42,12 @@ export interface IRegistrySource {
   metadata_source?: string;
   /** URL for the primary metadata/catalogue page. Must differ from `url`. */
   metadata_url?: string;
+  /**
+   * ISO date (YYYY-MM-DD) on which this entry's links and description were last
+   * checked against the registry's own site. Provenance only — not rendered;
+   * the page shows a single site-wide date via `<LastUpdated />`.
+   */
+  last_verified?: string;
 }
 
 export const filters: IRegistryFilters = {
