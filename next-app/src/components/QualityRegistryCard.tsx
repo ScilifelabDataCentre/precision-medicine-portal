@@ -48,11 +48,13 @@ export const QualityRegistryCard = ({
   // Show the catalogue link only when it adds something: a source label, and a
   // destination that is not just the registry's own site again. Deliberately
   // not restricted to a known set of sources — the data decides, so adding a
-  // catalogue is a data change rather than a change here.
-  const metadataUrl =
+  // catalogue is a data change rather than a change here. Narrowed into one
+  // object so both fields stay type-checked at the call site.
+  const metadata =
     registry.metadata_source &&
+    registry.metadata_url &&
     !isSameDestination(registry.metadata_url, registry.url)
-      ? registry.metadata_url
+      ? { source: registry.metadata_source, url: registry.metadata_url }
       : undefined;
 
   return (
@@ -97,14 +99,13 @@ export const QualityRegistryCard = ({
             allowedAttr={["class"]}
             className="mb-3"
           />
-          {metadataUrl && (
+          {metadata && (
             <div className="mb-3">
               <MetadataLink
-                href={metadataUrl}
-                ariaLabel={`View metadata for ${registry.name} at ${registry.metadata_source} (opens in new tab)`}
-              >
-                Metadata: {registry.metadata_source}
-              </MetadataLink>
+                href={metadata.url}
+                source={metadata.source}
+                resourceName={registry.name}
+              />
             </div>
           )}
           <dl

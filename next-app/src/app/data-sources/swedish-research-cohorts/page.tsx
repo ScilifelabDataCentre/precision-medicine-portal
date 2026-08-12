@@ -402,10 +402,9 @@ export default function SwedishResearchCohortsPage(): ReactElement {
                       {item.SND && (
                         <MetadataLink
                           href={item.SND}
-                          ariaLabel={`View SND metadata for ${item.title} (opens in new tab)`}
-                        >
-                          SND Metadata
-                        </MetadataLink>
+                          source="SND"
+                          resourceName={item.title}
+                        />
                       )}
                       <div
                         className="flex flex-wrap gap-2"

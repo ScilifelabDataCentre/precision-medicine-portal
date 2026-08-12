@@ -302,8 +302,7 @@
     "category": [
       "Other quality registry"
     ],
-    "start_date": "1998",
-    "last_verified": "2026-08-11"
+    "start_date": "1998"
   },
   {
     "name": "Lungfibrosregistret",
@@ -1238,7 +1237,6 @@
       "National quality registry"
     ],
     "start_date": "2009",
-    "last_verified": "2026-08-11",
     "metadata_source": "SKR",
     "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforpatientermedsvarlaktasarrikssar.77628.html"
   },
@@ -1867,9 +1865,9 @@
   {
     "name": "Q-bup – Nationellt kvalitetsregister för barn- och ungdomspsykiatri",
     "registry_centre": [
-      "Registercentrum Västra Götaland"
+      "Kvalitetsregistercentrum Stockholm"
     ],
-    "url": "https://qbup.registercentrum.se/",
+    "url": "https://www.qbup.slso.regionstockholm.se/",
     "search_tags": [
       "peadiatric care",
       "child psychiatry",
@@ -1880,7 +1878,7 @@
       "National quality registry"
     ],
     "start_date": "2017",
-    "last_verified": "2026-08-11"
+    "last_verified": "2026-08-12"
   },
   {
     "name": "Riksät – Nationellt kvalitetsregister för ätstörningsbehandling",
@@ -1954,7 +1952,6 @@
       "National quality registry"
     ],
     "start_date": "1998",
-    "last_verified": "2026-08-11",
     "metadata_source": "SKR",
     "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskabarnnjurregistret.77608.html"
   },
@@ -1974,7 +1971,6 @@
       "National quality registry"
     ],
     "start_date": "2009",
-    "last_verified": "2026-08-11",
     "metadata_source": "SKR",
     "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskabarnreumaregistret.77594.html"
   },
@@ -1993,7 +1989,6 @@
       "National quality registry"
     ],
     "start_date": "2013",
-    "last_verified": "2026-08-11",
     "metadata_source": "SKR",
     "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/registretformedfoddametabolasjukdomarrmms.77604.html"
   },
@@ -2012,8 +2007,7 @@
     "category": [
       "National quality registry"
     ],
-    "start_date": "2013",
-    "last_verified": "2026-08-11"
+    "start_date": "2013"
   },
   {
     "name": "PIDcare",
@@ -2029,7 +2023,6 @@
       "National quality registry"
     ],
     "start_date": "2012",
-    "last_verified": "2026-08-11",
     "metadata_source": "SKR",
     "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/nationelltkvalitetsregisterforprimaraimmunbristerpidcare.77614.html"
   },
@@ -2110,7 +2103,6 @@
       "National quality registry"
     ],
     "start_date": "2005",
-    "last_verified": "2026-08-11",
     "metadata_source": "SKR",
     "metadata_url": "https://kunskapsstyrningvard.se/kunskapsstyrningvard/datauppfoljningochanalys/kvalitetsregister/hittakvalitetsregister/registerarkiv/svenskapalliativregistret.77633.html"
   },

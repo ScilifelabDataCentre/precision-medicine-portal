@@ -43,9 +43,13 @@ export interface IRegistrySource {
   /** URL for the primary metadata/catalogue page. Must differ from `url`. */
   metadata_url?: string;
   /**
-   * ISO date (YYYY-MM-DD) on which this entry's links and description were last
-   * checked against the registry's own site. Provenance only — not rendered;
-   * the page shows a single site-wide date via `<LastUpdated />`.
+   * ISO date (YYYY-MM-DD) on which *this* registry's link was confirmed
+   * reachable and its description checked against the registry's own site.
+   * Omit when that could not be confirmed — an absent value means "unverified",
+   * so do not backfill it for rows whose link is broken.
+   *
+   * Provenance only; not rendered. The page shows a single site-wide date via
+   * `<LastUpdated />`.
    */
   last_verified?: string;
 }
