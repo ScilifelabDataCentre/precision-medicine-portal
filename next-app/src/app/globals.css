@@ -64,26 +64,6 @@
      `navbar:` variant. */
   --breakpoint-navbar: 72rem;
 
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-
-  @keyframes accordion-down {
-    from {
-      height: 0;
-    }
-    to {
-      height: var(--radix-accordion-content-height);
-    }
-  }
-  @keyframes accordion-up {
-    from {
-      height: var(--radix-accordion-content-height);
-    }
-    to {
-      height: 0;
-    }
-  }
-
   /* Fast, subtle reveal for the header navigation dropdowns. Added because the
      tailwindcss-animate classes the shadcn primitive ships with became inert
      after the Tailwind v4 migration, so the menus previously had no open

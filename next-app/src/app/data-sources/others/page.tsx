@@ -4,6 +4,7 @@ import { ReactElement, useMemo, useCallback, useState, useEffect } from "react";
 
 import { LastUpdated } from "@/components/common/last-updated";
 import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
+import { DataAccessNotice } from "@/components/common/DataAccessNotice";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
 import { DataSourceCard } from "@/components/DataSourceCard";
@@ -280,14 +281,7 @@ export default function DataSourcesOthersPage(): ReactElement {
           role="complementary"
         >
           <div className="space-y-8">
-            <div
-              className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-foreground text-left mx-auto"
-              role="note"
-              aria-label="Data access information"
-            >
-              To access data, researchers may need to obtain ethical approval,
-              submit data requests, and set up data management agreements.
-            </div>
+            <DataAccessNotice />
 
             <section aria-label="Search data sources">
               <div className="space-y-4">
