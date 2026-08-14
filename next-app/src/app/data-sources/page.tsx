@@ -433,7 +433,7 @@ export default function DataSourcesPage(): ReactElement {
             </a>
           </li>
         </ul>
-        <LastUpdated date="09-09-2025" />
+        <LastUpdated date="14-08-2026" />
       </div>
     </div>
   );

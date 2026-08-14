@@ -4,6 +4,7 @@ import { useState, useEffect, useCallback, useMemo, ReactElement } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Title from "@/components/common/title";
 import { LastUpdated } from "@/components/common/last-updated";
+import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
 import {
@@ -442,33 +443,8 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         </section>
       </div>
 
-      <div
-        className="mt-8 p-4 bg-muted/50 border border-neutral rounded-lg text-sm text-muted-foreground"
-        role="complementary"
-        aria-label="Context on Swedish data linkage"
-      >
-        <p className="mb-2">
-          In Sweden, cohort and biobank data are often linked with clinical
-          registries and national health registers, creating rich datasets for
-          precision medicine research. Researchers can apply for access through
-          the responsible institutions or national catalogues.
-        </p>
-        <p>
-          For a broader catalogue of Swedish research data, see the{" "}
-          <a
-            href="https://snd.se/en/catalogue/search"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
-            aria-label="Swedish National Data Service catalogue search (opens in new tab)"
-          >
-            Swedish National Data Service (SND) search
-          </a>
-          .
-        </p>
-      </div>
-
-      <LastUpdated date="23-03-2026" />
+      <DataSourcesDisclaimer />
+      <LastUpdated date="14-08-2026" />
     </div>
   );
 }

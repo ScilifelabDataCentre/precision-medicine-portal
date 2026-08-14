@@ -16,7 +16,6 @@ const routes = [
   "/about/dsnpmd-projects",
   "/about/team",
   "/about/partners",
-  "/about/faq",
   "/citation-and-license",
   "/accessibility",
   "/privacy",

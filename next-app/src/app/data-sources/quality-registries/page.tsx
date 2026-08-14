@@ -4,6 +4,7 @@ import { useState, useEffect, useMemo, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import Title from "@/components/common/title";
 import { LastUpdated } from "@/components/common/last-updated";
+import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
 import { QualityRegistryCard } from "@/components/QualityRegistryCard";
@@ -208,9 +209,25 @@ export default function QualityRegistryPage() {
         </Breadcrumb>
       </nav>
 
-      <Title level={1}>Quality registries</Title>
+      <Title level={1} className="mb-4">
+        Quality registries
+      </Title>
 
-      <div className="lg:grid lg:grid-cols-4 lg:gap-8 pt-8">
+      <div
+        className="text-justify mx-auto mb-6"
+        role="doc-abstract"
+        aria-label="Page introduction and overview"
+      >
+        <p>
+          Sweden has a large number of quality registries that collect
+          individual-level health data on specific diseases, treatments and
+          areas of healthcare. The registries are primarily used to monitor and
+          improve the quality of care, but their detailed longitudinal data can
+          also be valuable for research.
+        </p>
+      </div>
+
+      <div className="lg:grid lg:grid-cols-4 lg:gap-8">
         <aside
           className="lg:col-span-1 mb-8 lg:mb-0"
           aria-label="Search and filter options"
@@ -398,7 +415,8 @@ export default function QualityRegistryPage() {
         </section>
       </div>
 
-      <LastUpdated date="11-08-2026" />
+      <DataSourcesDisclaimer />
+      <LastUpdated date="14-08-2026" />
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import { ReactElement, useMemo, useCallback, useState, useEffect } from "react";
 
 import { LastUpdated } from "@/components/common/last-updated";
+import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
 import { DataSourceCard } from "@/components/DataSourceCard";
@@ -259,9 +260,26 @@ export default function DataSourcesOthersPage(): ReactElement {
         </Breadcrumb>
       </nav>
 
-      <Title level={1}>Data sources</Title>
+      <Title level={1} className="mb-4">
+        Data sources
+      </Title>
 
-      <div className="lg:grid lg:grid-cols-4 lg:gap-8 pt-8">
+      <div
+        className="text-justify mx-auto mb-6"
+        role="doc-abstract"
+        aria-label="Page introduction and overview"
+      >
+        <p>
+          A wide range of additional data sources can support precision medicine
+          research, both in Sweden and internationally. These include research
+          data repositories, public databases and other resources providing
+          access to clinical, molecular, genomic and other life science data.
+          The resources below provide an overview of useful data sources beyond
+          Swedish research cohorts and quality registries.
+        </p>
+      </div>
+
+      <div className="lg:grid lg:grid-cols-4 lg:gap-8">
         <aside
           className="lg:col-span-1 mb-8 lg:mb-0"
           aria-label="Search and filter options"
@@ -438,7 +456,8 @@ export default function DataSourcesOthersPage(): ReactElement {
         </section>
       </div>
 
-      <LastUpdated date="17-03-2026" />
+      <DataSourcesDisclaimer />
+      <LastUpdated date="14-08-2026" />
     </div>
   );
 }
