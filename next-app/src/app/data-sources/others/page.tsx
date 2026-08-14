@@ -261,23 +261,17 @@ export default function DataSourcesOthersPage(): ReactElement {
       </nav>
 
       <Title level={1} className="mb-4">
-        Data sources
+        Other data sources
       </Title>
 
-      <div
-        className="text-justify mx-auto mb-6"
-        role="doc-abstract"
-        aria-label="Page introduction and overview"
-      >
-        <p>
-          A wide range of additional data sources can support precision medicine
-          research, both in Sweden and internationally. These include research
-          data repositories, public databases and other resources providing
-          access to clinical, molecular, genomic and other life science data.
-          The resources below provide an overview of useful data sources beyond
-          Swedish research cohorts and quality registries.
-        </p>
-      </div>
+      <p role="doc-abstract" className="mb-6">
+        A wide range of additional data sources can support precision medicine
+        research, both in Sweden and internationally. These include research
+        data repositories, public databases and other resources providing access
+        to clinical, molecular, genomic and other life science data. The
+        resources below provide an overview of useful data sources beyond
+        Swedish research cohorts and quality registries.
+      </p>
 
       <div className="lg:grid lg:grid-cols-4 lg:gap-8">
         <aside

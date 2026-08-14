@@ -190,6 +190,9 @@ function DesktopNav() {
           <NavigationMenuTrigger aria-label="About us menu">
             About us
           </NavigationMenuTrigger>
+          {/* Right-aligned under its own trigger, which only works because the
+              menu above runs with `viewport={false}`; the default viewport mode
+              centres all content under the menubar instead. */}
           <NavigationMenuContent className="left-auto right-0">
             <ul
               className="grid gap-3 p-4 w-[400px]"

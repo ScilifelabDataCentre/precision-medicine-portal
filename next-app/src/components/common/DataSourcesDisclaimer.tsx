@@ -13,10 +13,9 @@ export function DataSourcesDisclaimer(): ReactElement {
       source is missing or mislabelled, please let us know via the{" "}
       <Link
         href="/contact"
-        className="text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
-        aria-label="Go to contact form"
+        className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
       >
-        contact form
+        contact page
       </Link>
       .
     </p>

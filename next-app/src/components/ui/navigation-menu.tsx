@@ -1,3 +1,12 @@
+// shadcn "navigation-menu" primitive, with one local deviation from the
+// generated file: the `viewport` prop backported from the newer upstream
+// version. With `viewport={false}` each NavigationMenuContent renders in place,
+// anchored to its own NavigationMenuItem, instead of inside a single shared
+// NavigationMenuViewport — which is what lets a dropdown align under its own
+// trigger rather than being centred under the menubar. The backport is
+// deliberately partial (upstream also reworks Trigger/Link/Viewport and moves
+// to `data-slot` attributes), so re-running `shadcn add navigation-menu` will
+// drop this and needs the prop re-applied.
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva } from "class-variance-authority";
@@ -13,12 +22,15 @@ const NavigationMenu = React.forwardRef<
 >(({ className, children, viewport = true, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
     ref={ref}
-    data-viewport={viewport ? "true" : "false"}
     className={cn(
       "group/navigation-menu relative z-10 flex max-w-max flex-1 items-center justify-center",
       className,
     )}
     {...props}
+    // Derived from `viewport`, so it is set after the caller's props: the
+    // attribute drives the `group-data-[viewport=false]` styling below and must
+    // stay in sync with whether NavigationMenuViewport is actually rendered.
+    data-viewport={viewport ? "true" : "false"}
   >
     {children}
     {viewport && <NavigationMenuViewport />}
@@ -47,7 +59,13 @@ const NavigationMenuItem = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <NavigationMenuPrimitive.Item
     ref={ref}
-    className={cn("relative", className)}
+    // Only the viewport-less mode needs the item to be a positioning context,
+    // since that is where NavigationMenuContent anchors itself. Scoping it here
+    // keeps items inert (no stray positioning context) in the default mode.
+    className={cn(
+      "group-data-[viewport=false]/navigation-menu:relative",
+      className,
+    )}
     {...props}
   />
 ));

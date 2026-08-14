@@ -84,10 +84,11 @@
     }
   }
 
-  /* Fast, subtle reveal for the header navigation dropdowns (see
-     NavigationMenuViewport). Added because the tailwindcss-animate classes the
-     shadcn primitive ships with became inert after the Tailwind v4 migration,
-     so the menus previously had no open animation at all. */
+  /* Fast, subtle reveal for the header navigation dropdowns. Added because the
+     tailwindcss-animate classes the shadcn primitive ships with became inert
+     after the Tailwind v4 migration, so the menus previously had no open
+     animation at all. Applied by NavigationMenuViewport in the default mode and
+     by NavigationMenuContent when the menu runs with `viewport={false}`. */
   --animate-nav-open: nav-open 120ms ease-out;
 
   @keyframes nav-open {

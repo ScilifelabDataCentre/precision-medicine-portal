@@ -213,19 +213,13 @@ export default function QualityRegistryPage() {
         Quality registries
       </Title>
 
-      <div
-        className="text-justify mx-auto mb-6"
-        role="doc-abstract"
-        aria-label="Page introduction and overview"
-      >
-        <p>
-          Sweden has a large number of quality registries that collect
-          individual-level health data on specific diseases, treatments and
-          areas of healthcare. The registries are primarily used to monitor and
-          improve the quality of care, but their detailed longitudinal data can
-          also be valuable for research.
-        </p>
-      </div>
+      <p role="doc-abstract" className="mb-6">
+        Sweden has a large number of quality registries that collect
+        individual-level health data on specific diseases, treatments and areas
+        of healthcare. The registries are primarily used to monitor and improve
+        the quality of care, but their detailed longitudinal data can also be
+        valuable for research.
+      </p>
 
       <div className="lg:grid lg:grid-cols-4 lg:gap-8">
         <aside

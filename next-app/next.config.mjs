@@ -72,6 +72,15 @@ const nextConfig = {
         destination: "https://kiarva.scilifelab.se/",
         permanent: true,
       },
+      {
+        // The FAQ page was removed from the portal; its content now lives on
+        // the data sources pages (curation notice) and the contact page. Send
+        // old bookmarks and indexed links to the About us landing page, which
+        // is where `/about` already points.
+        source: "/about/faq",
+        destination: "/about/dsnpmd-projects",
+        permanent: true,
+      },
     ];
   },
   async headers() {

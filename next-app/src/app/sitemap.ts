@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 import { SITE_URL } from "@/lib/metadata";
 
 /**
- * Public, indexable routes. Excludes redirect-only paths (`/about`, `/kiarva`)
- * and the `/meta/version` API route.
+ * Public, indexable routes. Excludes redirect-only paths (`/about`,
+ * `/about/faq`, `/kiarva`) and the `/meta/version` API route.
  */
 const routes = [
   "/",
