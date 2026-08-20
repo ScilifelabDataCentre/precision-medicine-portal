@@ -4,6 +4,8 @@ import { useState, useEffect, useCallback, useMemo, ReactElement } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Title from "@/components/common/title";
 import { LastUpdated } from "@/components/common/last-updated";
+import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
+import { DataAccessNotice } from "@/components/common/DataAccessNotice";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
 import {
@@ -249,20 +251,14 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         Swedish research cohorts and biobank studies
       </Title>
 
-      <div
-        className="text-justify mx-auto mb-6"
-        role="doc-abstract"
-        aria-label="Page introduction and overview"
-      >
-        <p className="mb-2">
-          This page highlights major Swedish research cohorts and biobank-based
-          studies that collect biological samples and health data. These are
-          typically long-term research resources used by multiple studies rather
-          than single projects. In Sweden, such data are often linked with
-          national quality registries and health registers, enabling large-scale
-          precision medicine research.
-        </p>
-      </div>
+      <p role="doc-abstract" className="mb-6">
+        This page highlights major Swedish research cohorts and biobank-based
+        studies that collect biological samples and health data. These are
+        typically long-term research resources used by multiple studies rather
+        than single projects. In Sweden, such data are often linked with
+        national quality registries and health registers, enabling large-scale
+        precision medicine research.
+      </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <aside
@@ -270,14 +266,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
           aria-label="Search and filter options"
           role="complementary"
         >
-          <div
-            className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-foreground text-left mx-auto"
-            role="note"
-            aria-label="Data access information"
-          >
-            To access data, researchers may need to obtain ethical approval,
-            submit data requests, and set up data management agreements.
-          </div>
+          <DataAccessNotice />
 
           <section aria-label="Search cohorts and biobank studies">
             <div className="space-y-4">
@@ -442,33 +431,8 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         </section>
       </div>
 
-      <div
-        className="mt-8 p-4 bg-muted/50 border border-neutral rounded-lg text-sm text-muted-foreground"
-        role="complementary"
-        aria-label="Context on Swedish data linkage"
-      >
-        <p className="mb-2">
-          In Sweden, cohort and biobank data are often linked with clinical
-          registries and national health registers, creating rich datasets for
-          precision medicine research. Researchers can apply for access through
-          the responsible institutions or national catalogues.
-        </p>
-        <p>
-          For a broader catalogue of Swedish research data, see the{" "}
-          <a
-            href="https://snd.se/en/catalogue/search"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
-            aria-label="Swedish National Data Service catalogue search (opens in new tab)"
-          >
-            Swedish National Data Service (SND) search
-          </a>
-          .
-        </p>
-      </div>
-
-      <LastUpdated date="23-03-2026" />
+      <DataSourcesDisclaimer />
+      <LastUpdated date="14-08-2026" />
     </div>
   );
 }

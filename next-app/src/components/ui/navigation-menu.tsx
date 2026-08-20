@@ -1,3 +1,12 @@
+// shadcn "navigation-menu" primitive, with one local deviation from the
+// generated file: the `viewport` prop backported from the newer upstream
+// version. With `viewport={false}` each NavigationMenuContent renders in place,
+// anchored to its own NavigationMenuItem, instead of inside a single shared
+// NavigationMenuViewport — which is what lets a dropdown align under its own
+// trigger rather than being centred under the menubar. The backport is
+// deliberately partial (upstream also reworks Trigger/Link/Viewport and moves
+// to `data-slot` attributes), so re-running `shadcn add navigation-menu` will
+// drop this and needs the prop re-applied.
 import * as React from "react";
 import * as NavigationMenuPrimitive from "@radix-ui/react-navigation-menu";
 import { cva } from "class-variance-authority";
@@ -7,18 +16,24 @@ import { cn } from "@/lib/utils";
 
 const NavigationMenu = React.forwardRef<
   React.ElementRef<typeof NavigationMenuPrimitive.Root>,
-  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root>
->(({ className, children, ...props }, ref) => (
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Root> & {
+    viewport?: boolean;
+  }
+>(({ className, children, viewport = true, ...props }, ref) => (
   <NavigationMenuPrimitive.Root
     ref={ref}
     className={cn(
-      "relative z-10 flex max-w-max flex-1 items-center justify-center",
+      "group/navigation-menu relative z-10 flex max-w-max flex-1 items-center justify-center",
       className,
     )}
     {...props}
+    // Derived from `viewport`, so it is set after the caller's props: the
+    // attribute drives the `group-data-[viewport=false]` styling below and must
+    // stay in sync with whether NavigationMenuViewport is actually rendered.
+    data-viewport={viewport ? "true" : "false"}
   >
     {children}
-    <NavigationMenuViewport />
+    {viewport && <NavigationMenuViewport />}
   </NavigationMenuPrimitive.Root>
 ));
 NavigationMenu.displayName = NavigationMenuPrimitive.Root.displayName;
@@ -38,7 +53,23 @@ const NavigationMenuList = React.forwardRef<
 ));
 NavigationMenuList.displayName = NavigationMenuPrimitive.List.displayName;
 
-const NavigationMenuItem = NavigationMenuPrimitive.Item;
+const NavigationMenuItem = React.forwardRef<
+  React.ElementRef<typeof NavigationMenuPrimitive.Item>,
+  React.ComponentPropsWithoutRef<typeof NavigationMenuPrimitive.Item>
+>(({ className, ...props }, ref) => (
+  <NavigationMenuPrimitive.Item
+    ref={ref}
+    // Only the viewport-less mode needs the item to be a positioning context,
+    // since that is where NavigationMenuContent anchors itself. Scoping it here
+    // keeps items inert (no stray positioning context) in the default mode.
+    className={cn(
+      "group-data-[viewport=false]/navigation-menu:relative",
+      className,
+    )}
+    {...props}
+  />
+));
+NavigationMenuItem.displayName = NavigationMenuPrimitive.Item.displayName;
 
 const navigationMenuTriggerStyle = cva(
   "group inline-flex h-10 w-max items-center justify-center rounded-md bg-background px-4 py-2 text-sm font-medium transition-colors hover:bg-neutral hover:text-neutral-foreground focus:bg-neutral focus:text-neutral-foreground focus:outline-hidden disabled:pointer-events-none disabled:opacity-50 data-active:bg-neutral/50 data-[state=open]:bg-neutral/50",
@@ -69,7 +100,8 @@ const NavigationMenuContent = React.forwardRef<
   <NavigationMenuPrimitive.Content
     ref={ref}
     className={cn(
-      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto ",
+      "left-0 top-0 w-full data-[motion^=from-]:animate-in data-[motion^=to-]:animate-out data-[motion^=from-]:fade-in data-[motion^=to-]:fade-out data-[motion=from-end]:slide-in-from-right-52 data-[motion=from-start]:slide-in-from-left-52 data-[motion=to-end]:slide-out-to-right-52 data-[motion=to-start]:slide-out-to-left-52 md:absolute md:w-auto",
+      "group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-md group-data-[viewport=false]/navigation-menu:border group-data-[viewport=false]/navigation-menu:bg-popover group-data-[viewport=false]/navigation-menu:text-popover-foreground group-data-[viewport=false]/navigation-menu:shadow-lg group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-nav-open",
       className,
     )}
     {...props}

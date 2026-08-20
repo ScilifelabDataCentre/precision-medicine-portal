@@ -4,6 +4,8 @@ import { useState, useEffect, useMemo, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import Title from "@/components/common/title";
 import { LastUpdated } from "@/components/common/last-updated";
+import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
+import { DataAccessNotice } from "@/components/common/DataAccessNotice";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
 import { QualityRegistryCard } from "@/components/QualityRegistryCard";
@@ -208,24 +210,26 @@ export default function QualityRegistryPage() {
         </Breadcrumb>
       </nav>
 
-      <Title level={1}>Quality registries</Title>
+      <Title level={1} className="mb-4">
+        Quality registries
+      </Title>
 
-      <div className="lg:grid lg:grid-cols-4 lg:gap-8 pt-8">
+      <p role="doc-abstract" className="mb-6">
+        Sweden has a large number of quality registries that collect
+        individual-level health data on specific diseases, treatments and areas
+        of healthcare. The registries are primarily used to monitor and improve
+        the quality of care, but their detailed longitudinal data can also be
+        valuable for research.
+      </p>
+
+      <div className="lg:grid lg:grid-cols-4 lg:gap-8">
         <aside
           className="lg:col-span-1 mb-8 lg:mb-0"
           aria-label="Search and filter options"
           role="complementary"
         >
           <div className="space-y-8">
-            {/* Disclaimer */}
-            <div
-              className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-foreground text-left mx-auto"
-              role="note"
-              aria-label="Data access information"
-            >
-              To access data, researchers may need to obtain ethical approval,
-              submit data requests, and set up data management agreements.
-            </div>
+            <DataAccessNotice />
 
             {/* Search */}
             <section aria-label="Search quality registries">
@@ -398,7 +402,8 @@ export default function QualityRegistryPage() {
         </section>
       </div>
 
-      <LastUpdated date="11-08-2026" />
+      <DataSourcesDisclaimer />
+      <LastUpdated date="14-08-2026" />
     </div>
   );
 }

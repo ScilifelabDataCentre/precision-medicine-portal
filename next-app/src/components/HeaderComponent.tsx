@@ -29,11 +29,6 @@ const components: { title: string; href: string; description: string }[] = [
     description: "Find out more about our ongoing and previous projects",
   },
   {
-    title: "FAQ",
-    href: "/about/faq",
-    description: "Frequently asked questions by our users",
-  },
-  {
     title: "Team",
     href: "/about/team",
     description: "Who's who in the Data Science Node",
@@ -103,7 +98,7 @@ export default function HeaderComponent() {
 
 function DesktopNav() {
   return (
-    <NavigationMenu delayDuration={0}>
+    <NavigationMenu delayDuration={0} viewport={false}>
       <NavigationMenuList role="menubar" aria-label="Main navigation">
         <NavigationMenuItem role="none">
           <NavigationMenuTrigger aria-label="Data sources menu">
@@ -195,9 +190,12 @@ function DesktopNav() {
           <NavigationMenuTrigger aria-label="About us menu">
             About us
           </NavigationMenuTrigger>
-          <NavigationMenuContent>
+          {/* Right-aligned under its own trigger, which only works because the
+              menu above runs with `viewport={false}`; the default viewport mode
+              centres all content under the menubar instead. */}
+          <NavigationMenuContent className="left-auto right-0">
             <ul
-              className="grid gap-3 p-4 w-[500px] grid-cols-2"
+              className="grid gap-3 p-4 w-[400px]"
               role="menu"
               aria-label="About us submenu"
             >

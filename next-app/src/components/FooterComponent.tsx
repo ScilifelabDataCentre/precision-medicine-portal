@@ -40,10 +40,6 @@ export default function Footer(): ReactElement {
       link: "/about/dsnpmd-projects",
     },
     l7: { text: "Team", link: "/about/team" },
-    l8: {
-      text: "FAQ",
-      link: "/about/faq",
-    },
     l9: { text: "Partners", link: "/about/partners" },
   };
 
