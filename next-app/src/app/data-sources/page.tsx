@@ -288,6 +288,38 @@ export default function DataSourcesPage(): ReactElement {
             </a>
           </li>
         </ul>
+        <div
+          className="flex flex-row items-center"
+          aria-label="National Genomics Platform section"
+        >
+          <Title level={2}>National Genomics Platform</Title>
+          <Link
+            href="/data-sources/national-genomics-platform"
+            aria-label="Go to National Genomics Platform page"
+            className="focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
+          >
+            <svg
+              className="ml-2 fill-primary w-7 h-7"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              aria-hidden="true"
+              role="presentation"
+            >
+              <g data-name="19-Arrow Right">
+                <path d="M16 0a16 16 0 1 0 16 16A16 16 0 0 0 16 0zm0 30a14 14 0 1 1 14-14 14 14 0 0 1-14 14z" />
+                <path d="m26.71 15.29-7-7-1.42 1.42 5.3 5.29H5v2h18.59l-5.29 5.29 1.41 1.41 7-7a1 1 0 0 0 0-1.41z" />
+              </g>
+            </svg>
+          </Link>
+        </div>
+        <p>
+          The National Genomics Platform is the shared national infrastructure
+          where Sweden&apos;s seven Genomic Medicine Centres store genomic data
+          generated in clinical care. Data belongs to the healthcare region that
+          generated it, so a research project needs ethical approval and a
+          separate disclosure decision from every region holding the data it
+          needs.
+        </p>
         <Title level={2} aria-label="Patient records and data access section">
           Patient records and data access
         </Title>
@@ -433,7 +465,7 @@ export default function DataSourcesPage(): ReactElement {
             </a>
           </li>
         </ul>
-        <LastUpdated date="09-09-2025" />
+        <LastUpdated date="21-08-2026" />
       </div>
     </div>
   );

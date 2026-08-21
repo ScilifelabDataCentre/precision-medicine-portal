@@ -20,6 +20,13 @@ const dataSourceCards = [
     href: "/data-sources/swedish-research-cohorts",
   },
   {
+    title: "National Genomics Platform",
+    description:
+      "Explore genomic data from Sweden's seven Genomic Medicine Centres",
+    cta: "About the platform",
+    href: "/data-sources/national-genomics-platform",
+  },
+  {
     title: "Other data sources",
     description: "Access a comprehensive overview of data sources",
     cta: "Browse sources",
@@ -83,7 +90,7 @@ export default function HomePage(): ReactElement {
         <Title level={2} className="mb-4 md:mb-5">
           Find data
         </Title>
-        <div className="grid gap-3.5 md:grid-cols-3 md:gap-6">
+        <div className="grid gap-3.5 sm:grid-cols-2 md:gap-6 lg:grid-cols-4">
           {dataSourceCards.map((card) => (
             <Link
               key={card.href}
