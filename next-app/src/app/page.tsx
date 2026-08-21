@@ -98,7 +98,7 @@ export default function HomePage(): ReactElement {
               className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
               <Card className="flex h-full flex-col gap-2.5 border-transparent bg-primary p-6 transition-all group-hover:bg-primary/90 group-hover:shadow-lg md:gap-3 md:p-8">
-                <CardTitle className="text-xl text-white md:text-2xl">
+                <CardTitle className="break-words text-xl text-white md:text-2xl">
                   {card.title}
                 </CardTitle>
                 <p className="flex-1 text-sm leading-relaxed text-white/90 md:text-base">
@@ -132,7 +132,14 @@ export default function HomePage(): ReactElement {
               className="group block rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground"
             >
               <Card className="flex h-full flex-col gap-2.5 p-6 transition-all group-hover:border-primary/50 group-hover:shadow-lg md:gap-3 md:p-8">
-                <CardTitle className="text-xl text-primary md:text-2xl">
+                {/*
+                  Titles here are product names, not prose: "DIGIfor1healthSE"
+                  is one unbreakable 16-character token that overflowed the
+                  card's right border in the three-column grid. `break-words`
+                  only splits a word that cannot fit, so multi-word titles are
+                  unaffected.
+                */}
+                <CardTitle className="break-words text-xl text-primary md:text-2xl">
                   {card.title}
                 </CardTitle>
                 <p className="flex-1 text-sm leading-relaxed text-muted-foreground md:text-base">
