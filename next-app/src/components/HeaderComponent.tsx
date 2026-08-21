@@ -75,20 +75,31 @@ export default function HeaderComponent() {
       aria-label="Site header"
     >
       <div className="flex items-center justify-between gap-4 2xl:max-w-(--breakpoint-2xl) 2xl:mx-auto py-2 px-4 lg:px-6">
-        <Link href="/" className="shrink-0" aria-label="Go to homepage">
+        {/*
+          The logo must be able to give up width. `px-4` + `gap-4` + the 40px
+          menu button leave 232px on a 320px screen, and this PNG is 282px wide
+          at `h-7` (600x59.5 scaled to a 28px height). Pinning it with
+          `shrink-0` pushed the menu button off the right edge, where
+          `html { overflow-x: clip }` silently swallowed it. `max-w-full` with
+          an auto height lets the browser scale the whole lockup down
+          proportionally instead - the cap still governs every width that has
+          the room for it.
+        */}
+        <Link href="/" className="min-w-0" aria-label="Go to homepage">
           <Image
             width={600}
             height={59.5}
             src={"/scilifelab-logo/precisionmedicineportal-logo-white.png"}
             alt="Precision Medicine Portal - SciLifeLab"
             priority
-            className="w-auto h-7 navbar:h-12"
+            className="h-auto w-auto max-h-7 max-w-full object-contain navbar:max-h-12"
           />
         </Link>
         <div className="hidden navbar:block">
           <DesktopNav />
         </div>
-        <div className="navbar:hidden">
+        {/* The one control a phone has for navigation: never let it shrink. */}
+        <div className="navbar:hidden shrink-0">
           <MobileNav />
         </div>
       </div>
