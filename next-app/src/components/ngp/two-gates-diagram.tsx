@@ -43,7 +43,20 @@ const REGION_ROWS = [40, 122, 204];
 export function TwoGatesDiagram(): ReactElement {
   return (
     <figure>
-      <Card className="overflow-x-auto border-0 p-6">
+      {/*
+        `tabIndex={0}` is what makes the horizontal scroll reachable without a
+        pointer: below `min-w-175` roughly half the diagram sits outside the
+        box, and a keyboard or switch-access user can only scroll a region they
+        can focus (WCAG 2.1.1; axe `scrollable-region-focusable`). The short
+        `aria-label` names the focus stop - the svg's own `aria-label` carries
+        the full description, so this one stays deliberately terse.
+      */}
+      <Card
+        className="overflow-x-auto border-0 p-6"
+        tabIndex={0}
+        role="group"
+        aria-label="Diagram, scrollable"
+      >
         <svg
           viewBox="0 0 860 300"
           role="img"
