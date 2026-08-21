@@ -23,6 +23,10 @@ export default function Footer(): ReactElement {
       text: "Swedish research cohorts",
       link: "/data-sources/swedish-research-cohorts",
     },
+    l3b: {
+      text: "National Genomics Platform",
+      link: "/data-sources/national-genomics-platform",
+    },
     l4: {
       text: "Other data sources",
       link: "/data-sources/others",
