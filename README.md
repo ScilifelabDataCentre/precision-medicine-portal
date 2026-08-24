@@ -23,7 +23,7 @@ The portal is one of our main projects. Other projects the team has been or is i
 
 ## Cite this portal
 
-<a href="https://zenodo.org/doi/10.5281/zenodo.19106324"><img src="https://zenodo.org/badge/256458920.svg" alt="DOI"></a>
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19106324.svg)](https://doi.org/10.5281/zenodo.19106324)
 
 Click on 'Cite this repository' near the top right of this repository to see how to formally cite this repository. Also see the [citation and license](https://precision-medicine-portal.scilifelab.se/citation-and-license) site for detailed information.
 
