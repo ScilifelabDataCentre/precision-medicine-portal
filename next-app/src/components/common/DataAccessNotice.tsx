@@ -8,7 +8,7 @@ import type { ReactElement } from "react";
 export function DataAccessNotice(): ReactElement {
   return (
     <div
-      className="mx-auto w-full max-w-lg rounded-lg border border-neutral bg-muted p-4 text-left text-sm text-foreground"
+      className="w-full max-w-lg bg-muted border border-neutral rounded-lg p-4 text-sm text-foreground text-left mx-auto"
       role="note"
       aria-label="Data access information"
     >

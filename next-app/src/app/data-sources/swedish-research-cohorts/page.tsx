@@ -251,17 +251,16 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         Swedish research cohorts and biobank studies
       </Title>
 
-      <div className="mb-6 space-y-4">
-        <p role="doc-abstract">
-          This page highlights major Swedish research cohorts and biobank-based
-          studies that collect biological samples and health data. These are
-          typically long-term research resources used by multiple studies rather
-          than single projects. In Sweden, such data are often linked with
-          national quality registries and health registers, enabling large-scale
-          precision medicine research.
-        </p>
-        <DataSourcesSuggestUpdate />
-      </div>
+      <p role="doc-abstract" className="mb-6">
+        This page highlights major Swedish research cohorts and biobank-based
+        studies that collect biological samples and health data. These are
+        typically long-term research resources used by multiple studies rather
+        than single projects. In Sweden, such data are often linked with
+        national quality registries and health registers, enabling large-scale
+        precision medicine research.
+      </p>
+
+      <DataSourcesSuggestUpdate />
 
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <aside
@@ -434,7 +433,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         </section>
       </div>
 
-      <LastUpdated date="14-08-2026" />
+      <LastUpdated date="30-08-2026" className="mt-8" />
     </div>
   );
 }

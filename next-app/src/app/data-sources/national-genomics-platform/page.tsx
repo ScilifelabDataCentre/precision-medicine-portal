@@ -13,9 +13,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import { TwoGatesDiagram } from "@/components/ngp/two-gates-diagram";
-
-const linkClassName =
-  "text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded";
+import { linkClassName } from "@/lib/styles";
 
 /**
  * Phase headings in "How to apply" are the only pinned element on the site (the

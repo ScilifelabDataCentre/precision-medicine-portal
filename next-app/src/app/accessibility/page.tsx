@@ -1,4 +1,5 @@
 import { pageMetadata } from "@/lib/metadata";
+import { linkClassName } from "@/lib/styles";
 import { ReactElement } from "react";
 import Title from "@/components/common/title";
 import {
@@ -57,9 +58,6 @@ const assessmentOptions: ComplianceOption[] = [
     selected: false,
   },
 ];
-
-const linkClassName =
-  "text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded";
 
 export const metadata = pageMetadata({
   title: "Accessibility statement",
