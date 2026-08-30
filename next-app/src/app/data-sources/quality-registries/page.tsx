@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo, useCallback } from "react";
 import { Input } from "@/components/ui/input";
 import Title from "@/components/common/title";
 import { LastUpdated } from "@/components/common/last-updated";
-import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
+import { DataSourcesSuggestUpdate } from "@/components/common/DataSourcesSuggestUpdate";
 import { DataAccessNotice } from "@/components/common/DataAccessNotice";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
@@ -222,6 +222,8 @@ export default function QualityRegistryPage() {
         valuable for research.
       </p>
 
+      <DataSourcesSuggestUpdate />
+
       <div className="lg:grid lg:grid-cols-4 lg:gap-8">
         <aside
           className="lg:col-span-1 mb-8 lg:mb-0"
@@ -402,8 +404,7 @@ export default function QualityRegistryPage() {
         </section>
       </div>
 
-      <DataSourcesDisclaimer />
-      <LastUpdated date="14-08-2026" />
+      <LastUpdated date="30-08-2026" className="mt-8" />
     </div>
   );
 }

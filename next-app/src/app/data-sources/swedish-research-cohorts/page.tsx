@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback, useMemo, ReactElement } from "react";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import Title from "@/components/common/title";
 import { LastUpdated } from "@/components/common/last-updated";
-import { DataSourcesDisclaimer } from "@/components/common/DataSourcesDisclaimer";
+import { DataSourcesSuggestUpdate } from "@/components/common/DataSourcesSuggestUpdate";
 import { DataAccessNotice } from "@/components/common/DataAccessNotice";
 import { LoadingState } from "@/components/common/LoadingState";
 import { FilterSection } from "@/components/common/FilterSection";
@@ -260,6 +260,8 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         precision medicine research.
       </p>
 
+      <DataSourcesSuggestUpdate />
+
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <aside
           className="space-y-6"
@@ -431,8 +433,7 @@ export default function SwedishResearchCohortsPage(): ReactElement {
         </section>
       </div>
 
-      <DataSourcesDisclaimer />
-      <LastUpdated date="14-08-2026" />
+      <LastUpdated date="30-08-2026" className="mt-8" />
     </div>
   );
 }
