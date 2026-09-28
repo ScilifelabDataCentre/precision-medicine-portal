@@ -357,7 +357,7 @@ export default function DataSourcesPage(): ReactElement {
         <p>
           SciLifeLab provides general research data management (RDM) guidelines,{" "}
           <a
-            href="https://data-guidelines.scilifelab.se/"
+            href="https://rdm-guidelines.scilifelab.se/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
@@ -368,7 +368,7 @@ export default function DataSourcesPage(): ReactElement {
           , and specific information about the ethical, legal, and societal
           implications (ELSI) for research involving human data,{" "}
           <a
-            href="https://data-guidelines.scilifelab.se/topics/research-involving-human-data/"
+            href="https://rdm-guidelines.scilifelab.se/topics/research-involving-human-data/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
@@ -378,7 +378,7 @@ export default function DataSourcesPage(): ReactElement {
           </a>
           . They also offer guidance on{" "}
           <a
-            href="https://data-guidelines.scilifelab.se/topics/sharing-human-data/"
+            href="https://rdm-guidelines.scilifelab.se/topics/sharing-human-data/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-primary hover:text-black underline focus:outline-hidden focus:ring-2 focus:ring-primary focus:ring-offset-2 rounded"
