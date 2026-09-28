@@ -266,15 +266,15 @@ const RESOURCE_GROUPS: { title: string; links: ResourceLink[] }[] = [
     links: [
       {
         label: "Research data management guidelines",
-        href: "https://data-guidelines.scilifelab.se/",
+        href: "https://rdm-guidelines.scilifelab.se/",
       },
       {
         label: "Research involving human data",
-        href: "https://data-guidelines.scilifelab.se/topics/research-involving-human-data/",
+        href: "https://rdm-guidelines.scilifelab.se/topics/research-involving-human-data/",
       },
       {
         label: "Sharing human data",
-        href: "https://data-guidelines.scilifelab.se/topics/sharing-human-data/",
+        href: "https://rdm-guidelines.scilifelab.se/topics/sharing-human-data/",
       },
     ],
   },
