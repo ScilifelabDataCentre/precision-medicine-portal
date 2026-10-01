@@ -179,6 +179,11 @@ Use the project's Node version before installing dependencies or running npm
 commands. `npm ci` installs the versions in the committed lockfile; use
 `npm install` when intentionally changing dependencies.
 
+If a restricted environment blocks Turbopack's local worker with a
+`binding to a port` / `Operation not permitted` error, Next.js supports a
+Webpack fallback: `npm run build -- --webpack` or `npm run dev -- --webpack`.
+The regular commands keep Turbopack as their default.
+
 ##### Available Scripts
 
 ###### `npm install`

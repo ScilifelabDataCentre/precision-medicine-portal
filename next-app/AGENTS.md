@@ -26,8 +26,8 @@ If question cards are not visible to Jan, ask the questions directly in chat.
 
 ## Use Node 26
 
-The root and `next-app/.nvmrc` files pin Node 26 and `engines.node` is `>=26`. Run `nvm use` in
-`next-app/` first. On an older Node the failures are indirect and easy to
+The root and `next-app/.nvmrc` files pin Node 26 and `engines.node` is `>=26`.
+Run `nvm use` in `next-app/` first. On an older Node the failures are indirect and easy to
 misdiagnose as dependency bugs:
 
 - npm 10 rewrites `package-lock.json` with all 20 `libc` fields stripped — a
