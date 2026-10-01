@@ -177,7 +177,7 @@ The theme file `next-app/src/app/pmp-theme.css`, imported from `globals.css`, de
 
 ## Typography
 
-Set `body` and `lead` with `font-serif`; everything else uses `font-sans`. Lato and Lora load through `next/font/google` (400 and 700, plus italic 400) as `--font-lato` and `--font-lora`.
+Set `body` and `lead` with `font-serif`; everything else uses `font-sans`. Both load through `next/font/google`: Lato in 400 and 700 as `--font-lato`, Lora in 400 and 700, upright and italic, as `--font-lora`. Lato has no italic loaded, which fits the rule that UI text takes emphasis from bold.
 
 | Style      | Family | Size             | Line height | Tracking | Weight | Use                                                                 |
 | ---------- | ------ | ---------------- | ----------- | -------- | ------ | ------------------------------------------------------------------- |
