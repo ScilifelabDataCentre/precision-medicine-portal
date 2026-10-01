@@ -1,0 +1,135 @@
+/*
+ * Precision Medicine Portal v2: tokens for Tailwind CSS v4.
+ * Merge into the @theme block in next-app/src/app/globals.css and delete the entries it replaces.
+ * Source of truth: DESIGN.md. Values are SciLifeLab Graphic Manual 2025 colours; type, spacing and layout in rem.
+ */
+
+@theme {
+  /* Colour: brand hues, tints, neutrals and roles */
+  --color-lime: #a7c947;
+  --color-lime-75: #bdd775;
+  --color-lime-50: #d3e4a3;
+  --color-lime-25: #e9f2d1;
+  --color-teal: #045c64;
+  --color-teal-75: #43858b;
+  --color-teal-50: #82aeb2;
+  --color-teal-25: #c0d6d8;
+  --color-aqua: #4c979f;
+  --color-aqua-75: #79b1b7;
+  --color-aqua-50: #a6cbcf;
+  --color-aqua-25: #d2e5e7;
+  --color-grape: #491f53;
+  --color-grape-75: #77577e;
+  --color-grape-50: #a48fa9;
+  --color-grape-25: #d2c7d4;
+  --color-gray-light: #e5e5e5;
+  --color-gray-medium: #a6a6a6;
+  --color-gray-dark: #3f3f3f;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f2f2f2;
+  --color-header-material: #ffffffd9;
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #595959;
+  --color-on-teal: #ffffff;
+  --color-on-lime: var(--color-ink);
+  --color-line: var(--color-gray-light);
+  --color-line-strong: #808080;
+  --color-link: var(--color-teal);
+  --color-focus: var(--color-teal);
+  --color-focus-inverse: var(--color-lime);
+  --color-danger: #b3261e;
+  --color-danger-soft: #fbeae9;
+  --color-success: var(--color-teal);
+  --color-success-soft: var(--color-teal-25);
+
+  /* Existing shadcn names, remapped to v2. This also removes the failing white-on-lime,
+     white-on-orange pairs (accent, success, warning, error). Delete the old definitions. */
+  --color-background: var(--color-surface);
+  --color-foreground: var(--color-ink);
+  --color-card: var(--color-surface-alt);
+  --color-card-foreground: var(--color-ink);
+  --color-popover: var(--color-surface);
+  --color-popover-foreground: var(--color-ink);
+  --color-primary: var(--color-teal);
+  --color-primary-foreground: var(--color-on-teal);
+  --color-accent: var(--color-lime);
+  --color-accent-foreground: var(--color-on-lime);
+  --color-muted: var(--color-surface-alt);
+  --color-muted-foreground: var(--color-ink-muted);
+  --color-success-foreground: var(--color-on-teal);
+  --color-info: var(--color-grape);
+  --color-info-foreground: var(--color-on-teal);
+  --color-error: var(--color-danger);
+  --color-error-foreground: #ffffff; /* 6.5:1 on danger */
+  --color-destructive: var(--color-danger);
+  --color-destructive-foreground: #ffffff;
+  --color-border: var(--color-line);
+  --color-input: var(--color-line-strong);
+  --color-ring: var(--color-focus);
+  /* --color-warning (#ff9900 with white, 2.1:1) has no v2 equivalent: show warnings as text with an icon instead. */
+
+  /* Type: families come from next/font/google (--font-lato, --font-lora) */
+  --font-sans: var(--font-lato), "Helvetica Neue", Arial, sans-serif;
+  --font-serif: var(--font-lora), Georgia, "Times New Roman", serif;
+  --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  /* Headlines (sans) */
+  --text-display: 4rem;
+  --text-display--line-height: 1.05;
+  --text-display--letter-spacing: -0.02em;
+  --text-display--font-weight: 700;
+  --text-title-1: 2.75rem;
+  --text-title-1--line-height: 1.1;
+  --text-title-1--letter-spacing: -0.015em;
+  --text-title-1--font-weight: 700;
+  --text-title-2: 2rem;
+  --text-title-2--line-height: 1.2;
+  --text-title-2--letter-spacing: -0.01em;
+  --text-title-2--font-weight: 700;
+  --text-title-3: 1.5rem;
+  --text-title-3--line-height: 1.25;
+  --text-title-3--letter-spacing: -0.005em;
+  --text-title-3--font-weight: 700;
+  --text-headline: 1.1875rem;
+  --text-headline--line-height: 1.35;
+  --text-headline--font-weight: 700;
+  /* Reading (serif) */
+  --text-lead: 1.375rem;
+  --text-lead--line-height: 1.55;
+  --text-lead--font-weight: 400;
+  --text-body: 1.125rem;
+  --text-body--line-height: 1.65;
+  --text-body--font-weight: 400;
+  /* Interface (sans) */
+  --text-ui: 1.0625rem;
+  --text-ui--line-height: 1.5;
+  --text-ui--font-weight: 400;
+  --text-label: 1rem;
+  --text-label--line-height: 1.5;
+  --text-label--font-weight: 700;
+  --text-caption: 0.875rem;
+  --text-caption--line-height: 1.45;
+  --text-caption--letter-spacing: 0.01em;
+  --text-caption--font-weight: 400;
+  /* Code (mono) */
+  --text-code: 0.9375rem;
+  --text-code--line-height: 1.6;
+  --text-code--font-weight: 400;
+
+  /* Radius: actions are pills */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+
+  /* The only shadow: product imagery */
+  --shadow-media: 0 24px 48px -16px #1a1a1a33;
+
+  /* Layout: max-w-content, max-w-measure, h-header, min-h-target */
+  --container-content: 75rem;
+  --container-measure: 42.5rem;
+  --spacing-header: 4rem;
+  --spacing-target: 2.75rem;
+
+  /* Spacing uses Tailwind's default 0.25rem unit: space-24 in DESIGN.md is p-6, gap-6, mt-6. */
+}
