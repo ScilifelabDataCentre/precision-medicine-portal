@@ -30,7 +30,7 @@ export const FilterSection = ({
     <Card>
       <CardContent className="pt-6">
         {items.map((item) => (
-          <div key={item} className="flex items-center space-x-3 mb-4">
+          <div key={item} className="flex min-h-target items-center gap-3">
             <Checkbox
               id={`filter-${title}-${item}`}
               aria-label={item}
@@ -39,7 +39,7 @@ export const FilterSection = ({
             />
             <label
               htmlFor={`filter-${title}-${item}`}
-              className="text-base leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
+              className="flex min-h-target flex-1 cursor-pointer items-center text-ui peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {item} ({getItemCount(item)})
             </label>

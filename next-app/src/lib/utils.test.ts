@@ -20,6 +20,10 @@ describe("cn", () => {
 
   it("keeps v2 type tokens next to a colour utility", () => {
     expect(cn("text-label text-ink")).toBe("text-label text-ink");
+    expect(cn("text-caption text-ink-muted")).toBe(
+      "text-caption text-ink-muted",
+    );
+    expect(cn("text-ui", "text-danger")).toBe("text-ui text-danger");
   });
 
   it("resolves v2 type tokens against other font sizes", () => {
