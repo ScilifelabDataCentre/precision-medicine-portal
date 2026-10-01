@@ -28,6 +28,7 @@
   --color-surface: #ffffff;
   --color-surface-alt: #f2f2f2;
   --color-header-material: #ffffffd9;
+  --color-scrim: #1a1a1a66;
   --color-ink: #1a1a1a;
   --color-ink-muted: #595959;
   --color-on-teal: #ffffff;
@@ -122,8 +123,9 @@
   --radius-lg: 24px;
   --radius-pill: 999px;
 
-  /* The only shadow: product imagery */
+  /* Two shadows: product imagery and floating layers */
   --shadow-media: 0 24px 48px -16px #1a1a1a33;
+  --shadow-float: 0 8px 24px -8px #1a1a1a29;
 
   /* Layout: max-w-content, max-w-measure, h-header, min-h-target */
   --container-content: 75rem;

@@ -34,6 +34,7 @@ describe("cn", () => {
     expect(cn("rounded-md", "rounded-pill")).toBe("rounded-pill");
     expect(cn("h-10", "h-target")).toBe("h-target");
     expect(cn("shadow-md", "shadow-media")).toBe("shadow-media");
+    expect(cn("shadow-md", "shadow-float")).toBe("shadow-float");
     expect(cn("max-w-xl", "max-w-content")).toBe("max-w-content");
   });
 });

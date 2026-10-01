@@ -20,7 +20,7 @@ const twMerge = extendTailwindMerge({
       ],
       radius: ["pill"],
       spacing: ["header", "target"],
-      shadow: ["media"],
+      shadow: ["media", "float"],
       container: ["content", "measure"],
     },
   },

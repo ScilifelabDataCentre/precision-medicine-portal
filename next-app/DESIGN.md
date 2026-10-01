@@ -298,5 +298,7 @@ The current header predates v2: a grey-to-teal gradient band instead of `header-
 - Their focus ring is drawn inside the tab (`-outline-offset-2`), because a 2px outside offset would land on the band. Return to the standard 2px offset.
 - The menu button's focus ring is white (`on-teal`) rather than `focus-inverse`: lime reaches only about 2.5:1 on the band's grey top. Use `focus` on the light header.
 - The desktop dropdowns open with the `nav-open` keyframes, which cross-fade under reduced motion. The spec asks for interruptible CSS transitions; the rebuilt menu panel replaces them.
-- The mobile menu is a side sheet and appears without a transition. The spec's mounted panel over the `scrim`, with one reversible transition, replaces it.
+- The mobile menu is a side sheet over the `scrim` and appears without a transition. The spec's mounted panel with one reversible transition replaces it.
 - Nav link size: the links follow the Header spec at 16px, weight 400 (`text-base`), but the Type table lists navigation links under `ui` (17px). Settle which is right in the redesign.
+- Desktop dropdowns stay solid `surface` with `shadow-float` instead of the material, because their items still use pre-v2 descriptions in `ink-muted` at caption size, which the material does not allow. The redesigned menu moves them onto the material.
+- `scroll-padding-top` arrives with the sticky header; today's header scrolls away with the page.

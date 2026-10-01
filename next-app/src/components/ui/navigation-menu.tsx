@@ -101,7 +101,7 @@ const NavigationMenuContent = React.forwardRef<
     ref={ref}
     className={cn(
       "left-0 top-0 w-full md:absolute md:w-auto",
-      "group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-md group-data-[viewport=false]/navigation-menu:border group-data-[viewport=false]/navigation-menu:border-line group-data-[viewport=false]/navigation-menu:bg-surface group-data-[viewport=false]/navigation-menu:text-ink group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-nav-open",
+      "group-data-[viewport=false]/navigation-menu:top-full group-data-[viewport=false]/navigation-menu:mt-1.5 group-data-[viewport=false]/navigation-menu:overflow-hidden group-data-[viewport=false]/navigation-menu:rounded-md group-data-[viewport=false]/navigation-menu:border group-data-[viewport=false]/navigation-menu:border-line group-data-[viewport=false]/navigation-menu:bg-surface group-data-[viewport=false]/navigation-menu:shadow-float group-data-[viewport=false]/navigation-menu:contrast-more:shadow-none group-data-[viewport=false]/navigation-menu:contrast-more:border-line-strong group-data-[viewport=false]/navigation-menu:text-ink group-data-[viewport=false]/navigation-menu:data-[state=open]:animate-nav-open",
       className,
     )}
     {...props}
@@ -118,7 +118,7 @@ const NavigationMenuViewport = React.forwardRef<
   <div className={cn("absolute left-0 top-full flex justify-center")}>
     <NavigationMenuPrimitive.Viewport
       className={cn(
-        "origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-md border border-line bg-surface text-ink data-[state=open]:animate-nav-open md:w-(--radix-navigation-menu-viewport-width)",
+        "origin-top-center relative mt-1.5 h-(--radix-navigation-menu-viewport-height) w-full overflow-hidden rounded-md border border-line bg-surface text-ink shadow-float contrast-more:shadow-none contrast-more:border-line-strong data-[state=open]:animate-nav-open md:w-(--radix-navigation-menu-viewport-width)",
         className,
       )}
       ref={ref}

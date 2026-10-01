@@ -20,26 +20,30 @@ const SheetOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
-    className={cn("fixed inset-0 z-50 bg-transparent", className)}
+    className={cn("fixed inset-0 z-50 bg-scrim", className)}
     {...props}
     ref={ref}
   />
 ));
 SheetOverlay.displayName = SheetPrimitive.Overlay.displayName;
 
-const sheetVariants = cva("fixed z-50 gap-4 bg-surface p-6 text-ink", {
-  variants: {
-    side: {
-      top: "inset-x-0 top-0 border-b border-line",
-      bottom: "inset-x-0 bottom-0 border-t border-line",
-      left: "inset-y-0 left-0 h-full w-3/4 border-r border-line sm:max-w-sm",
-      right: "inset-y-0 right-0 h-full w-3/4 border-l border-line sm:max-w-sm",
+const sheetVariants = cva(
+  "fixed z-50 gap-4 bg-surface p-6 text-ink shadow-float contrast-more:shadow-none contrast-more:border-line-strong",
+  {
+    variants: {
+      side: {
+        top: "inset-x-0 top-0 border-b border-line",
+        bottom: "inset-x-0 bottom-0 border-t border-line",
+        left: "inset-y-0 left-0 h-full w-3/4 border-r border-line sm:max-w-sm",
+        right:
+          "inset-y-0 right-0 h-full w-3/4 border-l border-line sm:max-w-sm",
+      },
+    },
+    defaultVariants: {
+      side: "right",
     },
   },
-  defaultVariants: {
-    side: "right",
-  },
-});
+);
 
 interface SheetContentProps
   extends
