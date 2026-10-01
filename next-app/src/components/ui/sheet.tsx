@@ -20,7 +20,7 @@ const SheetOverlay = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Overlay>
 >(({ className, ...props }, ref) => (
   <SheetPrimitive.Overlay
-    className={cn("fixed inset-0 z-50 bg-ink/60", className)}
+    className={cn("fixed inset-0 z-50 bg-transparent", className)}
     {...props}
     ref={ref}
   />
@@ -58,7 +58,7 @@ const SheetContent = React.forwardRef<
       {...props}
     >
       {children}
-      <SheetPrimitive.Close className="absolute right-4 top-4 inline-flex size-target items-center justify-center rounded-pill text-ink transition-colors duration-150 ease-out hover:bg-surface-alt disabled:pointer-events-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus">
+      <SheetPrimitive.Close className="absolute right-4 top-4 inline-flex size-target items-center justify-center rounded-pill text-ink transition-colors duration-160 ease-out hover:bg-surface-alt disabled:pointer-events-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus">
         <X className="size-5" />
         <span className="sr-only">Close</span>
       </SheetPrimitive.Close>
