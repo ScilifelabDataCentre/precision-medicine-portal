@@ -5,6 +5,10 @@
 The Next.js app is in `next-app/`, not the repository root, and there is no root
 `package.json`. Run every npm/next command from `next-app/`.
 
+## Design
+
+Read DESIGN.md before any UI work. Where a design skill's defaults conflict with it, follow DESIGN.md. My instructions in chat still come first.
+
 ## Use Node 26
 
 `next-app/.nvmrc` pins Node 26 and `engines.node` is `>=26`. Run `nvm use` in
