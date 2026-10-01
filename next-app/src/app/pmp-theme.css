@@ -1,6 +1,6 @@
 /*
  * Precision Medicine Portal v2: tokens for Tailwind CSS v4.
- * Merge into the @theme block in next-app/src/app/globals.css and delete the entries it replaces.
+ * Imported by globals.css after Tailwind; edit tokens here rather than duplicating them there.
  * Source of truth: DESIGN.md. Values are SciLifeLab Graphic Manual 2025 colours; type, spacing and layout in rem.
  */
 

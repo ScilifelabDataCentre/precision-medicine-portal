@@ -7,11 +7,26 @@ The Next.js app is in `next-app/`, not the repository root, and there is no root
 
 ## Design
 
-Read DESIGN.md before any UI work. Where a design skill's defaults conflict with it, follow DESIGN.md. My instructions in chat still come first.
+Read PRODUCT.md and DESIGN.md before any UI work. PRODUCT.md records the
+audience, purpose and constraints; DESIGN.md records the brand and visual
+conventions. Where a design skill's defaults conflict with them, follow these
+project documents. My instructions in chat still come first.
+
+Run the repository's Impeccable helper from this directory so it loads this
+app's context: `../.agents/skills/impeccable/scripts/impeccable context`.
+
+For a new page layout or substantial redesign, present at least three distinct
+design options side by side before building the selected version. Use code-based
+previews or wireframes at matching viewport sizes, with consistent real content
+and the fixed brand rules. Include a short trade-off and a recommendation for
+each comparison. Small fixes do not need an alternatives round. The default
+build approach is recorded in `.impeccable/config.json`.
+
+If question cards are not visible to Jan, ask the questions directly in chat.
 
 ## Use Node 26
 
-`next-app/.nvmrc` pins Node 26 and `engines.node` is `>=26`. Run `nvm use` in
+The root and `next-app/.nvmrc` files pin Node 26 and `engines.node` is `>=26`. Run `nvm use` in
 `next-app/` first. On an older Node the failures are indirect and easy to
 misdiagnose as dependency bugs:
 

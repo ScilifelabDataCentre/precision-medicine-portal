@@ -1,0 +1,7 @@
+# Share the workflow default. Keep local overrides and generated sessions local.
+/config.local.json
+/live/
+/build/
+/mocks/
+/review/
+/cache/

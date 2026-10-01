@@ -1,6 +1,6 @@
 # DESIGN.md: Precision Medicine Portal v2
 
-This file is the design source of truth for the portal. Read it before any UI work. Where a design skill's defaults conflict with it (frontend-design, apple-design, impeccable, web-design-guidelines or others), follow this file. Jan's instructions in chat still come first. Brand rules in it are fixed; everything else changes only through a reviewed pull request.
+This file holds the portal's design conventions. Read it before any UI work. Where a design skill's defaults conflict with it, follow this file. Direct instructions from the person you're working with still come first. Brand rules in it are fixed; everything else changes only through a reviewed pull request.
 
 Precision Medicine Portal v2 carries SciLifeLab's brand exactly: four colours and their tints, Lato and Lora, the logotype. On top sits a quiet, product-first restraint in the spirit of Apple's design: generous space, one accent, strict type, depth from surfaces, one translucent material and motion that answers instantly and can always be reversed. The data is the product; the design gets out of its way. Every screen also passes the accessibility floor and the craft rules below. The portal is a public service under the Swedish Act on Accessibility to Digital Public Services (DOS-lagen), so WCAG 2.1 AA is the minimum, not the goal.
 
@@ -8,7 +8,7 @@ Precision Medicine Portal v2 carries SciLifeLab's brand exactly: four colours an
 
 - Read this file and `AGENTS.md` first. The app lives in `next-app/`.
 - Build with the tokens below through Tailwind utilities (`bg-surface-alt`, `text-ink-muted`, `text-title-2`, `rounded-pill`), never raw hex values or arbitrary pixel sizes.
-- Before you commit to a layout for a new page, offer two or three variants; build the chosen one.
+- Before you commit to a layout for a new page or substantial redesign, offer at least three distinct options side by side as described in `AGENTS.md`; build the chosen one.
 - Check your own render in the browser at 375px, 768px and 1280px wide, by keyboard and with reduced motion on.
 - Before opening a pull request: run a design critique and polish pass, audit the changed files against web interface guidelines, then `npm run lint`, `npm run typecheck`, `npm test` and `npm run build`. pa11y in CI is the final gate.
 
@@ -133,9 +133,9 @@ Check these before anything ships.
 
 ## Tokens
 
-The theme file `pmp-theme.css` defines all of these for Tailwind v4: colours as `--color-<token>`, type as `--text-<style>` with line height, tracking and weight, radii as `--radius-<token>`, the shadow as `--shadow-media`, and layout measures as `--container-content`, `--container-measure`, `--spacing-header` and `--spacing-target`.
+The theme file `next-app/src/app/pmp-theme.css`, imported from `globals.css`, defines all of these for Tailwind v4: colours as `--color-<token>`, type as `--text-<style>` with line height, tracking and weight, radii as `--radius-<token>`, the shadow as `--shadow-media`, and layout measures as `--container-content`, `--container-measure`, `--spacing-header` and `--spacing-target`.
 
-### Colour
+## Colors
 
 | Token             | Value                      | Use                                                                                                                                                                                                                                                                                        |
 | ----------------- | -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -175,7 +175,7 @@ The theme file `pmp-theme.css` defines all of these for Tailwind v4: colours as 
 | `success`         | `#045c64` (= `teal`)       | Confirmations, always with an icon and a word. Teal keeps success off the red-green axis.                                                                                                                                                                                                  |
 | `success-soft`    | `#c0d6d8` (= `teal-25`)    | Background of a confirmation message, with `teal` or `ink` text (5.1:1 or more).                                                                                                                                                                                                           |
 
-### Type
+## Typography
 
 Set `body` and `lead` with `font-serif`; everything else uses `font-sans`. Lato and Lora load through `next/font/google` (400 and 700, plus italic 400) as `--font-lato` and `--font-lora`.
 
@@ -192,6 +192,8 @@ Set `body` and `lead` with `font-serif`; everything else uses `font-sans`. Lato 
 | `label`    | sans   | 1rem (16px)      | 1.5         | 0        | 700    | Buttons, card actions and form labels. Sentence case.               |
 | `caption`  | sans   | 0.875rem (14px)  | 1.45        | 0.01em   | 400    | Metadata, footnotes, image credits and footer links. Never smaller. |
 | `code`     | mono   | 0.9375rem (15px) | 1.6         | 0        | 400    | OMOP table and field names, identifiers and code.                   |
+
+## Layout
 
 ### Spacing
 
@@ -210,20 +212,7 @@ Tailwind's default spacing unit is 0.25rem, so each token maps to a number utili
 | `space-96`  | 6rem    | `24` (e.g. `p-24`) | Section padding on wide screens.                                        |
 | `space-128` | 8rem    | `32` (e.g. `p-32`) | Above and below the hero headline on wide screens.                      |
 
-### Radius
-
-| Token         | Value | Use                                                 |
-| ------------- | ----- | --------------------------------------------------- |
-| `radius-sm`   | 6px   | Inputs, tags and code chips.                        |
-| `radius-md`   | 12px  | Cards, callouts and menus.                          |
-| `radius-lg`   | 24px  | Large media: hero images and dashboard screenshots. |
-| `radius-pill` | 999px | Buttons and badges.                                 |
-
-### Shadow
-
-- `shadow-media`: `0 24px 48px -16px #1a1a1a33`. Under product imagery such as a dashboard screenshot. Never on cards, buttons, menus or text.
-
-### Layout
+### Measures
 
 | Token           | Value   | Use                                                                  |
 | --------------- | ------- | -------------------------------------------------------------------- |
@@ -231,6 +220,19 @@ Tailwind's default spacing unit is 0.25rem, so each token maps to a number utili
 | `measure`       | 42.5rem | Maximum width of `body` and `lead` text, about 70 characters.        |
 | `header-height` | 4rem    | Height of the global header.                                         |
 | `target-min`    | 2.75rem | Minimum height of buttons, navigation items and other touch targets. |
+
+## Elevation & Depth
+
+- `shadow-media`: `0 24px 48px -16px #1a1a1a33`. Under product imagery such as a dashboard screenshot. Never on cards, buttons, menus or text.
+
+## Shapes
+
+| Token         | Value | Use                                                 |
+| ------------- | ----- | --------------------------------------------------- |
+| `radius-sm`   | 6px   | Inputs, tags and code chips.                        |
+| `radius-md`   | 12px  | Cards, callouts and menus.                          |
+| `radius-lg`   | 24px  | Large media: hero images and dashboard screenshots. |
+| `radius-pill` | 999px | Buttons and badges.                                 |
 
 ## Components
 
@@ -263,7 +265,7 @@ These are the reference behaviours. Rebuild them with the repo's existing Radix 
 
 ## Logo files
 
-Copy the files from `brand/` in this export into `next-app/public/brand/` and use them as they are.
+The supplied files are in `next-app/public/brand/`. Use them as they are through `/brand/<filename>` URLs.
 
 | File                                                                                        | Use                                                                         |
 | ------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------- |
