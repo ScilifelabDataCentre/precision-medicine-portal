@@ -136,7 +136,7 @@ Check these before anything ships.
 
 ## Tokens
 
-The theme file `next-app/src/app/pmp-theme.css`, imported from `globals.css`, defines all of these for Tailwind v4: colours as `--color-<token>`, type as `--text-<style>` with line height, tracking and weight, radii as `--radius-<token>`, the shadow as `--shadow-media`, and layout measures as `--container-content`, `--container-measure`, `--spacing-header` and `--spacing-target`.
+The theme file `next-app/src/app/pmp-theme.css`, imported from `globals.css`, defines all of these for Tailwind v4: colours as `--color-<token>`, type as `--text-<style>` with line height, tracking and weight, radii as `--radius-<token>`, the shadows as `--shadow-media` and `--shadow-float`, and layout measures as `--container-content`, `--container-measure`, `--spacing-header` and `--spacing-target`.
 
 ## Colors
 
