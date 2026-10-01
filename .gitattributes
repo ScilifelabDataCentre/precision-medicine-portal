@@ -1,0 +1,5 @@
+# Third-party agent skills, pinned by skills-lock.json: keep them out of
+# language stats and collapse the bundled scripts in pull request diffs.
+.agents/skills/** linguist-vendored
+.agents/skills/impeccable/scripts/live-browser.js linguist-generated
+.agents/skills/impeccable/scripts/modern-screenshot.umd.js linguist-generated
