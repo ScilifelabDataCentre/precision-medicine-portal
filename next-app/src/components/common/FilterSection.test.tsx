@@ -76,8 +76,8 @@ describe("FilterSection", () => {
   });
 
   it("names each checkbox by its visible label", () => {
-    expect(rowFor("Registercentrum Norr").checkboxTag).not.toContain(
-      "aria-label",
+    expect(rowFor("Registercentrum Norr").checkboxTag).toContain(
+      'aria-label="Registercentrum Norr (20)"',
     );
   });
 
