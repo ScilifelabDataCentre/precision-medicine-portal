@@ -72,7 +72,7 @@ const NavigationMenuItem = React.forwardRef<
 NavigationMenuItem.displayName = NavigationMenuPrimitive.Item.displayName;
 
 const navigationMenuTriggerStyle = cva(
-  "group inline-flex min-h-target w-max items-center justify-center rounded-pill bg-surface px-4 text-ui text-ink transition-colors duration-160 ease-out hover:bg-lime-25 data-[state=open]:bg-lime-25 data-active:font-bold data-active:text-teal disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus",
+  "group inline-flex min-h-target w-max items-center justify-center rounded-md bg-surface px-4 text-base text-ink transition-colors duration-160 ease-out hover:bg-gray-light data-[state=open]:bg-gray-light data-active:font-bold data-active:text-teal disabled:pointer-events-none disabled:opacity-50 focus-visible:outline-2 focus-visible:-outline-offset-2 focus-visible:outline-focus",
 );
 
 const NavigationMenuTrigger = React.forwardRef<

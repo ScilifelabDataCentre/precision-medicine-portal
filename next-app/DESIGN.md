@@ -286,9 +286,9 @@ Whether the portal follows the DDLS graphical guidelines (Teal, Aqua and Grape a
 
 The current header predates v2: a grey-to-teal gradient band instead of `header-material`, desktop dropdowns, and a side sheet instead of the "Menu" panel. Until it is rebuilt to the Header spec above, these deviations stand. The redesign removes each one.
 
-- Desktop nav links are solid `surface` pills, `lime-25` on hover and while open, so they stay legible on the dark band. The spec's plain `ink` links return with the light header.
-- Their focus ring is drawn inside the pill (`-outline-offset-2`), because a 2px outside offset would land on the band. Return to the standard 2px offset.
+- Desktop nav links are solid `surface` tabs with `radius-md` corners, `gray-light` on hover and while open, so they stay legible on the dark band. The spec's plain `ink` links return with the light header.
+- Their focus ring is drawn inside the tab (`-outline-offset-2`), because a 2px outside offset would land on the band. Return to the standard 2px offset.
 - The menu button's focus ring is white (`on-teal`) rather than `focus-inverse`: lime reaches only about 2.5:1 on the band's grey top. Use `focus` on the light header.
 - The desktop dropdowns open with the `nav-open` keyframes, which cross-fade under reduced motion. The spec asks for interruptible CSS transitions; the rebuilt menu panel replaces them.
 - The mobile menu is a side sheet over a transparent overlay and appears without a transition. The spec's mounted panel with one reversible transition replaces it.
-- Nav link size: the Header spec says 16px, while the Type table lists navigation links under `ui` (17px). The links use `ui` for now; settle it in the redesign.
+- Nav link size: the links follow the Header spec at 16px, weight 400 (`text-base`), but the Type table lists navigation links under `ui` (17px). Settle which is right in the redesign.
