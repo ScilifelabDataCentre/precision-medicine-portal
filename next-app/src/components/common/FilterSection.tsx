@@ -33,13 +33,12 @@ export const FilterSection = ({
           <div key={item} className="flex min-h-target items-center gap-3">
             <Checkbox
               id={`filter-${title}-${item}`}
-              aria-label={item}
               checked={selectedItems.includes(item)}
               onCheckedChange={() => onFilterChange(item)}
             />
             <label
               htmlFor={`filter-${title}-${item}`}
-              className="flex min-h-target flex-1 cursor-pointer items-center text-ui peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              className="flex min-h-target flex-1 -ml-3 cursor-pointer items-center pl-3 text-ui peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
             >
               {item} ({getItemCount(item)})
             </label>

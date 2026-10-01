@@ -284,7 +284,7 @@ Whether the portal follows the DDLS graphical guidelines (Teal, Aqua and Grape a
 
 ### Temporary deviations until the header redesign
 
-The current header predates v2: a grey-to-teal photo band instead of `header-material`, desktop dropdowns, and a side sheet instead of the "Menu" panel. Until it is rebuilt to the Header spec above, these deviations stand. The redesign removes each one.
+The current header predates v2: a grey-to-teal gradient band instead of `header-material`, desktop dropdowns, and a side sheet instead of the "Menu" panel. Until it is rebuilt to the Header spec above, these deviations stand. The redesign removes each one.
 
 - Desktop nav links are solid `surface` pills, `lime-25` on hover and while open, so they stay legible on the dark band. The spec's plain `ink` links return with the light header.
 - Their focus ring is drawn inside the pill (`-outline-offset-2`), because a 2px outside offset would land on the band. Return to the standard 2px offset.
