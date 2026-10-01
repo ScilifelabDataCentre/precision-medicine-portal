@@ -1,45 +1,16 @@
 /* Limit class detection to the app sources (parity with the v3 `content` globs). */
 @import "tailwindcss" source("..");
+@import "./pmp-theme.css";
 
 @theme {
-  --color-background: hsl(var(--background));
-  --color-foreground: hsl(var(--foreground));
-
-  --color-card: hsl(var(--card));
-  --color-card-foreground: hsl(var(--card-foreground));
-
-  --color-popover: hsl(var(--popover));
-  --color-popover-foreground: hsl(var(--popover-foreground));
-
-  --color-primary: #045c64;
-  --color-primary-foreground: #ffffff;
-
   --color-secondary: #777373;
   --color-secondary-foreground: #ffffff;
-
-  --color-accent: #a7c947;
-  --color-accent-foreground: #ffffff;
-
-  --color-muted: hsl(var(--muted));
-  --color-muted-foreground: hsl(var(--muted-foreground));
-
-  --color-destructive: hsl(var(--destructive));
-  --color-destructive-foreground: hsl(var(--destructive-foreground));
 
   --color-neutral: #e5e5e5;
   --color-neutral-foreground: #000000;
 
-  --color-info: #491f53;
-  --color-info-foreground: #ffffff;
-
-  --color-success: #a7c947;
-  --color-success-foreground: #ffffff;
-
   --color-warning: #ff9900;
   --color-warning-foreground: #ffffff;
-
-  --color-error: #ff5724;
-  --color-error-foreground: #ffffff;
 
   --color-base-100: #f8fafc;
 
@@ -47,15 +18,6 @@
      the black foreground is 7.3:1, clearing WCAG AA for normal text. */
   --color-metadata: #649ed2;
   --color-metadata-foreground: #000000;
-  --color-border: hsl(var(--border));
-  --color-input: hsl(var(--input));
-  --color-ring: hsl(var(--ring));
-
-  --radius-lg: var(--radius);
-  --radius-md: calc(var(--radius) - 2px);
-  --radius-sm: calc(var(--radius) - 4px);
-
-  --font-sans: var(--font-lato), sans-serif;
 
   /* Custom breakpoint for the header: the horizontal desktop nav needs ~1130px
      to fit alongside the logo (logo ~484px at h-12 + 5 items ~581px +
@@ -79,6 +41,27 @@
     to {
       opacity: 1;
       transform: scale(1) translateY(0);
+    }
+  }
+}
+
+/*
+  The header dropdowns open with the nav-open keyframes (scale + translate).
+  Under reduced motion they only cross-fade, as DESIGN.md asks.
+*/
+@keyframes nav-fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      --animate-nav-open: nav-fade 120ms ease-out;
     }
   }
 }
@@ -127,40 +110,6 @@
 @layer base {
   html {
     overflow-x: clip;
-  }
-}
-
-@layer base {
-  :root {
-    --background: 210 40% 98%;
-    --foreground: 222.2 84% 4.9%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
-
-    --primary: 186 100% 39%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 0 0% 47%;
-    --secondary-foreground: 0 0% 100%;
-
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 44%;
-
-    --accent: 74 60% 55%;
-    --accent-foreground: 0 0% 100%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
-
-    --radius: 0.5rem;
   }
 }
 

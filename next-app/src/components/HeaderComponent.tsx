@@ -243,7 +243,7 @@ function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="text-white hover:bg-secondary/20 focus:bg-secondary/20"
+          className="text-white hover:bg-secondary/20 focus:bg-secondary/20 focus-visible:outline-on-teal"
           aria-label="Open mobile navigation menu"
         >
           <Menu className="h-6 w-6" aria-hidden="true" />

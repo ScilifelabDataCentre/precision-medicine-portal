@@ -29,22 +29,25 @@ export const FilterSection = ({
     </h2>
     <Card>
       <CardContent className="pt-6">
-        {items.map((item) => (
-          <div key={item} className="flex items-center space-x-3 mb-4">
-            <Checkbox
-              id={`filter-${title}-${item}`}
-              aria-label={item}
-              checked={selectedItems.includes(item)}
-              onCheckedChange={() => onFilterChange(item)}
-            />
-            <label
-              htmlFor={`filter-${title}-${item}`}
-              className="text-base leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
-            >
-              {item} ({getItemCount(item)})
-            </label>
-          </div>
-        ))}
+        {items.map((item) => {
+          const label = `${item} (${getItemCount(item)})`;
+          return (
+            <div key={item} className="flex min-h-target items-center gap-3">
+              <Checkbox
+                id={`filter-${title}-${item}`}
+                aria-label={label}
+                checked={selectedItems.includes(item)}
+                onCheckedChange={() => onFilterChange(item)}
+              />
+              <label
+                htmlFor={`filter-${title}-${item}`}
+                className="flex min-h-target flex-1 -ml-3 cursor-pointer items-center pl-3 text-ui peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              >
+                {label}
+              </label>
+            </div>
+          );
+        })}
       </CardContent>
     </Card>
   </div>

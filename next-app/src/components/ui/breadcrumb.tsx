@@ -26,7 +26,7 @@ const BreadcrumbList = React.forwardRef<
   <ol
     ref={ref}
     className={cn(
-      "flex flex-wrap items-center gap-1.5 wrap-break-word text-sm text-muted-foreground sm:gap-2.5",
+      "flex flex-wrap items-center gap-1.5 wrap-break-word text-caption text-ink-muted sm:gap-2.5",
       className,
     )}
     {...props}
@@ -57,7 +57,10 @@ const BreadcrumbLink = React.forwardRef<
   return (
     <Comp
       ref={ref}
-      className={cn("transition-colors hover:text-foreground", className)}
+      className={cn(
+        "rounded-sm text-link underline-offset-4 hover:underline transition-colors duration-160 ease-out focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus",
+        className,
+      )}
       {...props}
     />
   );
@@ -73,7 +76,7 @@ const BreadcrumbPage = React.forwardRef<
     role="link"
     aria-disabled="true"
     aria-current="page"
-    className={cn("font-normal text-foreground", className)}
+    className={cn("text-ink", className)}
     {...props}
   />
 ));
@@ -105,7 +108,7 @@ const BreadcrumbEllipsis = ({
     className={cn("flex h-9 w-9 items-center justify-center", className)}
     {...props}
   >
-    <MoreHorizontal className="h-4 w-4" />
+    <MoreHorizontal className="size-4" />
     <span className="sr-only">More</span>
   </span>
 );

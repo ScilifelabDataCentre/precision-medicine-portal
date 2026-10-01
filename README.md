@@ -98,10 +98,41 @@ next-app/
 
 #### Design System
 
-- Custom color palette with semantic naming (primary, secondary, accent, etc.)
-- Responsive design with Tailwind CSS breakpoints
-- Lato font family integration
-- Accessible component primitives from Radix UI
+- [Product context](next-app/PRODUCT.md) defines the audience, purpose and constraints.
+- [Design conventions](next-app/DESIGN.md) define the SciLifeLab brand rules and the v2 direction.
+- [Theme tokens](next-app/src/app/pmp-theme.css) provide Tailwind colors, typography and layout values.
+- Lato and Lora are loaded through `next/font`; components use Radix UI primitives.
+
+The v2 tokens are connected. Existing pages and components still need to be
+migrated to the new conventions as part of the design work.
+
+#### Design agent skills
+
+The shared skills live in `.agents/skills/`: `impeccable` for design workflows,
+`apple-design` for interaction and motion guidance, and `web-design-guidelines`
+for interface reviews. `next-app/DESIGN.md` takes priority over their defaults.
+Keep the skills and `skills-lock.json` committed together.
+
+Run the Impeccable helper from `next-app/` so it finds this app's context:
+
+```sh
+cd next-app
+nvm use
+../.agents/skills/impeccable/scripts/impeccable engine-probe
+../.agents/skills/impeccable/scripts/impeccable context
+```
+
+On its first run, the launcher downloads the pinned helper into
+`~/.impeccable/bin/` and verifies its checksum. This needs network access and
+permission to write to that cache. The helper is local tooling, not an app
+dependency or a file to commit. To inspect setup later, run
+`../.agents/skills/impeccable/scripts/impeccable doctor --json` from `next-app/`.
+
+The default is code first, configured in `next-app/.impeccable/config.json`.
+For new layouts or substantial redesigns, compare at least three distinct
+options side by side before selecting one. For example, ask: "Use Impeccable
+to show three homepage layouts side by side, following `next-app/PRODUCT.md`
+and `next-app/DESIGN.md`."
 
 ### Running a local copy of the portal and contributing to the codebase
 
@@ -132,7 +163,26 @@ git pull upstream main
 
 #### Step 2: Set up your development environment
 
-The project is set up using npm. Navigate to the `next-app` directory and use npm to run the available scripts:
+The project uses Node 26 and npm. With nvm installed, start from the repository
+root and run:
+
+```sh
+cd next-app
+nvm install
+nvm use
+npm ci
+npm run dev
+```
+
+Both the repository root and `next-app/` contain a `.nvmrc` selecting Node 26.
+Use the project's Node version before installing dependencies or running npm
+commands. `npm ci` installs the versions in the committed lockfile; use
+`npm install` when intentionally changing dependencies.
+
+If a restricted environment blocks Turbopack's local worker with a
+`binding to a port` / `Operation not permitted` error, Next.js supports a
+Webpack fallback: `npm run build -- --webpack` or `npm run dev -- --webpack`.
+The regular commands keep Turbopack as their default.
 
 ##### Available Scripts
 

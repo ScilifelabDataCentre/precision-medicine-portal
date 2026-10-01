@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Lato } from "next/font/google";
+import { Lato, Lora } from "next/font/google";
 import "./globals.css";
 import { SITE_URL, SITE_NAME } from "@/lib/metadata";
 import HeaderComponent from "@/components/HeaderComponent";
@@ -14,6 +14,14 @@ const lato = Lato({
   weight: ["400", "700"],
   display: "swap",
   variable: "--font-lato",
+});
+
+const lora = Lora({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+  variable: "--font-lora",
 });
 
 const siteDescription =
@@ -57,7 +65,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={lato.variable}>
+    <html lang="en" className={`${lato.variable} ${lora.variable}`}>
       <body>
         <a
           href="#main-content"
