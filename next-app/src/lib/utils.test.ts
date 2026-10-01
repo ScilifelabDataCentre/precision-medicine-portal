@@ -17,4 +17,19 @@ describe("cn", () => {
   it("merges conflicting Tailwind utilities, last one winning", () => {
     expect(cn("px-2", "px-4")).toBe("px-4");
   });
+
+  it("keeps v2 type tokens next to a colour utility", () => {
+    expect(cn("text-label text-ink")).toBe("text-label text-ink");
+  });
+
+  it("resolves v2 type tokens against other font sizes", () => {
+    expect(cn("text-ui", "text-lg")).toBe("text-lg");
+  });
+
+  it("resolves v2 radius, spacing, shadow and container tokens", () => {
+    expect(cn("rounded-md", "rounded-pill")).toBe("rounded-pill");
+    expect(cn("h-10", "h-target")).toBe("h-target");
+    expect(cn("shadow-md", "shadow-media")).toBe("shadow-media");
+    expect(cn("max-w-xl", "max-w-content")).toBe("max-w-content");
+  });
 });
