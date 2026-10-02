@@ -55,14 +55,14 @@ Nothing below overrides these.
 
 - `teal` is the only interactive colour: links, primary buttons, focus and the current nav item. No other text on the page is teal, so teal always means "you can act here".
 - Text on `lime` is always `on-lime`. White on lime fails at 1.9:1.
-- `aqua` never carries text under 24px (3.4:1). Use it in charts, illustrations and large type.
+- `aqua` is never the colour of text under 24px (3.4:1 on white). Use it in charts, illustrations and large type; as an illustration fill it carries `ink` text (5.2:1).
 - Chart series run `teal`, `lime`, `aqua`, `grape`, then the 50% tints. Label series directly; never rely on colour alone.
 - Errors use `danger` on `danger-soft` with an icon and the word "Error". Confirmations use `success` on `success-soft` with an icon and a word.
 
 #### Type
 
 - Two weights only, 400 and 700. Lato on Google Fonts has no 500 or 600, so never fake them.
-- Build hierarchy from size, weight and leading together, never colour: `display` once per page, then `title-1`, `title-2`, `title-3` and `headline`.
+- Build hierarchy from size, weight and leading together, never colour: `display` once per page (the hero headline, also on an inner page that opens with a hero), then `title-1`, `title-2`, `title-3` and `headline`.
 - Tracking changes with size: the big styles are tight (built in), body text sits at 0 and `caption` opens slightly. Never set one letter-spacing for everything.
 - Leading runs the other way: tight on headlines, loose on `body` and `lead`.
 - Open a page with one `lead`. Set long text in `body` within `measure`. UI text is `ui`, buttons and labels are `label`, metadata is `caption`, and nothing is smaller than `caption`.
@@ -98,7 +98,7 @@ Nothing below overrides these.
 
 ### Interaction
 
-- Every page answers three questions. Where am I: the current nav item in `teal` and a page title that matches its nav label, plus breadcrumbs from two levels deep. Where can I go: one clear next step per section. How do I get back: the logotype always links home.
+- Every page answers three questions. Where am I: the current nav item in `teal` and a page title that matches its nav label (a label may shorten a long official name, as "PM Sample Central" does), plus breadcrumbs from two levels deep. Where can I go: one clear next step per section. How do I get back: the logotype always links home.
 - Feedback comes in four kinds: status, completion, warning and error. Validate a form field when the person leaves it, not on submit, and confirm a sent message in words.
 - Keep the input path free of delays: no artificial waits or spinners for local actions; debounce only search.
 - Ask for confirmation only before something destructive and irreversible. Everywhere else, make undo easy.
@@ -150,7 +150,7 @@ The theme file `next-app/src/app/pmp-theme.css`, imported from `globals.css`, de
 | `teal-75`         | `#43858b`                  | Teal 75% tint. Charts and large shapes only; 4.2:1 on white is too low for text under 24px.                                                                                                                                                                                                                     |
 | `teal-50`         | `#82aeb2`                  | Teal 50% tint. Charts and decorative fills with `ink` text.                                                                                                                                                                                                                                                     |
 | `teal-25`         | `#c0d6d8`                  | Teal 25% tint. Tags and quiet fills with `ink` or `teal` text; muted text and footer links on `teal` bands (5.1:1); the secondary button hover.                                                                                                                                                                 |
-| `aqua`            | `#4c979f`                  | Secondary brand hue for charts, illustrations and type 24px and up (3.4:1 on white). Never small text or a button fill.                                                                                                                                                                                         |
+| `aqua`            | `#4c979f`                  | Secondary brand hue for charts, illustrations and type 24px and up (3.4:1 on white). Never small text or a button fill. As an illustration fill it carries `ink` text (5.2:1), as in the PM Sample Central two-track diagram.                                                                                   |
 | `aqua-75`         | `#79b1b7`                  | Aqua 75% tint. Chart series and illustration fills.                                                                                                                                                                                                                                                             |
 | `aqua-50`         | `#a6cbcf`                  | Aqua 50% tint. Chart series and illustration fills with `ink` text.                                                                                                                                                                                                                                             |
 | `aqua-25`         | `#d2e5e7`                  | Aqua 25% tint. Info callouts and tags with `ink` or `teal` text.                                                                                                                                                                                                                                                |
@@ -185,7 +185,7 @@ Set `body` and `lead` with `font-serif`; everything else uses `font-sans`. Both 
 | Style      | Family | Size             | Line height | Tracking | Weight | Use                                                                 |
 | ---------- | ------ | ---------------- | ----------- | -------- | ------ | ------------------------------------------------------------------- |
 | `display`  | sans   | 4rem (64px)      | 1.05        | -0.02em  | 700    | One per page: the hero headline on `surface` or a `teal` band.      |
-| `title-1`  | sans   | 2.75rem (44px)   | 1.1         | -0.015em | 700    | Page titles on inner pages.                                         |
+| `title-1`  | sans   | 2.75rem (44px)   | 1.1         | -0.015em | 700    | Page titles on inner pages without a hero.                          |
 | `title-2`  | sans   | 2rem (32px)      | 1.2         | -0.01em  | 700    | Section headings.                                                   |
 | `title-3`  | sans   | 1.5rem (24px)    | 1.25        | -0.005em | 700    | Card titles, subsections and the links in the mobile menu.          |
 | `headline` | sans   | 1.1875rem (19px) | 1.35        | 0        | 700    | Small headings in dense layouts and footer column titles.           |
@@ -245,7 +245,7 @@ These are the reference behaviours. Rebuild them with the repo's existing Radix 
 
 ### Button
 
-- Variants: `primary` (teal fill, white label, hover `ink`), `secondary` (2px teal outline and label, hover `teal-25` fill), `quiet` (underlined teal text). On teal or grape bands: primary is a lime fill with an `ink` label (hover white), secondary is a white outline.
+- Variants: `primary` (teal fill, white label, hover `ink`), `secondary` (2px teal outline and label, hover `teal-25` fill), `quiet` (underlined teal text). On teal or grape bands: primary is a lime fill with an `ink` label (hover white), secondary is a white outline (hover white fill with a `teal` label).
 - Pill shape (`rounded-pill`), at least `target-min` tall, `label` type, padding `space-24` either side.
 - Press feedback on pointer-down: `active:scale-[0.97]` over 100ms. One primary button per view. Verb-first labels, no arrows.
 
@@ -302,3 +302,4 @@ The current header predates v2: a grey-to-teal gradient band instead of `header-
 - Nav link size: the links follow the Header spec at 16px, weight 400 (`text-base`), but the Type table lists navigation links under `ui` (17px). Settle which is right in the redesign.
 - Desktop dropdowns stay solid `surface` with `shadow-float` instead of the material, because their items still use pre-v2 descriptions in `ink-muted` at caption size, which the material does not allow. The redesigned menu moves them onto the material.
 - `scroll-padding-top` arrives with the sticky header; today's header scrolls away with the page.
+- The logo is one combined image (`precisionmedicineportal-logo-white.png`) rather than the logotype with the site name as live text, which the Brand rules ask for. With six nav items the image also scales down between 72rem and about 85rem (to about 28px tall at 1152px) so the row fits. The redesign splits it.
