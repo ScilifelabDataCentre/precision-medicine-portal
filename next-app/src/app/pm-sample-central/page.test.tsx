@@ -126,16 +126,11 @@ describe("PmSampleCentralPage", () => {
     }
   });
 
-  it("ends each content section on one next step", () => {
-    for (const [section, target] of [
-      ["the-sample", "#request"],
-      ["the-record", "#follow"],
-      ["pilots", "#request"],
-    ]) {
-      const start = html.indexOf(`id="${section}"`);
-      const end = html.indexOf("</section>", start);
-      expect(html.slice(start, end)).toContain(`href="${target}"`);
-    }
+  it("links to the request only through its buttons", () => {
+    expect(html).not.toContain('href="#request"');
+    const start = html.indexOf('id="the-record"');
+    const end = html.indexOf("</section>", start);
+    expect(html.slice(start, end)).toContain('href="#follow"');
   });
 
   it("keeps the draft's wording", () => {

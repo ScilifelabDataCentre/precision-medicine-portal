@@ -34,8 +34,8 @@ import { LastUpdated } from "@/components/common/last-updated";
  * - The pilot studies are a register, one row per study, so the cancers read
  *   down one column.
  * - The request is the one teal band; following a project closes the page.
- * - Every section ends on one next step (`NextStep`), and hairlines turn
- *   `line-strong` under `prefers-contrast: more`.
+ * - The record and the follow section end on a next step (`NextStep`), and
+ *   hairlines turn `line-strong` under `prefers-contrast: more`.
  */
 export function PmscPage(): ReactElement {
   return (
@@ -117,7 +117,6 @@ export function PmscPage(): ReactElement {
           <p className="mt-4 max-w-measure font-serif text-body">
             {TAILORED.body}
           </p>
-          <NextStep href="#request">{REQUEST.title}</NextStep>
         </section>
 
         <section id="the-record" aria-labelledby="the-record-heading">
@@ -173,7 +172,6 @@ export function PmscPage(): ReactElement {
             </li>
           ))}
         </ul>
-        <NextStep href="#request">{REQUEST.title}</NextStep>
       </Band>
 
       <Band
