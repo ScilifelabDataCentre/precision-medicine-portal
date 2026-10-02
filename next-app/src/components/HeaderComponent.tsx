@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import {
@@ -40,13 +41,24 @@ const components: { title: string; href: string; description: string }[] = [
   },
 ];
 
+/**
+ * "Where am I" (DESIGN.md Interaction): the current page's nav item is teal,
+ * bold and `aria-current="page"`; a dropdown trigger is marked when the page
+ * is inside its section. `usePathname` is null outside the app router, so the
+ * header still renders in tests.
+ */
+function useIsCurrent() {
+  const pathname = usePathname() ?? "";
+  return (href: string) => pathname === href || pathname.startsWith(`${href}/`);
+}
+
 const ListItem = React.forwardRef<
   React.ElementRef<"a">,
-  React.ComponentPropsWithoutRef<"a"> & { role?: string }
->(({ className, title, children, role, ...props }, ref) => {
+  React.ComponentPropsWithoutRef<"a"> & { role?: string; active?: boolean }
+>(({ className, title, children, role, active, ...props }, ref) => {
   return (
     <li>
-      <NavigationMenuLink asChild>
+      <NavigationMenuLink asChild active={active}>
         <a
           ref={ref}
           className={cn(
@@ -108,11 +120,15 @@ export default function HeaderComponent() {
 }
 
 function DesktopNav() {
+  const isCurrent = useIsCurrent();
   return (
     <NavigationMenu delayDuration={0} viewport={false}>
       <NavigationMenuList role="menubar" aria-label="Main navigation">
         <NavigationMenuItem role="none">
-          <NavigationMenuTrigger aria-label="Data sources menu">
+          <NavigationMenuTrigger
+            aria-label="Data sources menu"
+            data-active={isCurrent("/data-sources") ? "" : undefined}
+          >
             Data sources
           </NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -141,6 +157,7 @@ function DesktopNav() {
               </li>
               <ListItem
                 href="/data-sources/quality-registries"
+                active={isCurrent("/data-sources/quality-registries")}
                 title="Quality registries"
                 role="menuitem"
               >
@@ -149,6 +166,7 @@ function DesktopNav() {
               </ListItem>
               <ListItem
                 href="/data-sources/swedish-research-cohorts"
+                active={isCurrent("/data-sources/swedish-research-cohorts")}
                 title="Swedish research cohorts"
                 role="menuitem"
               >
@@ -156,6 +174,7 @@ function DesktopNav() {
               </ListItem>
               <ListItem
                 href="/data-sources/national-genomics-platform"
+                active={isCurrent("/data-sources/national-genomics-platform")}
                 title="National Genomics Platform"
                 role="menuitem"
               >
@@ -164,6 +183,7 @@ function DesktopNav() {
               </ListItem>
               <ListItem
                 href="/data-sources/others"
+                active={isCurrent("/data-sources/others")}
                 title="Other data sources"
                 role="menuitem"
               >
@@ -173,7 +193,7 @@ function DesktopNav() {
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem role="none">
-          <NavigationMenuLink asChild>
+          <NavigationMenuLink asChild active={isCurrent("/omop-cdm")}>
             <Link
               href="/omop-cdm"
               className={navigationMenuTriggerStyle()}
@@ -184,7 +204,7 @@ function DesktopNav() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem role="none">
-          <NavigationMenuLink asChild>
+          <NavigationMenuLink asChild active={isCurrent("/digifor1health")}>
             <Link
               href="/digifor1health"
               className={navigationMenuTriggerStyle()}
@@ -195,7 +215,17 @@ function DesktopNav() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem role="none">
-          <NavigationMenuLink asChild>
+          <NavigationMenuLink asChild active={isCurrent("/pm-sample-central")}>
+            <Link
+              href="/pm-sample-central"
+              className={navigationMenuTriggerStyle()}
+            >
+              PM Sample Central
+            </Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
+        <NavigationMenuItem role="none">
+          <NavigationMenuLink asChild active={isCurrent("/contact")}>
             <Link
               href="/contact"
               className={navigationMenuTriggerStyle()}
@@ -206,7 +236,10 @@ function DesktopNav() {
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem role="none">
-          <NavigationMenuTrigger aria-label="About us menu">
+          <NavigationMenuTrigger
+            aria-label="About us menu"
+            data-active={isCurrent("/about") ? "" : undefined}
+          >
             About us
           </NavigationMenuTrigger>
           {/* Right-aligned under its own trigger, which only works because the
@@ -223,6 +256,7 @@ function DesktopNav() {
                   key={component.title}
                   title={component.title}
                   href={component.href}
+                  active={isCurrent(component.href)}
                   role="menuitem"
                 >
                   {component.description}
@@ -237,6 +271,9 @@ function DesktopNav() {
 }
 
 function MobileNav() {
+  // `aria-current="page"` marks the exact page only, never a whole section.
+  const pathname = usePathname() ?? "";
+  const current = (href: string) => (pathname === href ? "page" : undefined);
   return (
     <Sheet>
       <SheetTrigger asChild>
@@ -252,9 +289,13 @@ function MobileNav() {
       </SheetTrigger>
       <SheetContent side="right" aria-label="Mobile navigation menu">
         <SheetTitle className="sr-only">Mobile Navigation</SheetTitle>
-        <nav className="flex flex-col gap-4" aria-label="Mobile navigation">
+        <nav
+          className="flex flex-col gap-4 [&_a[aria-current=page]]:font-bold [&_a[aria-current=page]]:text-teal"
+          aria-label="Mobile navigation"
+        >
           <Link
             href="/data-sources"
+            aria-current={current("/data-sources")}
             className="font-semibold"
             aria-label="Access data"
           >
@@ -262,6 +303,7 @@ function MobileNav() {
           </Link>
           <Link
             href="/data-sources/quality-registries"
+            aria-current={current("/data-sources/quality-registries")}
             className="text-sm pl-4"
             aria-label="Quality registries"
           >
@@ -269,6 +311,7 @@ function MobileNav() {
           </Link>
           <Link
             href="/data-sources/swedish-research-cohorts"
+            aria-current={current("/data-sources/swedish-research-cohorts")}
             className="text-sm pl-4"
             aria-label="Swedish research cohorts and biobank studies"
           >
@@ -276,6 +319,7 @@ function MobileNav() {
           </Link>
           <Link
             href="/data-sources/national-genomics-platform"
+            aria-current={current("/data-sources/national-genomics-platform")}
             className="text-sm pl-4"
             aria-label="National Genomics Platform"
           >
@@ -283,6 +327,7 @@ function MobileNav() {
           </Link>
           <Link
             href="/data-sources/others"
+            aria-current={current("/data-sources/others")}
             className="text-sm pl-4"
             aria-label="Other data sources"
           >
@@ -290,6 +335,7 @@ function MobileNav() {
           </Link>
           <Link
             href="/omop-cdm"
+            aria-current={current("/omop-cdm")}
             className=""
             aria-label="OMOP common data model"
           >
@@ -297,12 +343,24 @@ function MobileNav() {
           </Link>
           <Link
             href="/digifor1health"
+            aria-current={current("/digifor1health")}
             className=""
             aria-label="DIGIfor1healthSE initiative"
           >
             DIGIfor1healthSE
           </Link>
-          <Link href="/contact" className="" aria-label="Contact us">
+          <Link
+            href="/pm-sample-central"
+            aria-current={current("/pm-sample-central")}
+          >
+            PM Sample Central
+          </Link>
+          <Link
+            href="/contact"
+            aria-current={current("/contact")}
+            className=""
+            aria-label="Contact us"
+          >
             Contact
           </Link>
           <div className="font-semibold" role="heading" aria-level={2}>
@@ -312,6 +370,7 @@ function MobileNav() {
             <Link
               key={component.title}
               href={component.href}
+              aria-current={current(component.href)}
               className="text-sm pl-4"
               aria-label={component.title}
             >
