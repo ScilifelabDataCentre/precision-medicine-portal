@@ -1,4 +1,4 @@
-import type { ReactElement, ReactNode } from "react";
+import type { ReactElement } from "react";
 
 import {
   DATA_STRUCTURE,
@@ -13,7 +13,6 @@ import {
   SERVICES,
   TAILORED,
   WHY,
-  PMSC_EMAIL,
   type PilotStudy,
 } from "./content";
 import { Band, PageImage, RequestActions } from "./page-parts";
@@ -34,8 +33,7 @@ import { LastUpdated } from "@/components/common/last-updated";
  * - The pilot studies are a register, one row per study, so the cancers read
  *   down one column.
  * - The request is the one teal band; following a project closes the page.
- * - The record and the follow section end on a next step (`NextStep`), and
- *   hairlines turn `line-strong` under `prefers-contrast: more`.
+ * - Hairlines turn `line-strong` under `prefers-contrast: more`.
  */
 export function PmscPage(): ReactElement {
   return (
@@ -143,7 +141,6 @@ export function PmscPage(): ReactElement {
               </li>
             ))}
           </ul>
-          <NextStep href="#follow">{FOLLOW.title}</NextStep>
         </section>
       </Band>
 
@@ -251,7 +248,6 @@ export function PmscPage(): ReactElement {
             sizes="(min-width: 64rem) 34rem, 100vw"
             className="mt-12"
           />
-          <NextStep href={`mailto:${PMSC_EMAIL}`}>Email the PMSC team</NextStep>
         </div>
         <LastUpdated
           date="2026-10-02"
@@ -286,28 +282,5 @@ function StudyFacts({ study }: { study: PilotStudy }): ReactElement | null {
         </>
       )}
     </dl>
-  );
-}
-
-/**
- * The one clear next step a section ends on (DESIGN.md: "Where can I go").
- * It reuses the label of where it leads, so it promises exactly what it does.
- */
-function NextStep({
-  href,
-  children,
-}: {
-  href: string;
-  children: ReactNode;
-}): ReactElement {
-  return (
-    <p className="mt-12">
-      <a
-        href={href}
-        className="inline-flex min-h-target items-center rounded-sm text-label text-link underline decoration-1 underline-offset-4 hover:decoration-2 active:decoration-2 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-focus"
-      >
-        {children}
-      </a>
-    </p>
   );
 }

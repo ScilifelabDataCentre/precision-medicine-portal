@@ -40,8 +40,8 @@ describe("PmSampleCentralPage", () => {
       expect(tag).toContain('rel="noopener noreferrer"');
       expect(tag).toContain("(opens in new tab)");
     }
-    // Hero, request band, and the follow section's next step.
-    expect(html.split(`href="mailto:${PMSC_EMAIL}"`)).toHaveLength(4);
+    // Hero and request band.
+    expect(html.split(`href="mailto:${PMSC_EMAIL}"`)).toHaveLength(3);
   });
 
   it("keeps the order Jan chose: tracks, pilots, then why, then the request", () => {
@@ -126,11 +126,8 @@ describe("PmSampleCentralPage", () => {
     }
   });
 
-  it("links to the request only through its buttons", () => {
-    expect(html).not.toContain('href="#request"');
-    const start = html.indexOf('id="the-record"');
-    const end = html.indexOf("</section>", start);
-    expect(html.slice(start, end)).toContain('href="#follow"');
+  it("adds no in-page text links beside the buttons", () => {
+    expect(html).not.toMatch(/href="#(request|follow)"/);
   });
 
   it("keeps the draft's wording", () => {
