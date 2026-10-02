@@ -14,6 +14,7 @@ const routes = [
   "/data-sources/swedish-research-cohorts",
   "/omop-cdm",
   "/digifor1health",
+  "/pm-sample-central",
   "/about/dsnpmd-projects",
   "/about/team",
   "/about/partners",
