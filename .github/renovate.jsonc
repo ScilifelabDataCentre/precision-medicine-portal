@@ -3,7 +3,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "github>ScilifelabDataCentre/data-centre-template//.config/renovate/default.jsonc#v1.1.0", // Custom preset for the Data Centre
+    "github>ScilifelabDataCentre/data-centre-template//.config/renovate/default.jsonc#v1.1.2", // Custom preset for the Data Centre
     "helpers:pinGitHubActionDigests", // Pin GitHub Actions to digests to avoid unexpected changes
     "docker:pinDigests" // Pin Docker images to digests to avoid unexpected changes
   ],
