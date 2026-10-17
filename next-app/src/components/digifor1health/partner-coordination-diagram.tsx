@@ -6,7 +6,7 @@ import {
   useReducedMotion,
   type Variants,
   type Transition,
-} from "framer-motion";
+} from "motion/react";
 
 interface Partner {
   abbr: string;

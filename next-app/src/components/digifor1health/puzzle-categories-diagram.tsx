@@ -1,6 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion, type Transition } from "framer-motion";
+import { motion, useReducedMotion, type Transition } from "motion/react";
 import { useCallback } from "react";
 
 /** Colors from tailwind.config.ts — keep in sync with the theme palette */
