@@ -137,7 +137,7 @@ function DesktopNav() {
               role="menu"
               aria-label="Data sources submenu"
             >
-              <li className="row-span-4" role="none">
+              <li className="row-span-3" role="none">
                 <NavigationMenuLink asChild>
                   <a
                     className="flex h-full w-full select-none flex-col rounded-md bg-linear-to-b from-muted/50 to-muted p-6 no-underline outline-hidden focus:shadow-md"
@@ -171,15 +171,6 @@ function DesktopNav() {
                 role="menuitem"
               >
                 Discover Swedish research cohorts and biobank-based studies
-              </ListItem>
-              <ListItem
-                href="/data-sources/national-genomics-platform"
-                active={isCurrent("/data-sources/national-genomics-platform")}
-                title="National Genomics Platform"
-                role="menuitem"
-              >
-                Explore genomic data from Sweden&apos;s seven Genomic Medicine
-                Centres
               </ListItem>
               <ListItem
                 href="/data-sources/others"
@@ -316,14 +307,6 @@ function MobileNav() {
             aria-label="Swedish research cohorts and biobank studies"
           >
             Swedish research cohorts
-          </Link>
-          <Link
-            href="/data-sources/national-genomics-platform"
-            aria-current={current("/data-sources/national-genomics-platform")}
-            className="text-sm pl-4"
-            aria-label="National Genomics Platform"
-          >
-            National Genomics Platform
           </Link>
           <Link
             href="/data-sources/others"

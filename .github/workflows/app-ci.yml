@@ -7,7 +7,7 @@ name: App CI
 
 on:
   push:
-    branches: [main]
+    branches: [main, 'release/**']
   pull_request:
     branches: [main]
 
@@ -64,3 +64,28 @@ jobs:
             echo "$path -> $code"
             [ "$code" = "200" ] || exit 1
           done
+
+      - name: Verify production release excludes NGP
+        if: startsWith(github.ref, 'refs/heads/release/')
+        working-directory: ./next-app
+        run: |
+          node --input-type=module <<'NODE'
+          import assert from 'node:assert/strict';
+          import { readFileSync } from 'node:fs';
+
+          const config = JSON.parse(readFileSync('../.github/pa11y.config', 'utf8'));
+          const urls = config.urls.map(entry => typeof entry === 'string' ? entry : entry.url);
+          urls.push('http://127.0.0.1:3000/sitemap.xml');
+          for (const url of urls) {
+            const response = await fetch(url);
+            assert.equal(response.status, 200, url);
+            assert.doesNotMatch(await response.text(), /national.genomics|\bNGP\b/i, url);
+          }
+          for (const suffix of ['', '/']) {
+            const url = `http://127.0.0.1:3000/data-sources/national-genomics-platform${suffix}`;
+            assert.equal((await fetch(url)).status, 404, url);
+          }
+          const manifest = readFileSync('.next/server/app-paths-manifest.json', 'utf8');
+          assert.doesNotMatch(manifest, /national-genomics-platform/i);
+          console.log(`Verified ${urls.length} public responses, NGP 404s and build manifest`);
+          NODE

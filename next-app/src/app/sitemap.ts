@@ -8,7 +8,6 @@ import { SITE_URL } from "@/lib/metadata";
 const routes = [
   "/",
   "/data-sources",
-  "/data-sources/national-genomics-platform",
   "/data-sources/others",
   "/data-sources/quality-registries",
   "/data-sources/swedish-research-cohorts",

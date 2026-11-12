@@ -33,6 +33,6 @@ describe("HomePage", () => {
   });
 
   it("applies the same wrapping to the data-source card titles", () => {
-    expect(cardTitle("National Genomics Platform")).toMatch(/\bbreak-words\b/);
+    expect(cardTitle("Swedish research cohorts")).toMatch(/\bbreak-words\b/);
   });
 });
