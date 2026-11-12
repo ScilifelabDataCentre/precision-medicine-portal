@@ -347,7 +347,9 @@ export default function NationalGenomicsPlatformPage(): ReactElement {
           study spanning more than one region.
         </p>
         <p>
-          The NGP consolidates that storage without consolidating control.
+          The NGP consolidates that storage without consolidating control. NGP
+          is a shared national technical infrastructure, but each region has a
+          separate storage environment and controls access to its own data.
           Genomic data and metadata are transferred from local laboratory
           information systems over Sjunet or an encrypted connection into a
           storage area reserved for that region.
@@ -895,7 +897,7 @@ export default function NationalGenomicsPlatformPage(): ReactElement {
       </div>
 
       <div className="mt-8">
-        <LastUpdated date="21-08-2026" />
+        <LastUpdated date="12-11-2026" />
       </div>
     </div>
   );

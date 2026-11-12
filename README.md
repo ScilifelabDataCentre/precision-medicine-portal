@@ -82,6 +82,36 @@ This repository contains a modern web application built with the following archi
 - **Output**: Standalone Next.js build for optimized production deployment
 - **Port**: Configured for port 3000 with hostname binding
 
+##### Development images and Argo CD
+
+After merging a reviewed change into `main` and checking that App CI and Pa11y
+pass, run **Build development container image** from GitHub Actions, selecting
+`main`. Alternatively, run:
+
+```sh
+gh workflow run publish_development_image.yml --ref main
+```
+
+The workflow builds both supported architectures and publishes
+`ghcr.io/scilifelabdatacentre/precision-medicine-portal:dev-<full-commit-sha>`.
+Its run summary provides the exact image tag and digest. It publishes only the
+development tag; the existing release publisher manages versioned release tags.
+
+In the Argo CD repository, replace the development container's current image tag
+(for example, `1.3.7`) with the exact `dev-<full-commit-sha>` value from the summary.
+For Helm this is commonly the image `tag` value; for Kustomize it is `newTag`.
+Keep the existing repository-specific field and image repository name. Commit the
+change, then let Argo CD auto-sync or manually sync the development application.
+This changes the container image reference, not Argo CD's Git `targetRevision`.
+
+Development tags identify the source commit, so they do not require incrementing
+the application's package version or creating a versioned Git release tag. To pin
+the exact published artifact, use the image digest where the deployment
+configuration supports it. Rebuilding a commit can produce a different digest.
+
+While NGP is development-only, production uses the NGP-free `release/1.3.8` image
+(`1.3.8`). Keep development image updates in the development configuration.
+
 #### Project Structure
 
 ```
