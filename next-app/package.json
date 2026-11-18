@@ -59,13 +59,13 @@
     "postcss": "^8.5.23",
     "sharp": "^0.35.5",
     "eslint": {
-      "minimatch": "^11.0.8"
+      "minimatch": "^11.0.0"
     },
     "@eslint/config-array": {
-      "minimatch": "^11.0.8"
+      "minimatch": "^11.0.0"
     },
     "@typescript-eslint/typescript-estree": {
-      "minimatch": "^11.0.8"
+      "minimatch": "^11.0.0"
     }
   }
 }
